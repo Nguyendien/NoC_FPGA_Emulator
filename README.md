@@ -13,5 +13,6 @@ Authors (in alphabetic order):
       Tsotne Putkaradze
       Jaan Raik
       Hardi Selg
+      
 ---------------
 Copyright (C) 2015 as collective work. According to 17 U.S.C. 201(c) each author will retain their copyright for their contribution.
