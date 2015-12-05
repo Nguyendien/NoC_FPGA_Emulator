@@ -17,7 +17,8 @@
 ----------
 License: GNU GENERAL PUBLIC LICENSE Version 2
 
->Copyright (C) 2015 as collective work. According to 17 U.S.C. 201(c) each author >will retain their full ownership for their contribution.
+>Copyright (C) 2015 as collective work. According to 17 U.S.C. 201(c) each author will retain their full ownership for their contribution.
+
 ----------
 
 In case you need something to be implemented please conact: siavoosh[AT]ati[DOT]ttu[DOT]ee maybe we can arrange it.
