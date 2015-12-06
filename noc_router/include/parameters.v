@@ -1,4 +1,4 @@
-/********************** test
+/********************** test2
 * Filename:    parameters.v
 * Description: Parameters for Packet FLITS
 * $Revision: 21 $
