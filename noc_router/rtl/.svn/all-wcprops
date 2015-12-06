@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/lbdr_noc/!svn/ver/31/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl
+END
+xbar.v
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/lbdr_noc/!svn/ver/25/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/xbar.v
+END
+init_read.v
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/lbdr_noc/!svn/ver/28/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/init_read.v
+END
+fifo_onehot.v
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/lbdr_noc/!svn/ver/31/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/fifo_onehot.v
+END
+noc_router.v
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/lbdr_noc/!svn/ver/28/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/noc_router.v
+END
+LBDR.v
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/lbdr_noc/!svn/ver/25/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/LBDR.v
+END
+arbiter.v
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/lbdr_noc/!svn/ver/26/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/arbiter.v
+END
+flowcontrol.v
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/lbdr_noc/!svn/ver/27/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/flowcontrol.v
+END
+output_buffer.v
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/lbdr_noc/!svn/ver/25/Work/NOC_EMULATOR/NoC_ROUTER_ONEHOT/rtl/output_buffer.v
+END
