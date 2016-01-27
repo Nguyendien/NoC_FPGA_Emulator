@@ -47,7 +47,7 @@ process (clk,rst,state,full,almost_full,pe_write_in,data_in_pe,length)
 variable counter:integer range 2047 downto 0  ;	
 begin
 counter:=0;
- length <= conv_integer(data_in_pe(29 downto 18));
+
                 if clk'event and clk = '1' then
 					if rst = '1' then 
 				      state <= S0;
