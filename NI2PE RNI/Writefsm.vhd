@@ -33,8 +33,7 @@ architecture Beh of PE2NIfsm is
 
 
 
-signal length :integer;
-
+signal length :integer range 0 to 11;
 
 type state_type is (S0,S1,S2);
 signal  state  :  state_type ;
@@ -42,10 +41,13 @@ signal  state  :  state_type ;
 Begin
 
 
-process (clk)
+
+process (clk,rst,state,full,almost_full,pe_write_in,data_in_pe,length)
 
 variable counter:integer range 2047 downto 0  ;	
 begin
+counter:=0;
+ length <= conv_integer(data_in_pe(29 downto 18));
                 if clk'event and clk = '1' then
 					if rst = '1' then 
 				      state <= S0;
