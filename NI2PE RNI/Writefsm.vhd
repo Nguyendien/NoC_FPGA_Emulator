@@ -67,7 +67,7 @@ begin
 			                  end if;
 							
 						when   S1=>
-							 length <= conv_integer(data_in_pe(29 downto 18));
+							 length := conv_integer(data_in_pe(29 downto 18));
 							 counter := 1;
 							 wr_en <= '1';
 					         data_wr_ctlr <= data_in_pe;
