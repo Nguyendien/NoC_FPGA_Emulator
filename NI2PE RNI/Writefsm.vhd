@@ -61,7 +61,7 @@ begin
 							  state<= S1;
 							   wr_en <='0';
 					           --data_wr_ctlr <="--------------------------------";
-							   ni2pe_readyout<='1';
+							   ni2pe_readyout<='0';
                               else
 						       state<=S0;
 			                  end if;
@@ -71,10 +71,12 @@ begin
 							 counter := 1;
 							 wr_en <= '1';
 					         data_wr_ctlr <= data_in_pe;
+					         ni2pe_readyout<='1';
 							 state <= S2;
 						when   S2 =>	
-                          if counter <= length then 
-                            counter:= counter + 1;
+                                                    if counter <= length then 
+                                                     counter:= counter + 1;
+                                                     ni2pe_readyout<='1';
 							wr_en <= '1';
 					        data_wr_ctlr <= data_in_pe;
 							state <= S2;
