@@ -25,138 +25,119 @@
 -- to guarantee that the testbench will bind correctly to the post-implementation 
 -- simulation model.
 --------------------------------------------------------------------------------
-Library ieee;
+library ieee;
 use ieee.std_logic_1164.all;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-ENTITY NITB IS
-END NITB;
- 
-ARCHITECTURE behavior OF NITB IS 
- 
-    -- Component Declaration for the Unit Under Test (UUT)
- 
-    COMPONENT RNI
-    PORT(
-         PE_WRITE : IN  std_logic;
-         PE2NI_DATA : IN  std_logic_vector(31 downto 0);
-         Clk : IN  std_logic;
-         Rst : IN  std_logic;
-         R_READY : IN  std_logic;
-         NI2R_DATA : OUT  std_logic_vector(31 downto 0);
-         NI2R_WRITE : OUT  std_logic;
-         NI2PE_READY : OUT  std_logic
-        );
-    END COMPONENT;
-    
+use IEEE.STD_LOGIC_ARITH.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+entity NITB is
+end NITB;
 
-   --Inputs
-   signal PE_WRITE : std_logic := '0';
-   signal PE2NI_DATA : std_logic_vector(31 downto 0) := (others => '0');
-   signal Clk : std_logic := '0';
-   signal Rst : std_logic := '0';
-   signal R_READY : std_logic := '0';
+architecture behavior of NITB is
 
- 	--Outputs
-   signal NI2R_DATA : std_logic_vector(31 downto 0);
-   signal NI2R_WRITE : std_logic;
-   signal NI2PE_READY : std_logic;
+	-- Component Declaration for the Unit Under Test (UUT)
 
-   -- Clock period definitions
-   constant Clk_period : time := 10 ns;
- 
-BEGIN
- 
+	component RNI
+		port(
+			PE_WRITE    : in  std_logic;
+			PE2NI_DATA  : in  std_logic_vector(31 downto 0);
+			Clk         : in  std_logic;
+			Rst         : in  std_logic;
+			R_READY     : in  std_logic;
+			NI2R_DATA   : out std_logic_vector(31 downto 0);
+			NI2R_WRITE  : out std_logic;
+			NI2PE_READY : out std_logic
+		);
+	end component;
+
+	--Inputs
+	signal PE_WRITE   : std_logic                     := '0';
+	signal PE2NI_DATA : std_logic_vector(31 downto 0) := (others => '0');
+	signal Clk        : std_logic                     := '0';
+	signal Rst        : std_logic                     := '0';
+	signal R_READY    : std_logic                     := '0';
+
+	--Outputs
+	signal NI2R_DATA   : std_logic_vector(31 downto 0);
+	signal NI2R_WRITE  : std_logic;
+	signal NI2PE_READY : std_logic;
+
+	-- Clock period definitions
+	constant Clk_period : time := 10 ns;
+
+begin
 	-- Instantiate the Unit Under Test (UUT)
-   uut: RNI PORT MAP (
-          PE_WRITE => PE_WRITE,
-          PE2NI_DATA => PE2NI_DATA,
-          Clk => Clk,
-          Rst => Rst,
-          R_READY => R_READY,
-          NI2R_DATA => NI2R_DATA,
-          NI2R_WRITE => NI2R_WRITE,
-          NI2PE_READY => NI2PE_READY
-        );
+	uut : RNI port map(
+			PE_WRITE    => PE_WRITE,
+			PE2NI_DATA  => PE2NI_DATA,
+			Clk         => Clk,
+			Rst         => Rst,
+			R_READY     => R_READY,
+			NI2R_DATA   => NI2R_DATA,
+			NI2R_WRITE  => NI2R_WRITE,
+			NI2PE_READY => NI2PE_READY
+		);
 
-     CLK_process :process
+	CLK_process : process
 	begin
 		CLK <= '0';
-		wait for CLK_period/2;
+		wait for CLK_period / 2;
 		CLK <= '1';
-		wait for CLK_period/2;
+		wait for CLK_period / 2;
 	end process;
-	
+
 	-- Reset process
 	rst_proc : process
 	begin
-	wait for CLK_period * 5;
-		
-		RST <= '1';
-		
 		wait for CLK_period * 5;
-		
+
+		RST <= '1';
+
+		wait for CLK_period * 5;
+
 		RST <= '0';
-		
+
 		wait;
 	end process;
-	
+
 	-- Write process
 	wr_proc : process
-		variable counter : unsigned (31 downto 0) := (others => '0');
-	begin		
+		variable counter : unsigned(31 downto 0) := (others => '0');
+	begin
 		wait for CLK_period * 20;
- 
+
 		for i in 1 to 32 loop
-			counter := counter + 1;
-			
+			counter    := counter + 1;
 			PE2NI_DATA <= std_logic_vector(counter);
-			
 			wait for CLK_period * 1;
-			
 			PE_WRITE <= '1';
-			
 			wait for CLK_period * 1;
-		
 			PE_WRITE <= '0';
 		end loop;
-		
+
 		wait for clk_period * 20;
-		
+
 		for i in 1 to 32 loop
-			counter := counter + 1;
-			
+			counter    := counter + 1;
 			PE2NI_DATA <= std_logic_vector(counter);
-			
 			wait for CLK_period * 1;
-			
 			PE_WRITE <= '1';
-			
 			wait for CLK_period * 1;
-			
 			PE_WRITE <= '0';
 		end loop;
-		
+
 		wait;
 	end process;
-	
+
 	-- Read process
 	rd_proc : process
 	begin
 		wait for CLK_period * 20;
-		
 		wait for CLK_period * 40;
-			
-		 R_READY <= '1';
-		
+		R_READY <= '1';
 		wait for CLK_period * 60;
-		
-		 R_READY <= '0';
-		
+		R_READY <= '0';
 		wait for CLK_period * 256 * 2;
-		
-		 R_READY <= '1';
-		
+		R_READY <= '1';
 		wait;
 	end process;
- end;
+end;
