@@ -2,9 +2,9 @@
 * Filename:	    LBDR.v
 * Description:  LBDR with minimal support only (no deroutes and no forks). The input is 8 routing bits, two per output port, and 4 connectivity bits, one per output port
 *
-* $Revision: 25 $
-* $Id: LBDR.v 25 2015-11-21 13:19:20Z ranga $
-* $Date: 2015-11-21 15:19:20 +0200 (Sat, 21 Nov 2015) $
+* $Revision: 34 $
+* $Id: LBDR.v 34 2016-02-15 21:43:28Z ranga $
+* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
 * $Author: ranga $
 *********************/
 
@@ -22,14 +22,14 @@ module LBDR(clk, rst,
   input [7:0] Rxy_rst;
   input [3:0] Cx_rst;
   input [2:0] flit_id;
-  input [3:0] dst_addr, cur_addr_rst;
+  input [(`NODES/2)-1:0] dst_addr, cur_addr_rst;
   
   output reg Nport, Wport, Eport, Sport, Lport;
   
   // Declaring the local variables
   reg [7:0] Rxy;
   reg [3:0] Cx;
-  reg [3:0] cur_addr;
+  reg [(`NODES/2)-1:0] cur_addr;
 
   // Assigning the Routing bits for 8 quadrants
   wire Rne = Rxy[0];
@@ -48,10 +48,10 @@ module LBDR(clk, rst,
   wire Cs = Cx[3];
   
   // Assigning the current and destination for XY co-ordinates
-  wire [1:0] x_cur = cur_addr[1:0];
-  wire [1:0] y_cur = cur_addr[3:2];
-  wire [1:0] x_dst = dst_addr[1:0];
-  wire [1:0] y_dst = dst_addr[3:2];
+  wire [`XAXIS-1 :0] x_cur = cur_addr[0 +: (`XAXIS/2)];
+  wire [`YAXIS-1 :0] y_cur = cur_addr[(`YAXIS/2) +: (`YAXIS/2)];
+  wire [`XAXIS-1 :0] x_dst = dst_addr[0 +: (`XAXIS/2)];
+  wire [`YAXIS-1 :0] y_dst = dst_addr[(`YAXIS/2) +: (`YAXIS/2)];
   
   always @ (posedge clk) begin
     if (rst) begin

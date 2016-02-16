@@ -7,15 +7,15 @@
                 select lines to select the output port for the crossbar switch. 
                 Active high control signals. Reset signal is active high synchronous reset
 *
-* $Revision: 27 $
-* $Id: noc_router_tb.v 27 2015-12-01 22:26:29Z ranga $
-* $Date: 2015-12-02 00:26:29 +0200 (Wed, 02 Dec 2015) $
+* $Revision: 34 $
+* $Id: noc_router_tb.v 34 2016-02-15 21:43:28Z ranga $
+* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
 `include "../include/state_defines.v"
 
-module noc_router_tb();
+module noc_router_tb;
 
 /* 
 
@@ -63,7 +63,7 @@ module noc_router_tb();
   reg                      clk, rst;
   reg [7:0]                Rxy;                                                              // Routing bits set during reset
   reg [3:0]                Cx;                                                               // Connectivity bits set during reset
-  reg [3:0]                cur_addr;                                                         // currrent address of the router set during reset
+  reg [(`NODES/2)-1 : 0]   cur_addr;                                                         // currrent address of the router set during reset
   reg [`DATA_WIDTH-1 : 0]  Ldata_in, Ndata_in, Edata_in, Wdata_in, Sdata_in;                 // Incoming data from PREVIOUS router(NI)
   reg                      Lvalid_in, Nvalid_in, Evalid_in, Wvalid_in, Svalid_in;            // Incoming valid signal from PREVIOUS router(NI)
   reg                      Lready_in, Nready_in, Eready_in, Wready_in, Sready_in;            // Incoming ready signal from NEXT router(NI)
@@ -124,6 +124,15 @@ module noc_router_tb();
     reset(8'b00111100, 4'b1011, 4'b1000); //--NODE8
     Lpkt_gen(12'd7, 4'd11, 4'd8, 8'd5); // East
     #(CYCLE * 5); 
+    reset(8'b00111100, 4'b1111, 4'b0101); //--NODE5
+    fork
+      Npkt_gen(12'd7, 4'd8, 4'd1, 8'd1); // West
+      Epkt_gen(12'd12, 4'd14, 4'd5, 8'd2); // East
+      Wpkt_gen(12'd4, 4'd5, 4'd14, 8'd3); // Local
+      Spkt_gen(12'd20, 4'd3, 4'd12, 8'd4); // East
+      Lpkt_gen(12'd8, 4'd11, 4'd8, 8'd5); // East
+    join
+    #(CYCLE * 25);
     $finish;
   end
 

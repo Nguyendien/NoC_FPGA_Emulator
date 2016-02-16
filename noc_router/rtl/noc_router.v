@@ -7,9 +7,9 @@
                 select lines to select the output port for the crossbar switch. 
                 Active high control signals. Reset signal is active high synchronous reset
 *
-* $Revision: 28 $
-* $Id: noc_router.v 28 2015-12-05 12:38:57Z ranga $
-* $Date: 2015-12-05 14:38:57 +0200 (Sat, 05 Dec 2015) $
+* $Revision: 34 $
+* $Id: noc_router.v 34 2016-02-15 21:43:28Z ranga $
+* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
@@ -28,7 +28,7 @@ module noc_router(clk, rst,
   input                      clk, rst;
   input [7:0]                Rxy;                                                              // Routing bits set during reset                    
   input [3:0]                Cx;                                                               // Connectivity bits set during reset        
-  input [3:0]                cur_addr;                                                         // currrent address of the router set during reset  
+  input [(`NODES/2)-1 : 0]   cur_addr;                                                         // currrent address of the router set during reset  
   input [`DATA_WIDTH-1 : 0]  Ldata_in, Ndata_in, Edata_in, Wdata_in, Sdata_in;                 // Incoming data from PREVIOUS router(NI)
   input                      Lvalid_in, Nvalid_in, Evalid_in, Wvalid_in, Svalid_in;            // Incoming valid signal from PREVIOUS router(NI)
   input                      Lready_in, Nready_in, Eready_in, Wready_in, Sready_in;            // Incoming ready signal from NEXT router(NI)
@@ -44,7 +44,7 @@ module noc_router(clk, rst,
   wire                   Nempty, Eempty, Wempty, Sempty, Lempty;                                               // empty signal from FIFO buffer to LBDR
   wire                   Nfifo_ready_out, Efifo_ready_out, Wfifo_ready_out, Sfifo_ready_out, Lfifo_ready_out;  // FIFO ready signal send to flowcontrol
   wire [2:0]             Nflit_id, Eflit_id, Wflit_id, Sflit_id, Lflit_id;                                     // flit id type from FIFO buffer to LBDR and ARBITER
-  wire [3:0]             Ndst_addr, Edst_addr, Wdst_addr, Sdst_addr, Ldst_addr;                                // destination address from FIFO buffer to LBDR and ARBITER
+  wire [(`NODES/2)-1:0]  Ndst_addr, Edst_addr, Wdst_addr, Sdst_addr, Ldst_addr;                                // destination address from FIFO buffer to LBDR and ARBITER
   wire [11: 0]           Nlength, Elength, Wlength, Slength, Llength;              // packet length sent to arbiter
   
   wire Ninit_rd, Einit_rd, Winit_rd, Sinit_rd, Linit_rd;        //Send the initial read enable signal to FIFO
@@ -70,6 +70,7 @@ module noc_router(clk, rst,
   
   wire [4:0]             Nsel_in, Esel_in, Wsel_in, Ssel_in, Lsel_in;                                                                              // XBAR select signals
   wire [`DATA_WIDTH-1:0] Ndata_out_with_parity, Edata_out_with_parity, Wdata_out_with_parity, Sdata_out_with_parity, Ldata_out_with_parity;        // Output data from XBAR to OUTPUT BUFFER
+  wire                   Nvalidout, Evalidout, Wvalidout, Svalidout, Lvalidout;        // Valid signal to OUTPUT BUFFER
   
   assign Lready_out = Lfifo_ready_out;
   assign Nready_out = Nfifo_ready_out;
@@ -176,18 +177,18 @@ module noc_router(clk, rst,
   arbiter S_ARBITER (clk, rst, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LSfc_ready_out, NSfc_ready_out, ESfc_ready_out, WSfc_ready_out, SSfc_ready_out, Snextstate);
   
   // CROSSBAR SWITCH
-  xbar L_XBAR (Lsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Ldata_out_with_parity);
-  xbar N_XBAR (Nsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Ndata_out_with_parity);
-  xbar E_XBAR (Esel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Edata_out_with_parity);
-  xbar W_XBAR (Wsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Wdata_out_with_parity);
-  xbar S_XBAR (Ssel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Sdata_out_with_parity);
+  xbar L_XBAR (Lsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Ldata_out_with_parity, Lvalidout);
+  xbar N_XBAR (Nsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Ndata_out_with_parity, Nvalidout);
+  xbar E_XBAR (Esel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Edata_out_with_parity, Evalidout);
+  xbar W_XBAR (Wsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Wdata_out_with_parity, Wvalidout);
+  xbar S_XBAR (Ssel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Sdata_out_with_parity, Svalidout);
   
   // OUTPUT BUFFER
-  output_buffer L_OUTPUT_BUFFER (clk, rst, Lready_in, Ldata_out_with_parity, Ldata_out, Lvalid_out);
-  output_buffer N_OUTPUT_BUFFER (clk, rst, Nready_in, Ndata_out_with_parity, Ndata_out, Nvalid_out);
-  output_buffer E_OUTPUT_BUFFER (clk, rst, Eready_in, Edata_out_with_parity, Edata_out, Evalid_out);
-  output_buffer W_OUTPUT_BUFFER (clk, rst, Wready_in, Wdata_out_with_parity, Wdata_out, Wvalid_out);
-  output_buffer S_OUTPUT_BUFFER (clk, rst, Sready_in, Sdata_out_with_parity, Sdata_out, Svalid_out);
+  output_buffer L_OUTPUT_BUFFER (clk, rst, (Lready_in && Lvalidout), Ldata_out_with_parity, Ldata_out, Lvalid_out);
+  output_buffer N_OUTPUT_BUFFER (clk, rst, (Nready_in && Nvalidout), Ndata_out_with_parity, Ndata_out, Nvalid_out);
+  output_buffer E_OUTPUT_BUFFER (clk, rst, (Eready_in && Evalidout), Edata_out_with_parity, Edata_out, Evalid_out);
+  output_buffer W_OUTPUT_BUFFER (clk, rst, (Wready_in && Wvalidout), Wdata_out_with_parity, Wdata_out, Wvalid_out);
+  output_buffer S_OUTPUT_BUFFER (clk, rst, (Sready_in && Svalidout), Sdata_out_with_parity, Sdata_out, Svalid_out);
  
   // PARITY CHECKER
   //parity_checkers PARITY_CHK0 (Nbuffer_data_out, Ebuffer_data_out, Wbuffer_data_out, Sbuffer_data_out, Lbuffer_data_out, Nparity_err, Eparity_err, Wparity_err, Sparity_err, Lparity_err);

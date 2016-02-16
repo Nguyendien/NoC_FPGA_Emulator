@@ -2,29 +2,48 @@
 * Filename:     xbar.v
 * Description:  5 : 1 multiplexer to select one of the input data through select lines from the arbiter and assigning it to the output port
 *
-* $Revision: 25 $
-* $Id: xbar.v 25 2015-11-21 13:19:20Z ranga $
-* $Date: 2015-11-21 15:19:20 +0200 (Sat, 21 Nov 2015) $
+* $Revision: 34 $
+* $Id: xbar.v 34 2016-02-15 21:43:28Z ranga $
+* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
 `include "../include/state_defines.v"
 
-module xbar(sel_in, N_datain, E_datain, W_datain, S_datain, L_datain, dataout);
+module xbar(sel_in, N_datain, E_datain, W_datain, S_datain, L_datain, dataout, validout);
   
   input [4 : 0]             sel_in;
   input [`DATA_WIDTH-1 : 0] N_datain, E_datain, W_datain, S_datain, L_datain;
   
   output reg [`DATA_WIDTH-1 : 0] dataout;
+  output reg                     validout;
   
-  always @ (sel_in, N_datain, E_datain, W_datain, S_datain, L_datain, dataout) begin
+  always @ (sel_in, N_datain, E_datain, W_datain, S_datain, L_datain, dataout, validout) begin
     case (sel_in)
-      `N_PORT : dataout = N_datain;
-      `E_PORT : dataout = E_datain;
-      `W_PORT : dataout = W_datain;
-      `S_PORT : dataout = S_datain;
-      `L_PORT : dataout = L_datain;
-      default : dataout = 0;
+      `N_PORT : begin
+        dataout  = N_datain;
+        validout = 1'b1;
+      end
+      `E_PORT : begin
+        dataout  = E_datain;
+        validout = 1'b1;
+      end
+      `W_PORT : begin
+        dataout  = W_datain;
+        validout = 1'b1;
+      end
+      `S_PORT : begin
+        dataout  = S_datain;
+        validout = 1'b1;
+      end
+      `L_PORT : begin
+        dataout  = L_datain;
+        validout = 1'b1;
+      end
+      default : begin
+        dataout  = 'd0;
+        validout = 1'b0;
+      end
     endcase
   end
   

@@ -3,13 +3,13 @@
 * Description:  Testbench for Flow control mechanism is established between the INPUT and OUTPUT FIFO so that input FIFO does not receive any further data 
                 for the particular output direction if it is not ready to accept data
 *
-* $Revision: 27 $
-* $Id: flowcontrol_tb.v 27 2015-12-01 22:26:29Z ranga $
-* $Date: 2015-12-02 00:26:29 +0200 (Wed, 02 Dec 2015) $
+* $Revision: 32 $
+* $Id: flowcontrol_tb.v 32 2016-02-05 18:19:58Z ranga $
+* $Date: 2016-02-05 20:19:58 +0200 (Fri, 05 Feb 2016) $
 * $Author: ranga $
 *********************/
 
-module flowcontrol_tb();
+module flowcontrol_tb;
   
   // Declaring the port variables for DUT
   reg   rst;

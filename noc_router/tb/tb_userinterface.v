@@ -2,13 +2,13 @@
 * Filename:     tb_userinterface.v
 * Description:  Test bench of Arbiter decides which of the Input port buffer gets the highest priority among the others. Arbitration is based on Round-Robin Scheduling policy with the last served as least priority. Priority direction Local, North, East, South, West
 *
-* $Revision: 26 $
-* $Id: tb_userinterface.v 26 2015-11-22 19:24:28Z ranga $
-* $Date: 2015-11-22 21:24:28 +0200 (Sun, 22 Nov 2015) $
+* $Revision: 32 $
+* $Id: tb_userinterface.v 32 2016-02-05 18:19:58Z ranga $
+* $Date: 2016-02-05 20:19:58 +0200 (Fri, 05 Feb 2016) $
 * $Author: ranga $
 *********************/
 
-module tb_userinterface();
+module tb_userinterface;
 
   // Declaring the port variables for DUT
   reg bfm_clk;

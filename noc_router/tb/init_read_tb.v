@@ -4,14 +4,14 @@
                 ready_out, empty signals are used for hadnshaking and flow control
                 Separate modules implemented for flow_control, register, output mux
 *
-* $Revision: 28 $
-* $Id: init_read_tb.v 28 2015-12-05 12:38:57Z ranga $
-* $Date: 2015-12-05 14:38:57 +0200 (Sat, 05 Dec 2015) $
+* $Revision: 32 $
+* $Id: init_read_tb.v 32 2016-02-05 18:19:58Z ranga $
+* $Date: 2016-02-05 20:19:58 +0200 (Fri, 05 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
 
-module init_read_tb();
+module init_read_tb;
   
   // Declaring the port variables for DUT
   reg         clk, rst;

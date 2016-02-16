@@ -2,15 +2,15 @@
 * Filename:     LBDR_tb.v
 * Description:  Testbench of LBDR with minimal support only (no deroutes and no forks). The reg is 8 routing bits, two per wire port, and 4 connectivity bits, one per wire port
 *
-* $Revision: 25 $
-* $Id: LBDR_tb.v 25 2015-11-21 13:19:20Z ranga $
-* $Date: 2015-11-21 15:19:20 +0200 (Sat, 21 Nov 2015) $
+* $Revision: 32 $
+* $Id: LBDR_tb.v 32 2016-02-05 18:19:58Z ranga $
+* $Date: 2016-02-05 20:19:58 +0200 (Fri, 05 Feb 2016) $
 * $Author: ranga $
 *********************/
 
 `include "../include/parameters.v"
 
-module LBDR_tb();
+module LBDR_tb;
 
   // Declaring the port variables for DUT
   reg clk, rst;
