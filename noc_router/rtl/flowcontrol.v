@@ -3,9 +3,9 @@
 * Description:  Flow control mechanism is established between the INPUT and OUTPUT FIFO so that input FIFO does not receive any further data 
                 for the particular output direction if it is not ready to accept data
 *
-* $Revision: 27 $
-* $Id: flowcontrol.v 27 2015-12-01 22:26:29Z ranga $
-* $Date: 2015-12-02 00:26:29 +0200 (Wed, 02 Dec 2015) $
+* $Revision: 38 $
+* $Id: flowcontrol.v 38 2016-02-20 17:24:53Z ranga $
+* $Date: 2016-02-20 19:24:53 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
 
@@ -31,18 +31,58 @@ module flowcontrol(rst,
   assign Sready = Sready_in && Sport;
   
   // Ready_out is asserted whenever the selected output port and the corresponding output FIFO is also ready enough
-  always @(rst, Lready, Nready, Eready, Wready, Sready) begin
+  always @(rst, Lready, Nready, Eready, Wready, Sready, Lready_out, Nready_out, Eready_out, Wready_out, Sready_out) begin
     if (rst) begin
-      {Lready_out, Nready_out, Eready_out, Wready_out, Sready_out} <= 1'b0;
+      Lready_out <= 1'b0;
+      Nready_out <= 1'b0;
+      Eready_out <= 1'b0;
+      Wready_out <= 1'b0;
+      Sready_out <= 1'b0;
     end
     else begin
       case(1'b1)
-        Lready : Lready_out <= 1'b1;
-        Nready : Nready_out <= 1'b1;
-        Eready : Eready_out <= 1'b1;
-        Wready : Wready_out <= 1'b1;
-        Sready : Sready_out <= 1'b1;
-        default: {Lready_out, Nready_out, Eready_out, Wready_out, Sready_out} <= 1'b0;
+        Lready : begin
+          Lready_out <= 1'b1;
+          Nready_out <= 1'b0;
+          Eready_out <= 1'b0;
+          Wready_out <= 1'b0;
+          Sready_out <= 1'b0;
+        end
+        Nready : begin
+          Lready_out <= 1'b0;
+          Nready_out <= 1'b1;
+          Eready_out <= 1'b0;
+          Wready_out <= 1'b0;
+          Sready_out <= 1'b0;
+        end
+        Eready : begin
+          Lready_out <= 1'b0;
+          Nready_out <= 1'b0;
+          Eready_out <= 1'b1;
+          Wready_out <= 1'b0;
+          Sready_out <= 1'b0;
+        end
+        Wready : begin
+          Lready_out <= 1'b0;
+          Nready_out <= 1'b0;
+          Eready_out <= 1'b0;
+          Wready_out <= 1'b1;
+          Sready_out <= 1'b0;
+        end
+        Sready : begin
+          Lready_out <= 1'b0;
+          Nready_out <= 1'b0;
+          Eready_out <= 1'b0;
+          Wready_out <= 1'b0;
+          Sready_out <= 1'b1;
+        end
+        default: begin
+          Lready_out <= 1'b0;
+          Nready_out <= 1'b0;
+          Eready_out <= 1'b0;
+          Wready_out <= 1'b0;
+          Sready_out <= 1'b0;
+        end
       endcase
     end
   end

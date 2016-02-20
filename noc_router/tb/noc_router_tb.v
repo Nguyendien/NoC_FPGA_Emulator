@@ -7,9 +7,9 @@
                 select lines to select the output port for the crossbar switch. 
                 Active high control signals. Reset signal is active high synchronous reset
 *
-* $Revision: 34 $
-* $Id: noc_router_tb.v 34 2016-02-15 21:43:28Z ranga $
-* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
+* $Revision: 36 $
+* $Id: noc_router_tb.v 36 2016-02-20 16:43:26Z ranga $
+* $Date: 2016-02-20 18:43:26 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
@@ -63,7 +63,7 @@ module noc_router_tb;
   reg                      clk, rst;
   reg [7:0]                Rxy;                                                              // Routing bits set during reset
   reg [3:0]                Cx;                                                               // Connectivity bits set during reset
-  reg [(`NODES/2)-1 : 0]   cur_addr;                                                         // currrent address of the router set during reset
+  reg [`AXIS-1 : 0]   cur_addr;                                                         // currrent address of the router set during reset
   reg [`DATA_WIDTH-1 : 0]  Ldata_in, Ndata_in, Edata_in, Wdata_in, Sdata_in;                 // Incoming data from PREVIOUS router(NI)
   reg                      Lvalid_in, Nvalid_in, Evalid_in, Wvalid_in, Svalid_in;            // Incoming valid signal from PREVIOUS router(NI)
   reg                      Lready_in, Nready_in, Eready_in, Wready_in, Sready_in;            // Incoming ready signal from NEXT router(NI)
