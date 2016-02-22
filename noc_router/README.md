@@ -1,23 +1,21 @@
-# NoC Router Version 1 Release (A generic NoC router for 2D NoC without Virtual Channel)
+# NoC Router Version 1 (A generic 2D NoC router without Virtual Channel)
 
-## Authors :
-- Ranganathan Hariharan 
+## Author 
 
--------------------
-For ducmentations please refer to wiki, the Router section.
+Ranganathan Hariharan
+      
+-----------------
+For documentations please refer to wiki for the router!
 
--------------------
+-----------------
 
-Folder "include" : includes all the necessary parameters and constants for the design (in Verilog)
+Folder "include" : includes all the necessary files defining the parameters and constants used in the design (in Verilog)
 
-Folder "rtl" : includes the NoC router design and its components in Verilog 
+Folder "rtl" : includes all the design files for the NoC router in Verilog
 
 Folder "sim" : includes the simulation scripts for ModelSim
 
-Folder "syn" : includes the synthesis scripts for the Router and its components for Synopsys Design Analyzer
+Folder "syn" : includes the scripts for synthesis using Synopsys Design Analyzer
 
-Folder "tb" : includes the test-bench files for testing different router components, the router itself and a 2x2 network of routers (for example sending from router 0 to router 3)
-
--------------------
-
+Folder "tb" : includes the test-bench files in Verilog for different components of the NoC Router
 

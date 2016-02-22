@@ -2,16 +2,16 @@
 * Filename:		  tb_tasks_network.v
 * Description:  TB task required to generate packets for all the direction LOCAL, NORTH, EAST, WEST and SOUTH based on id and also other required tasks.        
 *
-* $Revision: 34 $
-* $Id: tb_tasks_network.v 34 2016-02-15 21:43:28Z ranga $
-* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
+* $Revision: 39 $
+* $Id: tb_tasks_network.v 39 2016-02-20 19:11:39Z ranga $
+* $Date: 2016-02-20 21:11:39 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
 `include "../include/state_defines.v"
   
   // Task to generate reset and assign default settings -- router_id, Rxy, Cx, curr_addr
-  task reset;
+  task automatic reset;
     input [`NODES-1 : 0] id;
     input [7 : 0] Rxy_rst;
     input [3 : 0] Cx_rst;
@@ -33,7 +33,7 @@
     end
   endtask
   
-  task header;
+  task automatic header;
     input [11 : 0]    p_length;           // packet length in terms of # of flits = Header + Body (Payload) + Tail
     input [3 : 0]     d_addr, s_addr;
     input [7 : 0]     p_id;               // packet id
@@ -46,7 +46,7 @@
     end
   endtask
   
-  task payload;
+  task automatic payload;
     output [`DATA_WIDTH-1 : 0] payload_data; 
     begin
       data    = {$random};
@@ -56,7 +56,7 @@
     end
   endtask
   
-  task tail;
+  task automatic tail;
     output [`DATA_WIDTH-1 : 0] tail_data; 
     begin
       data    = {$random};
@@ -69,7 +69,7 @@
   // SINGLE PACKET GENERATION
   // Task to generate SINGLE packet data based on given header length
   // North port Buffer
-  task Npkt_gen;
+  task automatic Npkt_gen;
     input [`NODES-1 : 0] id;
     input [11 : 0]    p_length;           // packet length in terms of # of flits = Header + Body (Payload) + Tail
     input [3 : 0]     d_addr, s_addr;
@@ -117,7 +117,7 @@
   endtask
   
   // East port Buffer
-  task Epkt_gen;
+  task automatic Epkt_gen;
     input [`NODES-1 : 0] id;
     input [11 : 0]    p_length;           // packet length in terms of # of flits = Header + Body (Payload) + Tail
     input [3 : 0]     d_addr, s_addr;
@@ -165,7 +165,7 @@
   endtask
   
   // West port Buffer
-  task Wpkt_gen;
+  task automatic Wpkt_gen;
     input [`NODES-1 : 0] id;
     input [11 : 0]    p_length;           // packet length in terms of # of flits = Header + Body (Payload) + Tail
     input [3 : 0]     d_addr, s_addr;
@@ -213,7 +213,7 @@
   endtask
   
   // South port Buffer
-  task Spkt_gen;
+  task automatic Spkt_gen;
     input [`NODES-1 : 0] id;
     input [11 : 0]    p_length;           // packet length in terms of # of flits = Header + Body (Payload) + Tail
     input [3 : 0]     d_addr, s_addr;
@@ -261,7 +261,7 @@
   endtask
   
   // Local port Buffer
-  task Lpkt_gen;
+  task automatic Lpkt_gen;
     input [`NODES-1 : 0] id;
     input [11 : 0]    p_length;           // packet length in terms of # of flits = Header + Body (Payload) + Tail
     input [3 : 0]     d_addr, s_addr;

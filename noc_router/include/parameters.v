@@ -1,9 +1,9 @@
 /********************
 * Filename:    parameters.v
 * Description: Parameters for Packet FLITS
-* $Revision: 34 $
-* $Id: parameters.v 34 2016-02-15 21:43:28Z ranga $
-* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
+* $Revision: 35 $
+* $Id: parameters.v 35 2016-02-20 16:36:01Z ranga $
+* $Date: 2016-02-20 18:36:01 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
 
@@ -18,6 +18,5 @@
   `define DATA_WIDTH 'd32              // # of data bits with parity
   
   // Network parameters
-  `define XAXIS 'd2         // Change it to 2 for noc_network & 4 for noc_router
-  `define YAXIS 'd2         // Change it to 2 for noc_network & 4 for noc_router
-  `define NODES `XAXIS * `YAXIS
+  `define AXIS 'd2         // Change it to 2 for noc_network & 4 for noc_router
+  `define NODES `AXIS * `AXIS
