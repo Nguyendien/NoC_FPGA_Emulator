@@ -7,9 +7,9 @@
                 select lines to select the output port for the crossbar switch. 
                 Active high control signals. Reset signal is active high synchronous reset
 *
-* $Revision: 36 $
-* $Id: noc_router.v 36 2016-02-20 16:43:26Z ranga $
-* $Date: 2016-02-20 18:43:26 +0200 (Sat, 20 Feb 2016) $
+* $Revision: 34 $
+* $Id: noc_router.v 34 2016-02-15 21:43:28Z ranga $
+* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
@@ -28,7 +28,7 @@ module noc_router(clk, rst,
   input                      clk, rst;
   input [7:0]                Rxy;                                                              // Routing bits set during reset                    
   input [3:0]                Cx;                                                               // Connectivity bits set during reset        
-  input [`AXIS-1 : 0]        cur_addr;                                                         // currrent address of the router set during reset  
+  input [(`NODES/2)-1 : 0]   cur_addr;                                                         // currrent address of the router set during reset  
   input [`DATA_WIDTH-1 : 0]  Ldata_in, Ndata_in, Edata_in, Wdata_in, Sdata_in;                 // Incoming data from PREVIOUS router(NI)
   input                      Lvalid_in, Nvalid_in, Evalid_in, Wvalid_in, Svalid_in;            // Incoming valid signal from PREVIOUS router(NI)
   input                      Lready_in, Nready_in, Eready_in, Wready_in, Sready_in;            // Incoming ready signal from NEXT router(NI)
@@ -44,7 +44,7 @@ module noc_router(clk, rst,
   wire                   Nempty, Eempty, Wempty, Sempty, Lempty;                                               // empty signal from FIFO buffer to LBDR
   wire                   Nfifo_ready_out, Efifo_ready_out, Wfifo_ready_out, Sfifo_ready_out, Lfifo_ready_out;  // FIFO ready signal send to flowcontrol
   wire [2:0]             Nflit_id, Eflit_id, Wflit_id, Sflit_id, Lflit_id;                                     // flit id type from FIFO buffer to LBDR and ARBITER
-  wire [`AXIS-1 : 0]     Ndst_addr, Edst_addr, Wdst_addr, Sdst_addr, Ldst_addr;                                // destination address from FIFO buffer to LBDR and ARBITER
+  wire [(`NODES/2)-1:0]  Ndst_addr, Edst_addr, Wdst_addr, Sdst_addr, Ldst_addr;                                // destination address from FIFO buffer to LBDR and ARBITER
   wire [11: 0]           Nlength, Elength, Wlength, Slength, Llength;              // packet length sent to arbiter
   
   wire Ninit_rd, Einit_rd, Winit_rd, Sinit_rd, Linit_rd;        //Send the initial read enable signal to FIFO

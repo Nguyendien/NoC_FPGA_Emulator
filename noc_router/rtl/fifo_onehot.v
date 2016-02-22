@@ -4,9 +4,9 @@
                 ready_out, empty signals are used for hadnshaking and flow control
                 Separate modules implemented for flow_control, register, output mux
 *
-* $Revision: 38 $
-* $Id: fifo_onehot.v 38 2016-02-20 17:24:53Z ranga $
-* $Date: 2016-02-20 19:24:53 +0200 (Sat, 20 Feb 2016) $
+* $Revision: 33 $
+* $Id: fifo_onehot.v 33 2016-02-05 18:26:01Z ranga $
+* $Date: 2016-02-05 20:26:01 +0200 (Fri, 05 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
@@ -163,7 +163,7 @@ module onehot_mux (mux_input,
   
   genvar i;
   for(i = 0; i < `FIFO_DEPTH; i = i+1) begin
-	assign mux_output = ((sel >> i) & 1 == 1'b1) ? mux_input[(i*`DATA_WIDTH) +: `DATA_WIDTH] : 'dz;
+	assign mux_output = ((sel >> i) & 1 == 1'b1) ? mux_input[(i*`DATA_WIDTH) +: `DATA_WIDTH] : 'z;
   end
   
 endmodule

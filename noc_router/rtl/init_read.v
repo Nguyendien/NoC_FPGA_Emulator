@@ -2,9 +2,9 @@
 * Filename:     init_read.v
 * Description:  To send the read_en signal to FIFO after reset and also after processing 1 whole packet
 *
-* $Revision: 39 $
-* $Id: init_read.v 39 2016-02-20 19:11:39Z ranga $
-* $Date: 2016-02-20 21:11:39 +0200 (Sat, 20 Feb 2016) $
+* $Revision: 28 $
+* $Id: init_read.v 28 2015-12-05 12:38:57Z ranga $
+* $Date: 2015-12-05 14:38:57 +0200 (Sat, 05 Dec 2015) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
@@ -22,12 +22,10 @@ module init_read(clk, rst, empty, flit_id, init_rd);
       init_rd <= 1;
     end
     else begin
-      if(init_rd == 1) begin
-        if(empty == 0) begin
-          init_rd <= 0;
-        end
+      if (init_rd && ~empty) begin
+        init_rd <= 0;
       end
-      else if (flit_id == `TAIL) begin
+      if(flit_id == `TAIL) begin
         init_rd <= 1;
       end
     end

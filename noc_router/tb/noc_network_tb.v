@@ -3,9 +3,9 @@
 * Description:	Testbench for NOC Network Architecture with minimal functionality that contains the data path of 5 port(North, East, West, South, Local) 
                 2x2 Mesh Network
 *
-* $Revision: 39 $
-* $Id: noc_network_tb.v 39 2016-02-20 19:11:39Z ranga $
-* $Date: 2016-02-20 21:11:39 +0200 (Sat, 20 Feb 2016) $
+* $Revision: 34 $
+* $Id: noc_network_tb.v 34 2016-02-15 21:43:28Z ranga $
+* $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
@@ -59,7 +59,7 @@ module noc_network_tb;
   reg                      clk, rst;
   reg [7:0]                Rxy[`NODES-1 : 0];                                                              // Routing bits set during reset
   reg [3:0]                Cx[`NODES-1 : 0];                                                               // Connectivity bits set during reset
-  reg [`AXIS-1 : 0]   cur_addr[`NODES-1 : 0];                                                         // currrent address of the router set during reset
+  reg [(`NODES/2)-1 : 0]   cur_addr[`NODES-1 : 0];                                                         // currrent address of the router set during reset
   reg [`DATA_WIDTH-1 : 0]  Ldata_in[`NODES-1 : 0], Ndata_in[`NODES-1 : 0], Edata_in[`NODES-1 : 0], Wdata_in[`NODES-1 : 0], Sdata_in[`NODES-1 : 0];                 // Incoming data from PREVIOUS router(NI)
   reg                      Lvalid_in[`NODES-1 : 0], Nvalid_in[`NODES-1 : 0], Evalid_in[`NODES-1 : 0], Wvalid_in[`NODES-1 : 0], Svalid_in[`NODES-1 : 0];            // Incoming valid signal from PREVIOUS router(NI)
   reg                      Lready_in[`NODES-1 : 0], Nready_in[`NODES-1 : 0], Eready_in[`NODES-1 : 0], Wready_in[`NODES-1 : 0], Sready_in[`NODES-1 : 0];            // Incoming ready signal from NEXT router(NI)
@@ -144,12 +144,7 @@ module noc_network_tb;
     reset('d1, 8'b00111100, 4'b1100, 4'b0001); //--NODE1
     reset('d2, 8'b00111100, 4'b0011, 4'b0010); //--NODE2
     reset('d3, 8'b00111100, 4'b0101, 4'b0011); //--NODE3
-    Lpkt_gen('d3, 12'd5, 4'd0, 4'd3, 8'd5); // West
-    Lpkt_gen('d2, 12'd6, 4'd0, 4'd2, 8'd6); // North
-    fork
-      Lpkt_gen('d0, 12'd4, 4'd3, 4'd0, 8'd4); // East
-      Lpkt_gen('d2, 12'd7, 4'd0, 4'd2, 8'd7); // North
-    join
+    Lpkt_gen('d3, 12'd10, 4'd0, 4'd3, 8'd5); // East
     #(CYCLE * 25);
     $finish;
   end

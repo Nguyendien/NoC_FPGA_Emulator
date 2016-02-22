@@ -6,9 +6,9 @@
               One-hot encoding for state variable
               Output values [5:0]: Output[5:1] -> selection, Output[0] -> idle
 *
-* $Revision: 38 $
-* $Id: arbiter.v 38 2016-02-20 17:24:53Z ranga $
-* $Date: 2016-02-20 19:24:53 +0200 (Sat, 20 Feb 2016) $
+* $Revision: 26 $
+* $Id: arbiter.v 26 2015-11-22 19:24:28Z ranga $
+* $Date: 2015-11-22 21:24:28 +0200 (Sun, 22 Nov 2015) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
@@ -94,9 +94,6 @@ module arbiter(clk, rst,
           else if(Sreq == 1) begin
             nextstate = `GRANT_S;
           end
-          else if(Lreq == 1) begin
-            nextstate = `GRANT_L;
-          end
           else begin
             nextstate = `IDLE;
           end
@@ -119,9 +116,6 @@ module arbiter(clk, rst,
           end
           else if(Lreq == 1) begin
             nextstate = `GRANT_L;
-          end
-          else if(Nreq == 1) begin
-            nextstate = `GRANT_N;
           end
           else begin
             nextstate = `IDLE;
@@ -146,9 +140,6 @@ module arbiter(clk, rst,
           else if(Nreq == 1) begin
             nextstate = `GRANT_N;
           end
-          else if(Ereq == 1) begin
-            nextstate = `GRANT_E;
-          end
           else begin
             nextstate = `IDLE;
           end
@@ -172,9 +163,6 @@ module arbiter(clk, rst,
           else if(Ereq == 1) begin
             nextstate = `GRANT_E;
           end
-          else if(Wreq == 1) begin
-            nextstate = `GRANT_W;
-          end
           else begin
             nextstate = `IDLE;
           end
@@ -197,9 +185,6 @@ module arbiter(clk, rst,
           end
           else if(Wreq == 1) begin
             nextstate = `GRANT_W;
-          end
-          else if(Sreq == 1) begin
-            nextstate = `GRANT_S;
           end
           else begin
             nextstate = `IDLE;

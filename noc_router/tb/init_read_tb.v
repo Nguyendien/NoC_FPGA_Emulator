@@ -1,10 +1,12 @@
 /********************
 * Filename:     init_read_tb.v
-* Description:  Test Bench of INIT_READ module which send the read_en signal to FIFO after reset and also after processing 1 whole packet
+* Description:  Test Bench of FIFO with parameterized data_width and fifo_depth. All controls signals are active high and the reset signal is active high synchronous reset signal
+                ready_out, empty signals are used for hadnshaking and flow control
+                Separate modules implemented for flow_control, register, output mux
 *
-* $Revision: 39 $
-* $Id: init_read_tb.v 39 2016-02-20 19:11:39Z ranga $
-* $Date: 2016-02-20 21:11:39 +0200 (Sat, 20 Feb 2016) $
+* $Revision: 32 $
+* $Id: init_read_tb.v 32 2016-02-05 18:19:58Z ranga $
+* $Date: 2016-02-05 20:19:58 +0200 (Fri, 05 Feb 2016) $
 * $Author: ranga $
 *********************/
 `include "../include/parameters.v"
