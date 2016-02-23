@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date             : Tue Feb 23 13:11:44 2016
+| Date             : Tue Feb 23 18:20:30 2016
 | Host             : fx13.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 | Command          : report_power -file NoC_integration_wrapper_power_routed.rpt -pb NoC_integration_wrapper_power_summary_routed.pb
 | Design           : NoC_integration_wrapper
@@ -46,22 +46,22 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+--------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
-+--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.006 |        3 |       --- |             --- |
-| Slice Logic              |     0.003 |     3114 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1131 |     53200 |            2.13 |
-|   Register               |    <0.001 |     1328 |    106400 |            1.25 |
-|   CARRY4                 |    <0.001 |       46 |     13300 |            0.35 |
-|   LUT as Distributed RAM |    <0.001 |       32 |     17400 |            0.18 |
-|   LUT as Shift Register  |    <0.001 |       66 |     17400 |            0.38 |
-|   Others                 |     0.000 |      225 |       --- |             --- |
-| Signals                  |     0.004 |     2231 |       --- |             --- |
-| PS7                      |     1.529 |        1 |       --- |             --- |
-| Static Power             |     0.158 |          |           |                 |
-| Total                    |     1.699 |          |           |                 |
-+--------------------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.006 |        3 |       --- |             --- |
+| Slice Logic             |     0.003 |     2952 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     1072 |     53200 |            2.02 |
+|   Register              |    <0.001 |     1280 |    106400 |            1.20 |
+|   CARRY4                |    <0.001 |       45 |     13300 |            0.34 |
+|   LUT as Shift Register |    <0.001 |       66 |     17400 |            0.38 |
+|   Others                |     0.000 |      227 |       --- |             --- |
+| Signals                 |     0.004 |     2119 |       --- |             --- |
+| Block RAM               |     0.000 |      0.5 |       140 |            0.36 |
+| PS7                     |     1.529 |        1 |       --- |             --- |
+| Static Power            |     0.158 |          |           |                 |
+| Total                   |     1.699 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.027 |       0.013 |      0.015 |
+| Vccint    |       1.000 |     0.028 |       0.013 |      0.015 |
 | Vccaux    |       1.800 |     0.021 |       0.000 |      0.021 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -148,43 +148,14 @@ Table of Contents
 +--------------------------------------------------------------+-----------+
 | NoC_integration_wrapper                                      |     1.542 |
 |   NoC_integration_i                                          |     1.542 |
-|     NI_0                                                     |     0.001 |
-|       U0                                                     |     0.001 |
+|     NI_0                                                     |    <0.001 |
+|       U0                                                     |    <0.001 |
 |         NI_v1_0_S00_AXI_inst                                 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_0_0 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_1_1 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_2_2 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_3_3 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_4_4 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_5_5 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_6_6 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_7_7 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_0_0 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_1_1 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_2_2 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_3_3 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_4_4 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_5_5 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_6_6 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[1].byte_ram_reg_0_15_7_7 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_0_0 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_1_1 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_2_2 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_3_3 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_4_4 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_5_5 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_6_6 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[2].byte_ram_reg_0_15_7_7 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_0_0 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_1_1 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_2_2 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_3_3 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_4_4 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_5_5 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_6_6 |    <0.001 |
-|           BRAM_GEN[0].BYTE_BRAM_GEN[3].byte_ram_reg_0_15_7_7 |    <0.001 |
+|           uut2                                               |    <0.001 |
+|             FIFO_PE2                                         |    <0.001 |
+|             WRITE_CONTROLLER2                                |     0.000 |
 |         NI_v1_0_S_AXI_INTR_inst                              |    <0.001 |
-|     axi_mem_intercon                                         |     0.010 |
+|     axi_mem_intercon                                         |     0.011 |
 |       m01_couplers                                           |     0.005 |
 |         auto_pc                                              |     0.005 |
 |           inst                                               |     0.005 |
@@ -194,7 +165,7 @@ Table of Contents
 |                 cmd_translator_0                             |    <0.001 |
 |                   incr_cmd_0                                 |    <0.001 |
 |                   wrap_cmd_0                                 |    <0.001 |
-|               RD.r_channel_0                                 |     0.001 |
+|               RD.r_channel_0                                 |     0.002 |
 |                 rd_data_fifo_0                               |    <0.001 |
 |                 transaction_fifo_0                           |    <0.001 |
 |               SI_REG                                         |     0.002 |
@@ -212,9 +183,9 @@ Table of Contents
 |                 bresp_fifo_0                                 |    <0.001 |
 |       s00_couplers                                           |     0.000 |
 |         auto_pc                                              |     0.000 |
-|       xbar                                                   |     0.005 |
-|         inst                                                 |     0.005 |
-|           gen_samd.crossbar_samd                             |     0.005 |
+|       xbar                                                   |     0.006 |
+|         inst                                                 |     0.006 |
+|           gen_samd.crossbar_samd                             |     0.006 |
 |             addr_arbiter_ar                                  |    <0.001 |
 |             addr_arbiter_aw                                  |    <0.001 |
 |             gen_decerr_slave.decerr_slave_inst               |    <0.001 |
@@ -227,9 +198,9 @@ Table of Contents
 |             gen_master_slots[2].reg_slice_mi                 |    <0.001 |
 |               b_pipe                                         |    <0.001 |
 |               r_pipe                                         |    <0.001 |
-|             gen_slave_slots[0].gen_si_read.si_transactor_ar  |    <0.001 |
+|             gen_slave_slots[0].gen_si_read.si_transactor_ar  |     0.001 |
 |               gen_multi_thread.arbiter_resp_inst             |    <0.001 |
-|             gen_slave_slots[0].gen_si_write.si_transactor_aw |     0.001 |
+|             gen_slave_slots[0].gen_si_write.si_transactor_aw |     0.002 |
 |               gen_multi_thread.arbiter_resp_inst             |    <0.001 |
 |             gen_slave_slots[0].gen_si_write.splitter_aw_si   |    <0.001 |
 |             gen_slave_slots[0].gen_si_write.wdata_router_w   |    <0.001 |

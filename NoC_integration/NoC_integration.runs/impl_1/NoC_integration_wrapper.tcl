@@ -44,7 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set rc [catch {
@@ -53,20 +52,20 @@ set rc [catch {
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
-  set_property webtalk.parent_dir /home/INTRA/karl.janson/NoC_integration/NoC_integration.cache/wt [current_project]
-  set_property parent.project_path /home/INTRA/karl.janson/NoC_integration/NoC_integration.xpr [current_project]
+  set_property webtalk.parent_dir /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.cache/wt [current_project]
+  set_property parent.project_path /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.xpr [current_project]
   set_property ip_repo_paths {
-  /home/INTRA/karl.janson/NoC_integration/NoC_integration.cache/ip
-  /home/INTRA/karl.janson/ip_repo/NI_1.0
+  /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.cache/ip
+  /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/ip_repo
 } [current_project]
-  set_property ip_output_repo /home/INTRA/karl.janson/NoC_integration/NoC_integration.cache/ip [current_project]
-  add_files -quiet /home/INTRA/karl.janson/NoC_integration/NoC_integration.runs/synth_1/NoC_integration_wrapper.dcp
-  read_xdc -ref NoC_integration_processing_system7_0_0 -cells inst /home/INTRA/karl.janson/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files /home/INTRA/karl.janson/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xdc]
-  read_xdc -prop_thru_buffers -ref NoC_integration_rst_processing_system7_0_100M_0 /home/INTRA/karl.janson/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0_board.xdc
-  set_property processing_order EARLY [get_files /home/INTRA/karl.janson/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0_board.xdc]
-  read_xdc -ref NoC_integration_rst_processing_system7_0_100M_0 /home/INTRA/karl.janson/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xdc
-  set_property processing_order EARLY [get_files /home/INTRA/karl.janson/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xdc]
+  set_property ip_output_repo /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.cache/ip [current_project]
+  add_files -quiet /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/NoC_integration_wrapper.dcp
+  read_xdc -ref NoC_integration_processing_system7_0_0 -cells inst /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref NoC_integration_rst_processing_system7_0_100M_0 /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0_board.xdc
+  set_property processing_order EARLY [get_files /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0_board.xdc]
+  read_xdc -ref NoC_integration_rst_processing_system7_0_100M_0 /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xdc
+  set_property processing_order EARLY [get_files /home/INTRA/karl.janson/empty/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xdc]
   link_design -top NoC_integration_wrapper -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]

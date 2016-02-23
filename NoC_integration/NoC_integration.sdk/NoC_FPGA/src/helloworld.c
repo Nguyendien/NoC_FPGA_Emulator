@@ -58,22 +58,27 @@ int main()
     init_platform();
     print("+++++++++++++++++++++++++++++++++++++++++++++");
     print("Hello World\n\r");
-    u32 dataIn = 42;
+    u32 dataIn = 70;
     u32 dataOut = 0;
 
-    /*printf("Sending data back from IP...\n");
-    //dataOut = Xil_In32(XPAR_NI_0_S00_AXI_BASEADDR);
-    dataOut = NI_mReadMemory(XPAR_NI_0_S00_AXI_BASEADDR);
-    printf("Data received from IP: %lu\n", dataOut);*/
+    int i;
 
-    printf("Sending data to IP: %lu\n", dataIn);
-    //xil_Out32(XPAR_NI_0_S00_AXI_BASEADDR, (u32)dataIn);
-    NI_mWriteMemory(XPAR_NI_0_S00_AXI_BASEADDR, dataIn);
-    printf("Sending data back from IP...\n");
-    //dataOut = Xil_In32(XPAR_NI_0_S00_AXI_BASEADDR);
-    dataOut = NI_mReadMemory(XPAR_NI_0_S00_AXI_BASEADDR);
-    printf("Data received from IP: %lu\n", dataOut);
+    for (i=0; i<20; i++){
+		/*printf("Sending data back from IP...\n");
+		//dataOut = Xil_In32(XPAR_NI_0_S00_AXI_BASEADDR);
+		dataOut = NI_mReadMemory(XPAR_NI_0_S00_AXI_BASEADDR);
+		printf("Data received from IP: %lu\n", dataOut);*/
 
+		printf("Sending data to IP: %lu\n", dataIn);
+		//xil_Out32(XPAR_NI_0_S00_AXI_BASEADDR, (u32)dataIn);
+		NI_mWriteMemory(XPAR_NI_0_S00_AXI_BASEADDR, dataIn);
+		printf("Sending data back from IP...\n");
+		//dataOut = Xil_In32(XPAR_NI_0_S00_AXI_BASEADDR);
+		dataOut = NI_mReadMemory(XPAR_NI_0_S00_AXI_BASEADDR);
+		printf("Data received from IP: %lu\n", dataOut);
+
+		print("================");
+		}
     cleanup_platform();
     return 0;
 }
