@@ -254,11 +254,11 @@ architecture arch_imp of NI_v1_0_S00_AXI is
 begin
 	-- I/O Connections assignments
 
- --                     -----                                 -----                        
- --     PE_WRITE   --> |     | ---NI2R_DATA  --> R2NI_DATA-->|     | -- NI2PE_DATA-->       
- --     PE2NI_DATA --> |PE2NI| ---NI2R_WRITE -->  R_WRITE -->|NI2PE| -- NI2PE_WRITE-->     
- --    <--NI2PE_READY--|     | <--- R_READY <-- NI2R_READY-- |     | <-- PE_READY          
- --                     -----                                 -----                        
+--     AXI Bus	   		    -----                                 -----                             AXI Bus
+-- S_AXI_WVALID    -- PE_WRITE --> |     | ---NI2R_DATA  --> R2NI_DATA-->|     | -- NI2PE_DATA--> ------- S_AXI_RDATA
+-- S_AXI_WDATA   -- PE2NI_DATA --> |PE2NI| ---NI2R_WRITE -->  R_WRITE -->|NI2PE| -- NI2PE_WRITE--> ------ S_AXI_RVALID
+-- S_AXI_AWREADY  <-- NI2PE_READY--|     | <--- R_READY <-- NI2R_READY-- |     | <-- PE_READY  ---------- S_AXI_RREADY
+--         	         	    -----                                 -----                        
                
       uut1 : PE2NI_RNI port map(
                 PE_WRITE    => axi_wready and S_AXI_WVALID,
