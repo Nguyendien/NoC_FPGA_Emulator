@@ -26,4 +26,5 @@ In case you need something to be implemented please conact: siavoosh[AT]ati[DOT]
 ----------
 For ducmentations please refer to wiki!
 
+Check our page at: http://siavooshpayandehazad.github.io/NoC_FPGA_Emulator
  
