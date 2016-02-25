@@ -1,6 +1,6 @@
 # NoC FPGA Emulator
 
-## Authors (in alphabetic order):
+## Authors (in alphabetical order of last name):
 - Martin Dida 
 - Nevin George
 - Vineeth Govind 
