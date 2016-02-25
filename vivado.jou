@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Feb 25 13:29:27 2016
-# Process ID: 20861
+# Start of session at: Thu Feb 25 15:02:13 2016
+# Process ID: 22551
 # Log file: /home/kjans/pc/NoC_FPGA_Emulator/vivado.log
 # Journal file: /home/kjans/pc/NoC_FPGA_Emulator/vivado.jou
 #-----------------------------------------------------------
@@ -12,6 +12,23 @@ open_project /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.xp
 open_bd_design {/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/NoC_integration.bd}
 ipx::edit_ip_in_project -upgrade true -name NI_v1_0_project -directory /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.tmp/NI_v1_0_project /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/ip_repo/NI_1.0/component.xml
 update_compile_order -fileset sim_1
-close_project
-ipx::edit_ip_in_project -upgrade true -name NI_v1_0_project -directory /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.tmp/NI_v1_0_project /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/ip_repo/NI_1.0/component.xml
-update_compile_order -fileset sim_1
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv noc.ttu.ee:noc:NI:1.0 [get_ips  NoC_integration_NI_0_0]
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file copy -force /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/impl_1/NoC_integration_wrapper.sysdef /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf
+
+launch_sdk -workspace /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk -hwspec /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf
+file copy -force /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/impl_1/NoC_integration_wrapper.sysdef /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf
+
+launch_sdk -workspace /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk -hwspec /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf
+file copy -force /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/impl_1/NoC_integration_wrapper.sysdef /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf
+
+launch_sdk -workspace /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk -hwspec /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf

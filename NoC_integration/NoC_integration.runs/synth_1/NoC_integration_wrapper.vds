@@ -2,8 +2,8 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Thu Feb 25 13:01:28 2016
-# Process ID: 14144
+# Start of session at: Thu Feb 25 15:04:27 2016
+# Process ID: 22908
 # Log file: /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/NoC_integration_wrapper.vds
 # Journal file: /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
@@ -17,9 +17,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -56 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 966.957 ; gain = 214.305 ; free physical = 67808 ; free virtual = 387291
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 966.961 ; gain = 214.305 ; free physical = 67497 ; free virtual = 387646
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-1565] actual for formal port pe_write is neither a static name nor a globally static expression [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:264]
+WARNING: [Synth 8-1565] actual for formal port pe_write is neither a static name nor a globally static expression [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:264]
 INFO: [Synth 8-638] synthesizing module 'NoC_integration_wrapper' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd:40]
 INFO: [Synth 8-3491] module 'NoC_integration' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration.vhd:1831' bound to instance 'NoC_integration_i' of component 'NoC_integration' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd:67]
 INFO: [Synth 8-638] synthesizing module 'NoC_integration' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration.vhd:1861]
@@ -41,8 +41,8 @@ INFO: [Synth 8-638] synthesizing module 'NoC_integration_NI_0_0' [/home/kjans/pc
 	Parameter C_INTR_ACTIVE_STATE bound to: 32'b11111111111111111111111111111111 
 	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
 	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'NI_v1_0' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0.vhd:5' bound to instance 'U0' of component 'NI_v1_0' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_NI_0_0/synth/NoC_integration_NI_0_0.vhd:286]
-INFO: [Synth 8-638] synthesizing module 'NI_v1_0' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0.vhd:113]
+INFO: [Synth 8-3491] module 'NI_v1_0' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0.vhd:5' bound to instance 'U0' of component 'NI_v1_0' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_NI_0_0/synth/NoC_integration_NI_0_0.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'NI_v1_0' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0.vhd:113]
 	Parameter C_S00_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
@@ -66,8 +66,8 @@ INFO: [Synth 8-638] synthesizing module 'NI_v1_0' [/home/kjans/pc/NoC_FPGA_Emula
 	Parameter C_S_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'NI_v1_0_S00_AXI' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:5' bound to instance 'NI_v1_0_S00_AXI_inst' of component 'NI_v1_0_S00_AXI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0.vhd:216]
-INFO: [Synth 8-638] synthesizing module 'NI_v1_0_S00_AXI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:168]
+INFO: [Synth 8-3491] module 'NI_v1_0_S00_AXI' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:5' bound to instance 'NI_v1_0_S00_AXI_inst' of component 'NI_v1_0_S00_AXI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'NI_v1_0_S00_AXI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:168]
 	Parameter C_S_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
@@ -76,28 +76,28 @@ INFO: [Synth 8-638] synthesizing module 'NI_v1_0_S00_AXI' [/home/kjans/pc/NoC_FP
 	Parameter C_S_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_S_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'PE2NI_RNI' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/PE2NI_RNI.vhd:8' bound to instance 'uut1' of component 'PE2NI_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:263]
-INFO: [Synth 8-638] synthesizing module 'PE2NI_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/PE2NI_RNI.vhd:21]
-INFO: [Synth 8-3491] module 'PE2NIfsm' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Writefsm.vhd:6' bound to instance 'WRITE_CONTROLLER1' of component 'PE2NIfsm' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/PE2NI_RNI.vhd:79]
-INFO: [Synth 8-638] synthesizing module 'PE2NIfsm' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Writefsm.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'PE2NIfsm' (1#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Writefsm.vhd:18]
-INFO: [Synth 8-3491] module 'FIFO' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Fiforam.vhd:5' bound to instance 'FIFO_PE1' of component 'FIFO' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/PE2NI_RNI.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'FIFO' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Fiforam.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'FIFO' (2#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Fiforam.vhd:19]
-INFO: [Synth 8-3491] module 'NI2RFSM' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Readfsm.vhd:6' bound to instance 'READ_CONTROLLER1' of component 'NI2RFSM' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/PE2NI_RNI.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'NI2RFSM' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Readfsm.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'NI2RFSM' (3#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Readfsm.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'PE2NI_RNI' (4#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/PE2NI_RNI.vhd:21]
-INFO: [Synth 8-3491] module 'NI2PE_RNI' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI2PE_RNI.vhd:8' bound to instance 'uut2' of component 'NI2PE_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:274]
-INFO: [Synth 8-638] synthesizing module 'NI2PE_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI2PE_RNI.vhd:21]
-INFO: [Synth 8-3491] module 'PE2NIfsm' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Writefsm.vhd:6' bound to instance 'WRITE_CONTROLLER2' of component 'PE2NIfsm' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI2PE_RNI.vhd:96]
-INFO: [Synth 8-3491] module 'FIFO' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Fiforam.vhd:5' bound to instance 'FIFO_PE2' of component 'FIFO' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI2PE_RNI.vhd:99]
-INFO: [Synth 8-3491] module 'NI2RFSM' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Readfsm.vhd:6' bound to instance 'READ_CONTROLLER2' of component 'NI2RFSM' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI2PE_RNI.vhd:102]
-INFO: [Synth 8-256] done synthesizing module 'NI2PE_RNI' (5#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI2PE_RNI.vhd:21]
-WARNING: [Synth 8-3848] Net axi_buser in module/entity NI_v1_0_S00_AXI does not have driver. [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:200]
-WARNING: [Synth 8-3848] Net axi_rdata in module/entity NI_v1_0_S00_AXI does not have driver. [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:204]
-WARNING: [Synth 8-3848] Net axi_ruser in module/entity NI_v1_0_S00_AXI does not have driver. [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:207]
-INFO: [Synth 8-256] done synthesizing module 'NI_v1_0_S00_AXI' (6#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S00_AXI.vhd:168]
+INFO: [Synth 8-3491] module 'PE2NI_RNI' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/PE2NI_RNI.vhd:8' bound to instance 'uut1' of component 'PE2NI_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'PE2NI_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/PE2NI_RNI.vhd:21]
+INFO: [Synth 8-3491] module 'PE2NIfsm' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Writefsm.vhd:6' bound to instance 'WRITE_CONTROLLER1' of component 'PE2NIfsm' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/PE2NI_RNI.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'PE2NIfsm' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Writefsm.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'PE2NIfsm' (1#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Writefsm.vhd:18]
+INFO: [Synth 8-3491] module 'FIFO' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Fiforam.vhd:5' bound to instance 'FIFO_PE1' of component 'FIFO' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/PE2NI_RNI.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'FIFO' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Fiforam.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'FIFO' (2#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Fiforam.vhd:19]
+INFO: [Synth 8-3491] module 'NI2RFSM' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Readfsm.vhd:6' bound to instance 'READ_CONTROLLER1' of component 'NI2RFSM' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/PE2NI_RNI.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'NI2RFSM' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Readfsm.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'NI2RFSM' (3#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Readfsm.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'PE2NI_RNI' (4#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/PE2NI_RNI.vhd:21]
+INFO: [Synth 8-3491] module 'NI2PE_RNI' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI2PE_RNI.vhd:8' bound to instance 'uut2' of component 'NI2PE_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:274]
+INFO: [Synth 8-638] synthesizing module 'NI2PE_RNI' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI2PE_RNI.vhd:21]
+INFO: [Synth 8-3491] module 'PE2NIfsm' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Writefsm.vhd:6' bound to instance 'WRITE_CONTROLLER2' of component 'PE2NIfsm' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI2PE_RNI.vhd:96]
+INFO: [Synth 8-3491] module 'FIFO' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Fiforam.vhd:5' bound to instance 'FIFO_PE2' of component 'FIFO' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI2PE_RNI.vhd:99]
+INFO: [Synth 8-3491] module 'NI2RFSM' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Readfsm.vhd:6' bound to instance 'READ_CONTROLLER2' of component 'NI2RFSM' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI2PE_RNI.vhd:102]
+INFO: [Synth 8-256] done synthesizing module 'NI2PE_RNI' (5#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI2PE_RNI.vhd:21]
+WARNING: [Synth 8-3848] Net axi_buser in module/entity NI_v1_0_S00_AXI does not have driver. [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:200]
+WARNING: [Synth 8-3848] Net axi_rdata in module/entity NI_v1_0_S00_AXI does not have driver. [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:204]
+WARNING: [Synth 8-3848] Net axi_ruser in module/entity NI_v1_0_S00_AXI does not have driver. [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:207]
+INFO: [Synth 8-256] done synthesizing module 'NI_v1_0_S00_AXI' (6#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S00_AXI.vhd:168]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
@@ -105,8 +105,8 @@ INFO: [Synth 8-256] done synthesizing module 'NI_v1_0_S00_AXI' (6#1) [/home/kjan
 	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
 	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
 	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'NI_v1_0_S_AXI_INTR' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S_AXI_INTR.vhd:5' bound to instance 'NI_v1_0_S_AXI_INTR_inst' of component 'NI_v1_0_S_AXI_INTR' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0.vhd:277]
-INFO: [Synth 8-638] synthesizing module 'NI_v1_0_S_AXI_INTR' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S_AXI_INTR.vhd:98]
+INFO: [Synth 8-3491] module 'NI_v1_0_S_AXI_INTR' declared at '/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S_AXI_INTR.vhd:5' bound to instance 'NI_v1_0_S_AXI_INTR_inst' of component 'NI_v1_0_S_AXI_INTR' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'NI_v1_0_S_AXI_INTR' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S_AXI_INTR.vhd:98]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter C_NUM_OF_INTR bound to: 1 - type: integer 
@@ -114,8 +114,8 @@ INFO: [Synth 8-638] synthesizing module 'NI_v1_0_S_AXI_INTR' [/home/kjans/pc/NoC
 	Parameter C_INTR_ACTIVE_STATE bound to: -1 - type: integer 
 	Parameter C_IRQ_SENSITIVITY bound to: 1 - type: integer 
 	Parameter C_IRQ_ACTIVE_STATE bound to: 1 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'NI_v1_0_S_AXI_INTR' (7#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0_S_AXI_INTR.vhd:98]
-INFO: [Synth 8-256] done synthesizing module 'NI_v1_0' (8#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/NI_v1_0.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'NI_v1_0_S_AXI_INTR' (7#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0_S_AXI_INTR.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'NI_v1_0' (8#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/NI_v1_0.vhd:113]
 INFO: [Synth 8-256] done synthesizing module 'NoC_integration_NI_0_0' (9#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_NI_0_0/synth/NoC_integration_NI_0_0.vhd:124]
 INFO: [Synth 8-113] binding component instance 'VCC' to cell 'VCC' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration.vhd:2238]
 INFO: [Synth 8-638] synthesizing module 'NoC_integration_axi_mem_intercon_0' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration.vhd:1067]
@@ -2534,7 +2534,7 @@ INFO: [Synth 8-256] done synthesizing module 'NoC_integration_rst_processing_sys
 INFO: [Synth 8-256] done synthesizing module 'NoC_integration' (62#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration.vhd:1861]
 INFO: [Synth 8-256] done synthesizing module 'NoC_integration_wrapper' (63#1) [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd:40]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1117.242 ; gain = 364.590 ; free physical = 67653 ; free virtual = 387138
+Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1117.246 ; gain = 364.590 ; free physical = 67342 ; free virtual = 387493
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2544,7 +2544,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1117.242 ; gain = 364.590 ; free physical = 67653 ; free virtual = 387138
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1117.246 ; gain = 364.590 ; free physical = 67342 ; free virtual = 387493
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2572,16 +2572,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1408.266 ; gain = 1.000 ; free physical = 67522 ; free virtual = 387007
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1408.270 ; gain = 1.000 ; free physical = 67224 ; free virtual = 387374
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67520 ; free virtual = 387005
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67222 ; free virtual = 387373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67520 ; free virtual = 387005
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67222 ; free virtual = 387373
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2596,10 +2596,10 @@ Applied set_property DONT_TOUCH = true for NoC_integration_i/axi_mem_intercon/xb
 Applied set_property DONT_TOUCH = true for NoC_integration_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for NoC_integration_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67520 ; free virtual = 387006
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67222 ; free virtual = 387373
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'ni2pe_readyout_reg' into 'wr_en_reg' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Writefsm.vhd:32]
-INFO: [Synth 8-4471] merging register 'ni_read_ready_sig_reg' into 'read_fi_ni_sig_reg' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/2a1472ea/hdl/Readfsm.vhd:31]
+INFO: [Synth 8-4471] merging register 'ni2pe_readyout_reg' into 'wr_en_reg' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Writefsm.vhd:32]
+INFO: [Synth 8-4471] merging register 'ni_read_ready_sig_reg' into 'read_fi_ni_sig_reg' [/home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/ipshared/noc.ttu.ee/ni_v1_0/9684d24f/hdl/Readfsm.vhd:31]
 INFO: [Synth 8-5544] ROM "intr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "read_cs" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s_axi_rlast_i" won't be mapped to RAM because it is too sparse
@@ -2624,7 +2624,7 @@ INFO: [Synth 8-5562] The signal Memory_reg is implemented as block RAM but is be
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_axic_reg_srl_fifo'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67506 ; free virtual = 386991
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67208 ; free virtual = 387359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3118,7 +3118,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67506 ; free virtual = 386991
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67208 ; free virtual = 387359
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -3127,9 +3127,9 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b
 INFO: [Synth 8-5546] ROM "s_axi_rlast_i" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "read_cs" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67506 ; free virtual = 386992
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67208 ; free virtual = 387359
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67506 ; free virtual = 386992
+Finished Parallel Reinference  : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67208 ; free virtual = 387359
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -3158,16 +3158,16 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67479 ; free virtual = 386964
+Finished Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67191 ; free virtual = 387342
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67479 ; free virtual = 386964
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67191 ; free virtual = 387342
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1408.266 ; gain = 655.613 ; free physical = 67479 ; free virtual = 386964
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 1408.270 ; gain = 655.613 ; free physical = 67191 ; free virtual = 387342
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -3175,10 +3175,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 1523.250 ; gain = 770.598 ; free physical = 67279 ; free virtual = 386764
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 1522.254 ; gain = 769.598 ; free physical = 66992 ; free virtual = 387144
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:05 . Memory (MB): peak = 1541.258 ; gain = 788.605 ; free physical = 67260 ; free virtual = 386746
+Finished Timing Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 1540.262 ; gain = 787.605 ; free physical = 66974 ; free virtual = 387125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3291,7 +3291,7 @@ INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[43] ) is unused and will be removed from module NoC_integration_auto_pc_0.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3331,7 +3331,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3344,7 +3344,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3356,13 +3356,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Start Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3498,11 +3498,11 @@ Report Instance Areas:
 |74    |          SEQ_COUNTER                                          |upcnt_n                                                      |    14|
 +------+---------------------------------------------------------------+-------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1576.898 ; gain = 369.914 ; free physical = 67211 ; free virtual = 386697
-Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1576.898 ; gain = 824.246 ; free physical = 67211 ; free virtual = 386697
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:00:58 . Memory (MB): peak = 1574.746 ; gain = 367.758 ; free physical = 66939 ; free virtual = 387090
+Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:10 . Memory (MB): peak = 1574.746 ; gain = 822.090 ; free physical = 66939 ; free virtual = 387090
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -3518,6 +3518,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 469 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1608.914 ; gain = 692.957 ; free physical = 67211 ; free virtual = 386697
-report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1640.934 ; gain = 0.000 ; free physical = 67206 ; free virtual = 386693
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 25 13:02:46 2016...
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 1606.762 ; gain = 690.801 ; free physical = 66939 ; free virtual = 387090
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1638.781 ; gain = 0.000 ; free physical = 66935 ; free virtual = 387087
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 25 15:05:44 2016...
