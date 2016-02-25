@@ -85,3 +85,11 @@
 !*.elf
 !*.bmm
 !*.xmp
+########
+#SDK project files
+#######
+!.project
+!.cproject
+!Makefile
+!*.mdd
+
