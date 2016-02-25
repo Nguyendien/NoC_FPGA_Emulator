@@ -1,5 +1,0 @@
-WORK > default
-default : work
-class > class_FTSM
-class_FTSM : $LIBRARY/lib/FTSM
-Timebase = ns

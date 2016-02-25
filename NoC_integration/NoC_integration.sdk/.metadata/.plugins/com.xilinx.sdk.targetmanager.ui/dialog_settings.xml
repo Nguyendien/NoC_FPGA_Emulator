@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="" key="NoC_integration_wrapper_hw_platform_0-bmmFile"/>
-	<item value="NoC_integration_wrapper.bit" key="NoC_integration_wrapper_hw_platform_0-bitFile"/>
-	<item value="Auto Detect" key="NoC_integration_wrapper_hw_platform_0-device"/>
-	<item value="NoC_integration_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
-	<item value="Local" key="NoC_integration_wrapper_hw_platform_0-target"/>
-</section>
