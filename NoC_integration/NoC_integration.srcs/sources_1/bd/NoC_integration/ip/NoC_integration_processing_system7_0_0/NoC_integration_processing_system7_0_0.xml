@@ -9998,7 +9998,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>651a5099</spirit:value>
+            <spirit:value>138da03b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10014,7 +10014,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 25 13:04:24 UTC 2016</spirit:value>
+            <spirit:value>Fri Feb 26 17:47:11 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -10033,7 +10033,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>651a5099</spirit:value>
+            <spirit:value>138da03b</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -10049,7 +10049,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 25 13:04:24 UTC 2016</spirit:value>
+            <spirit:value>Fri Feb 26 17:47:11 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -27335,6 +27335,7 @@
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_276</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="Share reset pin">Share reset pin</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
@@ -28314,6 +28315,7 @@
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_357</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="Share reset pin">Share reset pin</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
@@ -28770,6 +28772,7 @@
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_380</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="MIO">MIO</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
@@ -29023,21 +29026,25 @@
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_415</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_416</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_417</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_418</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
@@ -29163,181 +29170,217 @@
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_443</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_444</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_445</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_446</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_447</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_448</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_449</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_450</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_451</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_452</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_453</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_454</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_455</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_456</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_457</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_458</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_459</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_460</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_461</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_462</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_463</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_464</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_465</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_466</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_467</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_468</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_469</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_470</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_471</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_472</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_473</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_474</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_475</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_476</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 3.3V">LVCMOS 3.3V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_477</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_478</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
@@ -30057,43 +30100,51 @@
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_615</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_616</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 1.8V">LVCMOS 1.8V</spirit:enumeration>
       <spirit:enumeration spirit:text="HSTL 1.8V">HSTL 1.8V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_617</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_618</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_619</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="disabled">disabled</spirit:enumeration>
       <spirit:enumeration spirit:text="enabled">enabled</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_620</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="LVCMOS 1.8V">LVCMOS 1.8V</spirit:enumeration>
       <spirit:enumeration spirit:text="HSTL 1.8V">HSTL 1.8V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_621</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="in">in</spirit:enumeration>
       <spirit:enumeration spirit:text="out">out</spirit:enumeration>
       <spirit:enumeration spirit:text="inout">inout</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choices_622</spirit:name>
+      <spirit:enumeration spirit:text="&lt;Select>">&lt;Select></spirit:enumeration>
       <spirit:enumeration spirit:text="fast">fast</spirit:enumeration>
       <spirit:enumeration spirit:text="slow">slow</spirit:enumeration>
     </spirit:choice>
@@ -30540,7 +30591,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_GPIO)) = 1) ">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_GPIO)) = 1) ">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -30553,7 +30604,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_GPIO)) = 1) ">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_GPIO)) = 1) ">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -33602,7 +33653,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_EMIO_GPIO)) = 1) ">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_EMIO_GPIO)) = 1) ">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -33616,7 +33667,7 @@
         <xilinx:parameterInfo>
           <xilinx:enablement>
             <xilinx:presence>optional</xilinx:presence>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_UART0)) = 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PCW_EN_UART0)) = 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -34038,7 +34089,7 @@
     <spirit:parameter>
       <spirit:name>PCW_EN_GPIO</spirit:name>
       <spirit:displayName>PCW EN GPIO</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_EN_GPIO" spirit:choiceRef="choices_143" spirit:order="8700">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_EN_GPIO" spirit:choiceRef="choices_143" spirit:order="8700">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -35675,22 +35726,22 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_ENET_RESET_ENABLE</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_ENET_RESET_ENABLE" spirit:choiceRef="choices_275" spirit:order="6103">1</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_ENET_RESET_ENABLE" spirit:choiceRef="choices_275" spirit:order="6103">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_ENET_RESET_SELECT</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_ENET_RESET_SELECT" spirit:choiceRef="choices_276" spirit:order="6103">Share reset pin</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_ENET_RESET_SELECT" spirit:choiceRef="choices_276" spirit:order="6103">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -35701,7 +35752,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -35712,7 +35763,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36617,22 +36668,22 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_USB_RESET_ENABLE</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_USB_RESET_ENABLE" spirit:choiceRef="choices_356" spirit:order="6103">1</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_USB_RESET_ENABLE" spirit:choiceRef="choices_356" spirit:order="6103">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_USB_RESET_SELECT</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_USB_RESET_SELECT" spirit:choiceRef="choices_357" spirit:order="6103">Share reset pin</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_USB_RESET_SELECT" spirit:choiceRef="choices_357" spirit:order="6103">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36643,7 +36694,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36654,7 +36705,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36823,11 +36874,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_I2C_RESET_ENABLE</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_I2C_RESET_ENABLE" spirit:choiceRef="choices_374" spirit:order="6103">1</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_I2C_RESET_ENABLE" spirit:choiceRef="choices_374" spirit:order="6103">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -36879,7 +36930,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PCW_GPIO_MIO_GPIO_ENABLE</spirit:name>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_GPIO_MIO_GPIO_ENABLE" spirit:choiceRef="choices_379" spirit:order="5499">1</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_GPIO_MIO_GPIO_ENABLE" spirit:choiceRef="choices_379" spirit:order="5499">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -36891,11 +36942,11 @@
     <spirit:parameter>
       <spirit:name>PCW_GPIO_MIO_GPIO_IO</spirit:name>
       <spirit:displayName>PCW GPIO MIO GPIO IO</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_GPIO_MIO_GPIO_IO" spirit:choiceRef="choices_380" spirit:order="5500">MIO</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_GPIO_MIO_GPIO_IO" spirit:choiceRef="choices_380" spirit:order="5500">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37311,11 +37362,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_0_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 0 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_PULLUP" spirit:choiceRef="choices_415" spirit:order="29400">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_PULLUP" spirit:choiceRef="choices_415" spirit:order="29400">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37323,11 +37374,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_0_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 0 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_IOTYPE" spirit:choiceRef="choices_416" spirit:order="34800">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_IOTYPE" spirit:choiceRef="choices_416" spirit:order="34800">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37335,7 +37386,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_0_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 0 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_DIRECTION" spirit:choiceRef="choices_417" spirit:order="40200">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_DIRECTION" spirit:choiceRef="choices_417" spirit:order="40200">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37347,11 +37398,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_0_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 0 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_SLEW" spirit:choiceRef="choices_418" spirit:order="40300">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_0_SLEW" spirit:choiceRef="choices_418" spirit:order="40300">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37647,7 +37698,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_7_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 7 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_PULLUP" spirit:choiceRef="choices_443" spirit:order="29407">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_PULLUP" spirit:choiceRef="choices_443" spirit:order="29407">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37659,11 +37710,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_7_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 7 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_IOTYPE" spirit:choiceRef="choices_444" spirit:order="34807">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_IOTYPE" spirit:choiceRef="choices_444" spirit:order="34807">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37671,7 +37722,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_7_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 7 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_DIRECTION" spirit:choiceRef="choices_445" spirit:order="40207">out</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_DIRECTION" spirit:choiceRef="choices_445" spirit:order="40207">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37683,11 +37734,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_7_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 7 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_SLEW" spirit:choiceRef="choices_446" spirit:order="40307">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_7_SLEW" spirit:choiceRef="choices_446" spirit:order="40307">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37695,7 +37746,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_8_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 8 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_PULLUP" spirit:choiceRef="choices_447" spirit:order="29408">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_PULLUP" spirit:choiceRef="choices_447" spirit:order="29408">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37707,11 +37758,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_8_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 8 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_IOTYPE" spirit:choiceRef="choices_448" spirit:order="34808">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_IOTYPE" spirit:choiceRef="choices_448" spirit:order="34808">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37719,7 +37770,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_8_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 8 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_DIRECTION" spirit:choiceRef="choices_449" spirit:order="40208">out</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_DIRECTION" spirit:choiceRef="choices_449" spirit:order="40208">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37731,11 +37782,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_8_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 8 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_SLEW" spirit:choiceRef="choices_450" spirit:order="40308">fast</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_8_SLEW" spirit:choiceRef="choices_450" spirit:order="40308">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37743,11 +37794,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_9_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 9 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_PULLUP" spirit:choiceRef="choices_451" spirit:order="29409">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_PULLUP" spirit:choiceRef="choices_451" spirit:order="29409">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37755,11 +37806,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_9_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 9 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_IOTYPE" spirit:choiceRef="choices_452" spirit:order="34809">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_IOTYPE" spirit:choiceRef="choices_452" spirit:order="34809">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37767,7 +37818,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_9_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 9 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_DIRECTION" spirit:choiceRef="choices_453" spirit:order="40209">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_DIRECTION" spirit:choiceRef="choices_453" spirit:order="40209">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37779,11 +37830,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_9_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 9 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_SLEW" spirit:choiceRef="choices_454" spirit:order="40309">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_9_SLEW" spirit:choiceRef="choices_454" spirit:order="40309">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37791,11 +37842,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_10_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 10 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_PULLUP" spirit:choiceRef="choices_455" spirit:order="29410">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_PULLUP" spirit:choiceRef="choices_455" spirit:order="29410">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37803,11 +37854,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_10_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 10 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_IOTYPE" spirit:choiceRef="choices_456" spirit:order="34810">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_IOTYPE" spirit:choiceRef="choices_456" spirit:order="34810">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37815,7 +37866,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_10_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 10 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_DIRECTION" spirit:choiceRef="choices_457" spirit:order="40210">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_DIRECTION" spirit:choiceRef="choices_457" spirit:order="40210">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37827,11 +37878,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_10_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 10 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_SLEW" spirit:choiceRef="choices_458" spirit:order="40310">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_10_SLEW" spirit:choiceRef="choices_458" spirit:order="40310">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37839,11 +37890,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_11_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 11 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_PULLUP" spirit:choiceRef="choices_459" spirit:order="29411">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_PULLUP" spirit:choiceRef="choices_459" spirit:order="29411">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37851,11 +37902,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_11_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 11 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_IOTYPE" spirit:choiceRef="choices_460" spirit:order="34811">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_IOTYPE" spirit:choiceRef="choices_460" spirit:order="34811">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37863,7 +37914,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_11_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 11 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_DIRECTION" spirit:choiceRef="choices_461" spirit:order="40211">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_DIRECTION" spirit:choiceRef="choices_461" spirit:order="40211">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37875,11 +37926,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_11_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 11 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_SLEW" spirit:choiceRef="choices_462" spirit:order="40311">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_11_SLEW" spirit:choiceRef="choices_462" spirit:order="40311">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37887,11 +37938,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_12_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 12 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_PULLUP" spirit:choiceRef="choices_463" spirit:order="29412">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_PULLUP" spirit:choiceRef="choices_463" spirit:order="29412">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37899,11 +37950,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_12_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 12 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_IOTYPE" spirit:choiceRef="choices_464" spirit:order="34812">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_IOTYPE" spirit:choiceRef="choices_464" spirit:order="34812">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37911,7 +37962,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_12_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 12 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_DIRECTION" spirit:choiceRef="choices_465" spirit:order="40212">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_DIRECTION" spirit:choiceRef="choices_465" spirit:order="40212">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37923,11 +37974,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_12_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 12 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_SLEW" spirit:choiceRef="choices_466" spirit:order="40312">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_12_SLEW" spirit:choiceRef="choices_466" spirit:order="40312">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37935,11 +37986,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_13_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 13 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_PULLUP" spirit:choiceRef="choices_467" spirit:order="29413">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_PULLUP" spirit:choiceRef="choices_467" spirit:order="29413">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37947,11 +37998,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_13_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 13 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_IOTYPE" spirit:choiceRef="choices_468" spirit:order="34813">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_IOTYPE" spirit:choiceRef="choices_468" spirit:order="34813">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37959,7 +38010,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_13_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 13 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_DIRECTION" spirit:choiceRef="choices_469" spirit:order="40213">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_DIRECTION" spirit:choiceRef="choices_469" spirit:order="40213">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -37971,11 +38022,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_13_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 13 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_SLEW" spirit:choiceRef="choices_470" spirit:order="40313">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_13_SLEW" spirit:choiceRef="choices_470" spirit:order="40313">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37983,11 +38034,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_14_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 14 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_PULLUP" spirit:choiceRef="choices_471" spirit:order="29414">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_PULLUP" spirit:choiceRef="choices_471" spirit:order="29414">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -37995,11 +38046,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_14_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 14 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_IOTYPE" spirit:choiceRef="choices_472" spirit:order="34814">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_IOTYPE" spirit:choiceRef="choices_472" spirit:order="34814">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -38007,7 +38058,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_14_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 14 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_DIRECTION" spirit:choiceRef="choices_473" spirit:order="40214">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_DIRECTION" spirit:choiceRef="choices_473" spirit:order="40214">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -38019,11 +38070,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_14_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 14 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_SLEW" spirit:choiceRef="choices_474" spirit:order="40314">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_14_SLEW" spirit:choiceRef="choices_474" spirit:order="40314">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -38031,11 +38082,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_15_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 15 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_PULLUP" spirit:choiceRef="choices_475" spirit:order="29415">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_PULLUP" spirit:choiceRef="choices_475" spirit:order="29415">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -38043,11 +38094,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_15_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 15 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_IOTYPE" spirit:choiceRef="choices_476" spirit:order="34815">LVCMOS 3.3V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_IOTYPE" spirit:choiceRef="choices_476" spirit:order="34815">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -38055,7 +38106,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_15_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 15 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_DIRECTION" spirit:choiceRef="choices_477" spirit:order="40215">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_DIRECTION" spirit:choiceRef="choices_477" spirit:order="40215">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -38067,11 +38118,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_15_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 15 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_SLEW" spirit:choiceRef="choices_478" spirit:order="40315">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_15_SLEW" spirit:choiceRef="choices_478" spirit:order="40315">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -39711,11 +39762,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_50_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 50 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_PULLUP" spirit:choiceRef="choices_615" spirit:order="29450">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_PULLUP" spirit:choiceRef="choices_615" spirit:order="29450">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -39723,11 +39774,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_50_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 50 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_IOTYPE" spirit:choiceRef="choices_616" spirit:order="34850">LVCMOS 1.8V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_IOTYPE" spirit:choiceRef="choices_616" spirit:order="34850">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -39735,7 +39786,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_50_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 50 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_DIRECTION" spirit:choiceRef="choices_617" spirit:order="40250">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_DIRECTION" spirit:choiceRef="choices_617" spirit:order="40250">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -39747,11 +39798,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_50_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 50 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_SLEW" spirit:choiceRef="choices_618" spirit:order="40350">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_50_SLEW" spirit:choiceRef="choices_618" spirit:order="40350">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -39759,11 +39810,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_51_PULLUP</spirit:name>
       <spirit:displayName>PCW MIO 51 PULLUP</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_PULLUP" spirit:choiceRef="choices_619" spirit:order="29451">disabled</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_PULLUP" spirit:choiceRef="choices_619" spirit:order="29451">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -39771,11 +39822,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_51_IOTYPE</spirit:name>
       <spirit:displayName>PCW MIO 51 IOTYPE</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_IOTYPE" spirit:choiceRef="choices_620" spirit:order="34851">LVCMOS 1.8V</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_IOTYPE" spirit:choiceRef="choices_620" spirit:order="34851">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -39783,7 +39834,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_51_DIRECTION</spirit:name>
       <spirit:displayName>PCW MIO 51 DIRECTION</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_DIRECTION" spirit:choiceRef="choices_621" spirit:order="40251">inout</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_DIRECTION" spirit:choiceRef="choices_621" spirit:order="40251">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -39795,11 +39846,11 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_51_SLEW</spirit:name>
       <spirit:displayName>PCW MIO 51 SLEW</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_SLEW" spirit:choiceRef="choices_622" spirit:order="40351">slow</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_51_SLEW" spirit:choiceRef="choices_622" spirit:order="40351">&lt;Select></spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled>true</xilinx:isEnabled>
+            <xilinx:isEnabled>false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -39913,7 +39964,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_TREE_PERIPHERALS</spirit:name>
       <spirit:displayName>PCW MIO TREE PERIPHERALS</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_TREE_PERIPHERALS" spirit:order="210000">GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#UART 1#UART 1#GPIO#GPIO#Enet 0#Enet 0</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_TREE_PERIPHERALS" spirit:order="210000">unassigned#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#UART 1#UART 1#unassigned#unassigned#Enet 0#Enet 0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -39925,7 +39976,7 @@
     <spirit:parameter>
       <spirit:name>PCW_MIO_TREE_SIGNALS</spirit:name>
       <spirit:displayName>PCW MIO TREE SIGNALS</spirit:displayName>
-      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_TREE_SIGNALS" spirit:order="220000">gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]#qspi0_sclk#gpio[7]#gpio[8]#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#wp#cd#tx#rx#gpio[50]#gpio[51]#mdc#mdio</spirit:value>
+      <spirit:value spirit:format="string" spirit:resolve="user" spirit:id="PARAM_VALUE.PCW_MIO_TREE_SIGNALS" spirit:order="220000">unassigned#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]#qspi0_sclk#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#unassigned#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#wp#cd#tx#rx#unassigned#unassigned#mdc#mdio</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -40496,6 +40547,8 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.FREQ_HZ" xilinx:valueSource="user_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_GP0.CLK_DOMAIN" xilinx:valueSource="default_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_M_AXI_GP0_FREQMHZ" xilinx:valueSource="propagated"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_GPIO_MIO_GPIO_ENABLE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PCW_QSPI_GRP_SINGLE_SS_ENABLE" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

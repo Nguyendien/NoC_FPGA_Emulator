@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
---Date        : Thu Feb 25 15:04:26 2016
+--Date        : Fri Feb 26 19:47:14 2016
 --Host        : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 --Command     : generate_target NoC_integration_wrapper.bd
 --Design      : NoC_integration_wrapper
@@ -33,7 +33,8 @@ entity NoC_integration_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    debug_port : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end NoC_integration_wrapper;
 
@@ -60,7 +61,8 @@ architecture STRUCTURE of NoC_integration_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    debug_port : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component NoC_integration;
 begin
@@ -86,6 +88,7 @@ NoC_integration_i: component NoC_integration
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      debug_port(7 downto 0) => debug_port(7 downto 0)
     );
 end STRUCTURE;
