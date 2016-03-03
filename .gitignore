@@ -93,6 +93,7 @@
 !Makefile
 !*.mdd
 !*.make
+!make.*
 
 NoC_integration/NoC_integration.sdk/FSBL*
 NoC_integration/NoC_integration.sdk/*wrapper_hw_platform*
