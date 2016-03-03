@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:19:00 MDT 2015
+# 
+# Start of session at: Thu Mar  3 16:37:44 2016
+# Process ID: 5269
+# Log file: /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/webtalk/webtalk.log
+# Journal file: /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

@@ -2,9 +2,9 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Fri Feb 26 19:47:16 2016
-# Process ID: 31573
-# Log file: /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/NoC_integration_wrapper.vds
-# Journal file: /home/kjans/pc/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/vivado.jou
+# Start of session at: Thu Mar  3 16:14:27 2016
+# Process ID: 31763
+# Log file: /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/NoC_integration_wrapper.vds
+# Journal file: /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source NoC_integration_wrapper.tcl -notrace

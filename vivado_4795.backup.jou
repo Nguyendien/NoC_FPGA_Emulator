@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Thu Mar  3 16:08:40 2016
+# Process ID: 31383
+# Log file: /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/vivado.log
+# Journal file: /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.xpr
+open_bd_design {/home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/NoC_integration.bd}
+validate_bd_design -force
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file copy -force /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/impl_1/NoC_integration_wrapper.sysdef /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf
+
+launch_sdk -workspace /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk -hwspec /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.sdk/NoC_integration_wrapper.hdf
