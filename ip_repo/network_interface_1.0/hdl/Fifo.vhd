@@ -18,7 +18,7 @@ end FIFO;
 
 architecture Behavioral of FIFO is
 begin
-    
+
 	-- Memory Pointer Process
 	fifo_proc : process(CLK)
 		type FIFO_Memory is array (0 to 255) of STD_LOGIC_VECTOR(31 downto 0);
@@ -29,8 +29,8 @@ begin
 
 		variable Looped : boolean;
 	begin
-		if rising_edge(CLK) then
-			if RST = '1' then
+		if clk'event and clk = '1' then
+			if RST = '0' then
 				wr_ptr := 0;
 				rd_ptr := 0;
 
@@ -43,6 +43,7 @@ begin
 					if ((Looped = true) or (wr_ptr /= rd_ptr)) then
 						-- Update data output
 						data_ram <= Memory(rd_ptr);
+
 						-- Update rd_ptr pointer as needed
 						if (rd_ptr = 255) then
 							rd_ptr := 0;

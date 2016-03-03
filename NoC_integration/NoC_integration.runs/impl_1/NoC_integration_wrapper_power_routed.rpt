@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date             : Thu Mar  3 16:16:47 2016
+| Date             : Thu Mar  3 18:32:05 2016
 | Host             : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 | Command          : report_power -file NoC_integration_wrapper_power_routed.rpt -pb NoC_integration_wrapper_power_summary_routed.pb
 | Design           : NoC_integration_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.709 |
-| Dynamic (W)              | 1.553 |
+| Total On-Chip Power (W)  | 1.701 |
+| Dynamic (W)              | 1.545 |
 | Device Static (W)        | 0.156 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 65.3  |
-| Junction Temperature (C) | 44.7  |
+| Max Ambient (C)          | 65.4  |
+| Junction Temperature (C) | 44.6  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,18 +50,18 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.006 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     3119 |       --- |             --- |
-|   LUT as Logic          |     0.003 |     1202 |     53200 |            2.26 |
-|   Register              |    <0.001 |     1332 |    106400 |            1.25 |
-|   CARRY4                |    <0.001 |       41 |     13300 |            0.31 |
+| Slice Logic             |     0.003 |     3317 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     1283 |     53200 |            2.41 |
+|   Register              |    <0.001 |     1412 |    106400 |            1.33 |
+|   CARRY4                |    <0.001 |       44 |     13300 |            0.33 |
 |   LUT as Shift Register |    <0.001 |       66 |     17400 |            0.38 |
-|   Others                |     0.000 |      225 |       --- |             --- |
-| Signals                 |     0.004 |     2288 |       --- |             --- |
-| Block RAM               |     0.002 |      0.5 |       140 |            0.36 |
-| I/O                     |     0.008 |        8 |       200 |            4.00 |
+|   Others                |     0.000 |      230 |       --- |             --- |
+| Signals                 |     0.004 |     2545 |       --- |             --- |
+| Block RAM               |    <0.001 |        1 |       140 |            0.71 |
+| I/O                     |     0.001 |        8 |       200 |            4.00 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.156 |          |           |                 |
-| Total                   |     1.709 |          |           |                 |
+| Total                   |     1.701 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.016 |      0.015 |
+| Vccint    |       1.000 |     0.030 |       0.015 |      0.015 |
 | Vccaux    |       1.800 |     0.021 |       0.000 |      0.021 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
 | Vcco15    |       1.500 |     0.001 |       0.000 |      0.001 |
@@ -147,9 +147,9 @@ Table of Contents
 +--------------------------------------------------------------+-----------+
 | Name                                                         | Power (W) |
 +--------------------------------------------------------------+-----------+
-| NoC_integration_wrapper                                      |     1.553 |
-|   NoC_integration_i                                          |     1.545 |
-|     axi_mem_intercon                                         |     0.010 |
+| NoC_integration_wrapper                                      |     1.545 |
+|   NoC_integration_i                                          |     1.544 |
+|     axi_mem_intercon                                         |     0.009 |
 |       m00_couplers                                           |     0.005 |
 |         auto_pc                                              |     0.005 |
 |           inst                                               |     0.005 |
@@ -159,10 +159,10 @@ Table of Contents
 |                 cmd_translator_0                             |    <0.001 |
 |                   incr_cmd_0                                 |    <0.001 |
 |                   wrap_cmd_0                                 |    <0.001 |
-|               RD.r_channel_0                                 |     0.002 |
+|               RD.r_channel_0                                 |     0.001 |
 |                 rd_data_fifo_0                               |    <0.001 |
 |                 transaction_fifo_0                           |    <0.001 |
-|               SI_REG                                         |     0.002 |
+|               SI_REG                                         |     0.001 |
 |                 ar_pipe                                      |    <0.001 |
 |                 aw_pipe                                      |    <0.001 |
 |                 b_pipe                                       |    <0.001 |
@@ -177,9 +177,9 @@ Table of Contents
 |                 bresp_fifo_0                                 |    <0.001 |
 |       s00_couplers                                           |     0.000 |
 |         auto_pc                                              |     0.000 |
-|       xbar                                                   |     0.005 |
-|         inst                                                 |     0.005 |
-|           gen_samd.crossbar_samd                             |     0.005 |
+|       xbar                                                   |     0.004 |
+|         inst                                                 |     0.004 |
+|           gen_samd.crossbar_samd                             |     0.004 |
 |             addr_arbiter_ar                                  |    <0.001 |
 |             addr_arbiter_aw                                  |    <0.001 |
 |             gen_decerr_slave.decerr_slave_inst               |    <0.001 |
@@ -205,10 +205,13 @@ Table of Contents
 |     network_interface_0                                      |     0.005 |
 |       U0                                                     |     0.005 |
 |         network_interface_v1_0_S00_AXI_inst                  |     0.005 |
-|           uut1                                               |     0.004 |
-|             FIFO_PE1                                         |     0.004 |
+|           RNI_PORTMAP                                        |     0.004 |
+|             FIFO_PE1                                         |     0.001 |
+|             FIFO_PE2                                         |     0.002 |
 |             READ_CONTROLLER1                                 |    <0.001 |
+|             READ_CONTROLLER2                                 |    <0.001 |
 |             WRITE_CONTROLLER1                                |    <0.001 |
+|             WRITE_CONTROLLER2                                |    <0.001 |
 |     processing_system7_0                                     |     1.530 |
 |       inst                                                   |     1.530 |
 |     rst_processing_system7_0_100M                            |    <0.001 |

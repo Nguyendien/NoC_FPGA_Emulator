@@ -27,18 +27,18 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.hwdef"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="NoC_integration_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.vhd"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_1/NoC_integration_auto_pc_1.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_axi_mem_intercon_0/NoC_integration_axi_mem_intercon_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_0_0/NoC_integration_network_interface_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xbar_0/NoC_integration_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_1/NoC_integration_auto_pc_1.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.vhd"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.hwdef"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="NoC_integration_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration_bd.tcl"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd">
         <FileInfo>
@@ -121,4 +121,14 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
   </Runs>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="IP_Flow 19-2248"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="16"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+  </MsgRule>
 </Project>

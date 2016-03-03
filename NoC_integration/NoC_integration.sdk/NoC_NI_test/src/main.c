@@ -16,25 +16,41 @@ int main()
     init_platform();
     print("+++++++++++++++++++++++++++++++++++++++++++++\n\r");
     print("Hello World\n\r");
-    //u32 dataIn = 2;
+    print("+++++++++++++++++++++++++++++++++++++++++++++\n\r");
+
     u32 dataOut = 0;
 
     int i;
 
-    for (i=0; i<32; i++){
-		/*printf("Sending data back from IP...\n");
-		//dataOut = Xil_In32(XPAR_NI_0_S00_AXI_BASEADDR);
-		dataOut = NI_mReadMemory(XPAR_NI_0_S00_AXI_BASEADDR);
-		printf("Data received from IP: %lu\n", dataOut);*/
+    print("+++++++++++++++++++++++++++++++++++++++++++++\n\r");
+    print("Testing RNI: PE-to-Router\n\r");
+    print("+++++++++++++++++++++++++++++++++++++++++++++\n\r");
+
+    for (i=0; i<16; i++){
 
 		printf("Sending data to IP: %d\n\r", i);
-		//xil_Out32(XPAR_NI_0_S00_AXI_BASEADDR, (u32)dataIn);
-		//NI_mWriteMemory(XPAR_NI_0_S00_AXI_BASEADDR, dataIn);
+
 		NETWORK_INTERFACE_mWriteReg(XPAR_NETWORK_INTERFACE_0_S00_AXI_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG1_OFFSET, i);
 		printf("Sending data back from IP...\n\r");
-		//dataOut = Xil_In32(XPAR_NI_0_S00_AXI_BASEADDR);
-		//dataOut = NI_mReadMemory(XPAR_NI_0_S00_AXI_BASEADDR);
+
 		dataOut = NETWORK_INTERFACE_mReadReg(XPAR_NETWORK_INTERFACE_0_S00_AXI_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG0_OFFSET);
+		printf("Data received from IP: %lu\n\r", dataOut);
+
+		print("================");
+		}
+
+    print("+++++++++++++++++++++++++++++++++++++++++++++\n\r");
+    print("Testing RNI: Router-to-PE\n\r");
+    print("+++++++++++++++++++++++++++++++++++++++++++++\n\r");
+
+    for (i=0; i<16; i++){
+
+		printf("Sending data to IP: %d\n\r", i);
+
+		NETWORK_INTERFACE_mWriteReg(XPAR_NETWORK_INTERFACE_0_S00_AXI_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG3_OFFSET, i);
+		printf("Sending data back from IP...\n\r");
+
+		dataOut = NETWORK_INTERFACE_mReadReg(XPAR_NETWORK_INTERFACE_0_S00_AXI_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG2_OFFSET);
 		printf("Data received from IP: %lu\n\r", dataOut);
 
 		print("================");
