@@ -155,7 +155,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list CONFIG.NUM_MI {2}  ] $axi_mem_intercon
 
   # Create instance: network_interface_0, and set properties
-  set network_interface_0 [ create_bd_cell -type ip -vlnv ttu.ee:user:network_interface:1.0 network_interface_0 ]
+  set network_interface_0 [ create_bd_cell -type ip -vlnv ttu.ee:user:dummy_network_interface:1.0 network_interface_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -166,6 +166,7 @@ proc create_root_design { parentCell } {
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins network_interface_0/S00_AXI]
+  connect_bd_intf_net -intf_net network_interface_0_NI_to_router_data [get_bd_intf_pins network_interface_0/NI_to_router_data] [get_bd_intf_pins network_interface_0/Router_to_ni_data]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins axi_mem_intercon/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]

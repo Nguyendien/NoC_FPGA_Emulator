@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
---Date        : Thu Mar  3 18:29:39 2016
+--Date        : Thu Mar 10 18:17:40 2016
 --Host        : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 --Command     : generate_target NoC_integration.bd
 --Design      : NoC_integration
@@ -2014,6 +2014,12 @@ architecture STRUCTURE of NoC_integration is
   component NoC_integration_network_interface_0_0 is
   port (
     debug_port : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    router_RTS_data_in : in STD_LOGIC;
+    router_CTS_data_in : out STD_LOGIC;
+    router_data_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    router_RTS_data_out : out STD_LOGIC;
+    router_CTS_data_out : in STD_LOGIC;
+    router_data_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -2058,6 +2064,9 @@ architecture STRUCTURE of NoC_integration is
   signal axi_mem_intercon_M00_AXI_WREADY : STD_LOGIC;
   signal axi_mem_intercon_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_mem_intercon_M00_AXI_WVALID : STD_LOGIC;
+  signal network_interface_0_NI_to_router_data_CTS : STD_LOGIC;
+  signal network_interface_0_NI_to_router_data_Data : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal network_interface_0_NI_to_router_data_RTC : STD_LOGIC;
   signal network_interface_0_debug_port : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -2288,6 +2297,12 @@ axi_mem_intercon: entity work.NoC_integration_axi_mem_intercon_0
 network_interface_0: component NoC_integration_network_interface_0_0
      port map (
       debug_port(7 downto 0) => network_interface_0_debug_port(7 downto 0),
+      router_CTS_data_in => network_interface_0_NI_to_router_data_CTS,
+      router_CTS_data_out => network_interface_0_NI_to_router_data_CTS,
+      router_RTS_data_in => network_interface_0_NI_to_router_data_RTC,
+      router_RTS_data_out => network_interface_0_NI_to_router_data_RTC,
+      router_data_in(31 downto 0) => network_interface_0_NI_to_router_data_Data(31 downto 0),
+      router_data_out(31 downto 0) => network_interface_0_NI_to_router_data_Data(31 downto 0),
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(3 downto 0) => axi_mem_intercon_M00_AXI_ARADDR(3 downto 0),
       s00_axi_aresetn => rst_processing_system7_0_100M_peripheral_aresetn(0),

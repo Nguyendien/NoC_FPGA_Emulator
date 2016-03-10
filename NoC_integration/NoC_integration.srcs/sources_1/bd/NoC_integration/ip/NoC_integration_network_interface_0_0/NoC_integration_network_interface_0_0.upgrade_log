@@ -1,6 +1,387 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 18:09:34 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 17:48:50 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 17:48:01 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 17:18:15 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'NoC_integration_network_interface_0_0'.
+
+
+-upgrade has added interface 'NI_to_router_data'
+-upgrade has added interface 'Router_to_ni_data'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'NoC_integration_network_interface_0_0'. These changes may impact your design.
+
+
+-upgrade has added port 'router_CTS_data_in'
+-upgrade has added port 'router_CTS_data_out'
+-upgrade has added port 'router_RTS_data_in'
+-upgrade has added port 'router_RTS_data_out'
+-upgrade has added port 'router_data_in'
+-upgrade has added port 'router_data_out'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 16:21:48 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 16:18:14 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 16:09:59 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 16:07:03 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 16:04:39 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Thu Mar 10 16:01:53 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of NoC_integration_network_interface_0_0 from ttu.ee:user:network_interface:1.0 (Rev. 1) to ttu.ee:user:dummy_network_interface:1.0 (Rev. 1)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Fri Mar  4 20:13:28 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Fri Mar  4 19:11:07 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Fri Mar  4 18:46:03 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Fri Mar  4 16:21:23 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Fri Mar  4 16:12:23 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Fri Mar  4 14:16:00 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Fri Mar  4 14:07:36 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
 | Date         : Thu Mar  3 18:29:07 2016
 | Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 | Command      : upgrade_ip

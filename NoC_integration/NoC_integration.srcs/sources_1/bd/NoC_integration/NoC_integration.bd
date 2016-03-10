@@ -83,7 +83,7 @@
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>network_interface_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="network_interface" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:componentRef spirit:library="user" spirit:name="dummy_network_interface" spirit:vendor="ttu.ee" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">NoC_integration_network_interface_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -99,6 +99,11 @@
         <spirit:name>axi_mem_intercon_M00_AXI</spirit:name>
         <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="axi_mem_intercon"/>
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="network_interface_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>network_interface_0_NI_to_router_data</spirit:name>
+        <spirit:activeInterface spirit:busRef="Router_to_ni_data" spirit:componentRef="network_interface_0"/>
+        <spirit:activeInterface spirit:busRef="NI_to_router_data" spirit:componentRef="network_interface_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
