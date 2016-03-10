@@ -60,6 +60,7 @@ set_dont_use { class/EO, class/EN, class/EOP, class/ENP, class/EO3, class/EN3, c
 
 analyze -format verilog ../rtl/LBDR.v
 analyze -format verilog ../rtl/arbiter.v
+analyze -format verilog ../rtl/flowcontrol.v
 analyze -format verilog ../rtl/fifo_onehot.v
 analyze -format verilog ../rtl/init_read.v
 analyze -format verilog ../rtl/output_buffer.v
@@ -74,4 +75,4 @@ link
 compile
 
 write -format edif -hierarchy -output noc_router_hier.edif
- 
+write -format verilog -hierarchy -output noc_router.v
