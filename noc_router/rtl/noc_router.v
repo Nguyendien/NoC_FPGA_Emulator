@@ -146,39 +146,39 @@ module noc_router(clk, rst,
 
   // Module Instantiations
   // FIFO
-  fifo_onehot L_FIFO (clk, rst, Lvalid_in, Lrd_en, Ldata_in,  Lfifo_data_out, Lempty, Lfifo_ready_out);
-  fifo_onehot N_FIFO (clk, rst, Nvalid_in, Nrd_en, Ndata_in,  Nfifo_data_out, Nempty, Nfifo_ready_out);
-  fifo_onehot E_FIFO (clk, rst, Evalid_in, Erd_en, Edata_in,  Efifo_data_out, Eempty, Efifo_ready_out);
-  fifo_onehot W_FIFO (clk, rst, Wvalid_in, Wrd_en, Wdata_in,  Wfifo_data_out, Wempty, Wfifo_ready_out);
-  fifo_onehot S_FIFO (clk, rst, Svalid_in, Srd_en, Sdata_in,  Sfifo_data_out, Sempty, Sfifo_ready_out);
+  fifo_onehot L_FIFO (clk, rst_active_low, Lvalid_in, Lrd_en, Ldata_in,  Lfifo_data_out, Lempty, Lfifo_ready_out);
+  fifo_onehot N_FIFO (clk, rst_active_low, Nvalid_in, Nrd_en, Ndata_in,  Nfifo_data_out, Nempty, Nfifo_ready_out);
+  fifo_onehot E_FIFO (clk, rst_active_low, Evalid_in, Erd_en, Edata_in,  Efifo_data_out, Eempty, Efifo_ready_out);
+  fifo_onehot W_FIFO (clk, rst_active_low, Wvalid_in, Wrd_en, Wdata_in,  Wfifo_data_out, Wempty, Wfifo_ready_out);
+  fifo_onehot S_FIFO (clk, rst_active_low, Svalid_in, Srd_en, Sdata_in,  Sfifo_data_out, Sempty, Sfifo_ready_out);
   
   // INIT_READ
-  init_read L_INIT (clk, rst, Lempty, Lflit_id, Linit_rd);
-  init_read N_INIT (clk, rst, Nempty, Nflit_id, Ninit_rd);
-  init_read E_INIT (clk, rst, Eempty, Eflit_id, Einit_rd);
-  init_read W_INIT (clk, rst, Wempty, Wflit_id, Winit_rd);
-  init_read S_INIT (clk, rst, Sempty, Sflit_id, Sinit_rd);
+  init_read L_INIT (clk, rst_active_low, Lempty, Lflit_id, Linit_rd);
+  init_read N_INIT (clk, rst_active_low, Nempty, Nflit_id, Ninit_rd);
+  init_read E_INIT (clk, rst_active_low, Eempty, Eflit_id, Einit_rd);
+  init_read W_INIT (clk, rst_active_low, Wempty, Wflit_id, Winit_rd);
+  init_read S_INIT (clk, rst_active_low, Sempty, Sflit_id, Sinit_rd);
   
   // LBDR
-  LBDR L_LBDR (clk, rst, Lempty, Rxy, Cx, Lflit_id, Ldst_addr, cur_addr, LNport, LEport, LWport, LSport, LLport);
-  LBDR N_LBDR (clk, rst, Nempty, Rxy, Cx, Nflit_id, Ndst_addr, cur_addr, NNport, NEport, NWport, NSport, NLport);
-  LBDR E_LBDR (clk, rst, Eempty, Rxy, Cx, Eflit_id, Edst_addr, cur_addr, ENport, EEport, EWport, ESport, ELport);
-  LBDR W_LBDR (clk, rst, Wempty, Rxy, Cx, Wflit_id, Wdst_addr, cur_addr, WNport, WEport, WWport, WSport, WLport);
-  LBDR S_LBDR (clk, rst, Sempty, Rxy, Cx, Sflit_id, Sdst_addr, cur_addr, SNport, SEport, SWport, SSport, SLport);
+  LBDR L_LBDR (clk, rst_active_low, Lempty, Rxy, Cx, Lflit_id, Ldst_addr, cur_addr, LNport, LEport, LWport, LSport, LLport);
+  LBDR N_LBDR (clk, rst_active_low, Nempty, Rxy, Cx, Nflit_id, Ndst_addr, cur_addr, NNport, NEport, NWport, NSport, NLport);
+  LBDR E_LBDR (clk, rst_active_low, Eempty, Rxy, Cx, Eflit_id, Edst_addr, cur_addr, ENport, EEport, EWport, ESport, ELport);
+  LBDR W_LBDR (clk, rst_active_low, Wempty, Rxy, Cx, Wflit_id, Wdst_addr, cur_addr, WNport, WEport, WWport, WSport, WLport);
+  LBDR S_LBDR (clk, rst_active_low, Sempty, Rxy, Cx, Sflit_id, Sdst_addr, cur_addr, SNport, SEport, SWport, SSport, SLport);
   
   // FLOWCONTROL
-  flowcontrol L_FC (rst, LNport, LEport, LWport, LSport, LLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, LLfc_ready_out, LNfc_ready_out, LEfc_ready_out, LWfc_ready_out, LSfc_ready_out);
-  flowcontrol N_FC (rst, NNport, NEport, NWport, NSport, NLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, NLfc_ready_out, NNfc_ready_out, NEfc_ready_out, NWfc_ready_out, NSfc_ready_out);
-  flowcontrol E_FC (rst, ENport, EEport, EWport, ESport, ELport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, ELfc_ready_out, ENfc_ready_out, EEfc_ready_out, EWfc_ready_out, ESfc_ready_out);
-  flowcontrol W_FC (rst, WNport, WEport, WWport, WSport, WLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, WLfc_ready_out, WNfc_ready_out, WEfc_ready_out, WWfc_ready_out, WSfc_ready_out);
-  flowcontrol S_FC (rst, SNport, SEport, SWport, SSport, SLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, SLfc_ready_out, SNfc_ready_out, SEfc_ready_out, SWfc_ready_out, SSfc_ready_out);
+  flowcontrol L_FC (rst_active_low, LNport, LEport, LWport, LSport, LLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, LLfc_ready_out, LNfc_ready_out, LEfc_ready_out, LWfc_ready_out, LSfc_ready_out);
+  flowcontrol N_FC (rst_active_low, NNport, NEport, NWport, NSport, NLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, NLfc_ready_out, NNfc_ready_out, NEfc_ready_out, NWfc_ready_out, NSfc_ready_out);
+  flowcontrol E_FC (rst_active_low, ENport, EEport, EWport, ESport, ELport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, ELfc_ready_out, ENfc_ready_out, EEfc_ready_out, EWfc_ready_out, ESfc_ready_out);
+  flowcontrol W_FC (rst_active_low, WNport, WEport, WWport, WSport, WLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, WLfc_ready_out, WNfc_ready_out, WEfc_ready_out, WWfc_ready_out, WSfc_ready_out);
+  flowcontrol S_FC (rst_active_low, SNport, SEport, SWport, SSport, SLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, SLfc_ready_out, SNfc_ready_out, SEfc_ready_out, SWfc_ready_out, SSfc_ready_out);
   
   // ARBITER
-  arbiter L_ARBITER (clk, rst, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LLfc_ready_out, NLfc_ready_out, ELfc_ready_out, WLfc_ready_out, SLfc_ready_out, Lnextstate);
-  arbiter N_ARBITER (clk, rst, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LNfc_ready_out, NNfc_ready_out, ENfc_ready_out, WNfc_ready_out, SNfc_ready_out, Nnextstate);
-  arbiter E_ARBITER (clk, rst, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LEfc_ready_out, NEfc_ready_out, EEfc_ready_out, WEfc_ready_out, SEfc_ready_out, Enextstate);
-  arbiter W_ARBITER (clk, rst, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LWfc_ready_out, NWfc_ready_out, EWfc_ready_out, WWfc_ready_out, SWfc_ready_out, Wnextstate);
-  arbiter S_ARBITER (clk, rst, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LSfc_ready_out, NSfc_ready_out, ESfc_ready_out, WSfc_ready_out, SSfc_ready_out, Snextstate);
+  arbiter L_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LLfc_ready_out, NLfc_ready_out, ELfc_ready_out, WLfc_ready_out, SLfc_ready_out, Lnextstate);
+  arbiter N_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LNfc_ready_out, NNfc_ready_out, ENfc_ready_out, WNfc_ready_out, SNfc_ready_out, Nnextstate);
+  arbiter E_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LEfc_ready_out, NEfc_ready_out, EEfc_ready_out, WEfc_ready_out, SEfc_ready_out, Enextstate);
+  arbiter W_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LWfc_ready_out, NWfc_ready_out, EWfc_ready_out, WWfc_ready_out, SWfc_ready_out, Wnextstate);
+  arbiter S_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LSfc_ready_out, NSfc_ready_out, ESfc_ready_out, WSfc_ready_out, SSfc_ready_out, Snextstate);
   
   // CROSSBAR SWITCH
   xbar L_XBAR (Lsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Ldata_out_with_parity, Lvalidout);
@@ -188,11 +188,11 @@ module noc_router(clk, rst,
   xbar S_XBAR (Ssel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Sdata_out_with_parity, Svalidout);
   
   // OUTPUT BUFFER
-  output_buffer L_OUTPUT_BUFFER (clk, rst, (Lready_in && Lvalidout), Ldata_out_with_parity, Ldata_out, Lvalid_out);
-  output_buffer N_OUTPUT_BUFFER (clk, rst, (Nready_in && Nvalidout), Ndata_out_with_parity, Ndata_out, Nvalid_out);
-  output_buffer E_OUTPUT_BUFFER (clk, rst, (Eready_in && Evalidout), Edata_out_with_parity, Edata_out, Evalid_out);
-  output_buffer W_OUTPUT_BUFFER (clk, rst, (Wready_in && Wvalidout), Wdata_out_with_parity, Wdata_out, Wvalid_out);
-  output_buffer S_OUTPUT_BUFFER (clk, rst, (Sready_in && Svalidout), Sdata_out_with_parity, Sdata_out, Svalid_out);
+  output_buffer L_OUTPUT_BUFFER (clk, rst_active_low, (Lready_in && Lvalidout), Ldata_out_with_parity, Ldata_out, Lvalid_out);
+  output_buffer N_OUTPUT_BUFFER (clk, rst_active_low, (Nready_in && Nvalidout), Ndata_out_with_parity, Ndata_out, Nvalid_out);
+  output_buffer E_OUTPUT_BUFFER (clk, rst_active_low, (Eready_in && Evalidout), Edata_out_with_parity, Edata_out, Evalid_out);
+  output_buffer W_OUTPUT_BUFFER (clk, rst_active_low, (Wready_in && Wvalidout), Wdata_out_with_parity, Wdata_out, Wvalid_out);
+  output_buffer S_OUTPUT_BUFFER (clk, rst_active_low, (Sready_in && Svalidout), Sdata_out_with_parity, Sdata_out, Svalid_out);
  
   // PARITY CHECKER
   //parity_checkers PARITY_CHK0 (Nbuffer_data_out, Ebuffer_data_out, Wbuffer_data_out, Sbuffer_data_out, Lbuffer_data_out, Nparity_err, Eparity_err, Wparity_err, Sparity_err, Lparity_err);
