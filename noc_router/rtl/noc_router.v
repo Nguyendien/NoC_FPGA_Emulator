@@ -39,6 +39,7 @@ module noc_router(clk, rst,
   //output                     Lparity_err, Nparity_err, Eparity_err, Wparity_err, Sparity_err;  // Parity error checker along with data_out
   
   // Declaring the local variables
+  wire                   rst_active_low; // NB: reset is avtive low!
   wire                   Nrd_en, Erd_en, Wrd_en, Srd_en, Lrd_en;                                               // read enable for FIFO buffer
   wire [`DATA_WIDTH-1:0] Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out;       // data output from input FIFO buffer
   wire                   Nempty, Eempty, Wempty, Sempty, Lempty;                                               // empty signal from FIFO buffer to LBDR
@@ -77,6 +78,9 @@ module noc_router(clk, rst,
   assign Eready_out = Efifo_ready_out;
   assign Wready_out = Wfifo_ready_out;
   assign Sready_out = Sfifo_ready_out;
+ 
+  // Reset is active low !
+  assign rst_active_low = ~rst;
  
   // Connecting the grant signal to the respective FIFOs rd_en
   assign Nrd_en = Ninit_rd || NNgrant || ENgrant || WNgrant || SNgrant || LNgrant;
