@@ -60,7 +60,7 @@ module noc_router_tb;
 */
   
   // Declaring the port variables for DUT
-  reg                      clk, rst;
+  reg                      clk, rst;                                                         // rst is active low!
   reg [7:0]                Rxy;                                                              // Routing bits set during reset
   reg [3:0]                Cx;                                                               // Connectivity bits set during reset
   reg [`AXIS-1 : 0]   cur_addr;                                                         // currrent address of the router set during reset
