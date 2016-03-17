@@ -17,27 +17,25 @@
 
 module noc_router(clk, rst,
                   Rxy, Cx, cur_addr,
-                  Ldata_in, Lvalid_in, Lready_out, Ldata_out, Lvalid_out, Lready_in,
-                  Ndata_in, Nvalid_in, Nready_out, Ndata_out, Nvalid_out, Nready_in,
-                  Edata_in, Evalid_in, Eready_out, Edata_out, Evalid_out, Eready_in,
-                  Wdata_in, Wvalid_in, Wready_out, Wdata_out, Wvalid_out, Wready_in,
-                  Sdata_in, Svalid_in, Sready_out, Sdata_out, Svalid_out, Sready_in/*,
-                  Lparity_err, Nparity_err, Eparity_err, Wparity_err, Sparity_err*/
+                  L_RX, L_DRTS, L_CTS, L_TX, L_RTS, L_DCTS,
+                  N_RX, N_DRTS, N_CTS, N_TX, N_RTS, N_DCTS,
+                  E_RX, E_DRTS, E_CTS, E_TX, E_RTS, E_DCTS,
+                  W_RX, W_DRTS, W_CTS, W_TX, W_RTS, W_DCTS,
+                  S_RX, S_DRTS, S_CTS, S_TX, S_RTS, S_DCTS
                 );
                 
   input                      clk, rst;
   input [7:0]                Rxy;                                                              // Routing bits set during reset                    
   input [3:0]                Cx;                                                               // Connectivity bits set during reset        
   input [`AXIS-1 : 0]        cur_addr;                                                         // currrent address of the router set during reset  
-  input [`DATA_WIDTH-1 : 0]  Ldata_in, Ndata_in, Edata_in, Wdata_in, Sdata_in;                 // Incoming data from PREVIOUS router(NI)
-  input                      Lvalid_in, Nvalid_in, Evalid_in, Wvalid_in, Svalid_in;            // Incoming valid signal from PREVIOUS router(NI)
-  input                      Lready_in, Nready_in, Eready_in, Wready_in, Sready_in;            // Incoming ready signal from NEXT router(NI)
+  input [`DATA_WIDTH-1 : 0]  L_RX, N_RX, E_RX, W_RX, S_RX;                                     // Incoming data from PREVIOUS router (or NI)
+  input                      L_DRTS, N_DRTS, E_DRTS, W_DRTS, S_DRTS;                           // Incoming DRTS (Detect Request to Send) signal from PREVIOUS router (or NI)
+  input                      L_DCTS, N_DCTS, E_DCTS, W_DCTS, S_DCTS;                           // Incoming DCTS (Detect Clear to Send) signal from NEXT router (or NI)
   
-  output [`DATA_WIDTH-1 : 0] Ldata_out, Ndata_out, Edata_out, Wdata_out, Sdata_out;            // Outgoing data to NEXT router(NI)
-  output                     Lready_out, Nready_out, Eready_out, Wready_out, Sready_out;       // Outgoing ready signal to PREVIOUS router(NI)
-  output                     Lvalid_out, Nvalid_out, Evalid_out, Wvalid_out, Svalid_out;       // Outgoing valid signal to NEXT router(NI)
-  //output                     Lparity_err, Nparity_err, Eparity_err, Wparity_err, Sparity_err;  // Parity error checker along with data_out
-  
+  output [`DATA_WIDTH-1 : 0] L_TX, N_TX, E_TX, W_TX, S_TX;                                     // Outgoing data to NEXT router(NI)
+  output                     L_CTS, N_CTS, E_CTS, W_CTS, S_CTS;                                // Outgoing CTS (Clear to Send) signal to PREVIOUS router (or NI)
+  output                     L_RTS, N_RTS, E_RTS, W_RTS, S_RTS;                                // Outgoing RTS (Request to Send) signal to NEXT router (or NI) 
+
   // Declaring the local variables
   wire                   rst_active_low; // NB: reset is avtive low!
   wire                   Nrd_en, Erd_en, Wrd_en, Srd_en, Lrd_en;                                               // read enable for FIFO buffer
@@ -71,13 +69,13 @@ module noc_router(clk, rst,
   
   wire [4:0]             Nsel_in, Esel_in, Wsel_in, Ssel_in, Lsel_in;                                                                              // XBAR select signals
   wire [`DATA_WIDTH-1:0] Ndata_out_with_parity, Edata_out_with_parity, Wdata_out_with_parity, Sdata_out_with_parity, Ldata_out_with_parity;        // Output data from XBAR to OUTPUT BUFFER
-  wire                   Nvalidout, Evalidout, Wvalidout, Svalidout, Lvalidout;        // Valid signal to OUTPUT BUFFER
+  wire                   Nvalidout, Evalidout, Wvalidout, Svalidout, Lvalidout;        // Valid signal from XBAR to OUTPUT BUFFER
   
-  assign Lready_out = Lfifo_ready_out;
-  assign Nready_out = Nfifo_ready_out;
-  assign Eready_out = Efifo_ready_out;
-  assign Wready_out = Wfifo_ready_out;
-  assign Sready_out = Sfifo_ready_out;
+  assign L_CTS = Lfifo_ready_out;
+  assign N_CTS = Nfifo_ready_out;
+  assign E_CTS = Efifo_ready_out;
+  assign W_CTS = Wfifo_ready_out;
+  assign S_CTS = Sfifo_ready_out;
  
   // Reset is active low !
   assign rst_active_low = ~rst;
@@ -146,11 +144,11 @@ module noc_router(clk, rst,
 
   // Module Instantiations
   // FIFO
-  fifo_onehot L_FIFO (clk, rst_active_low, Lvalid_in, Lrd_en, Ldata_in,  Lfifo_data_out, Lempty, Lfifo_ready_out);
-  fifo_onehot N_FIFO (clk, rst_active_low, Nvalid_in, Nrd_en, Ndata_in,  Nfifo_data_out, Nempty, Nfifo_ready_out);
-  fifo_onehot E_FIFO (clk, rst_active_low, Evalid_in, Erd_en, Edata_in,  Efifo_data_out, Eempty, Efifo_ready_out);
-  fifo_onehot W_FIFO (clk, rst_active_low, Wvalid_in, Wrd_en, Wdata_in,  Wfifo_data_out, Wempty, Wfifo_ready_out);
-  fifo_onehot S_FIFO (clk, rst_active_low, Svalid_in, Srd_en, Sdata_in,  Sfifo_data_out, Sempty, Sfifo_ready_out);
+  fifo_onehot L_FIFO (clk, rst_active_low, L_DRTS, Lrd_en, L_RX,  Lfifo_data_out, Lempty, Lfifo_ready_out);
+  fifo_onehot N_FIFO (clk, rst_active_low, N_DRTS, Nrd_en, N_RX,  Nfifo_data_out, Nempty, Nfifo_ready_out);
+  fifo_onehot E_FIFO (clk, rst_active_low, E_DRTS, Erd_en, E_RX,  Efifo_data_out, Eempty, Efifo_ready_out);
+  fifo_onehot W_FIFO (clk, rst_active_low, W_DRTS, Wrd_en, W_RX,  Wfifo_data_out, Wempty, Wfifo_ready_out);
+  fifo_onehot S_FIFO (clk, rst_active_low, S_DRTS, Srd_en, S_RX,  Sfifo_data_out, Sempty, Sfifo_ready_out);
   
   // INIT_READ
   init_read L_INIT (clk, rst_active_low, Lempty, Lflit_id, Linit_rd);
@@ -167,11 +165,11 @@ module noc_router(clk, rst,
   LBDR S_LBDR (clk, rst_active_low, Sempty, Rxy, Cx, Sflit_id, Sdst_addr, cur_addr, SNport, SEport, SWport, SSport, SLport);
   
   // FLOWCONTROL
-  flowcontrol L_FC (rst_active_low, LNport, LEport, LWport, LSport, LLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, LLfc_ready_out, LNfc_ready_out, LEfc_ready_out, LWfc_ready_out, LSfc_ready_out);
-  flowcontrol N_FC (rst_active_low, NNport, NEport, NWport, NSport, NLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, NLfc_ready_out, NNfc_ready_out, NEfc_ready_out, NWfc_ready_out, NSfc_ready_out);
-  flowcontrol E_FC (rst_active_low, ENport, EEport, EWport, ESport, ELport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, ELfc_ready_out, ENfc_ready_out, EEfc_ready_out, EWfc_ready_out, ESfc_ready_out);
-  flowcontrol W_FC (rst_active_low, WNport, WEport, WWport, WSport, WLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, WLfc_ready_out, WNfc_ready_out, WEfc_ready_out, WWfc_ready_out, WSfc_ready_out);
-  flowcontrol S_FC (rst_active_low, SNport, SEport, SWport, SSport, SLport, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, SLfc_ready_out, SNfc_ready_out, SEfc_ready_out, SWfc_ready_out, SSfc_ready_out);
+  flowcontrol L_FC (rst_active_low, LNport, LEport, LWport, LSport, LLport, L_DCTS, N_DCTS, E_DCTS, W_DCTS, S_DCTS, LLfc_ready_out, LNfc_ready_out, LEfc_ready_out, LWfc_ready_out, LSfc_ready_out);
+  flowcontrol N_FC (rst_active_low, NNport, NEport, NWport, NSport, NLport, L_DCTS, N_DCTS, E_DCTS, W_DCTS, S_DCTS, NLfc_ready_out, NNfc_ready_out, NEfc_ready_out, NWfc_ready_out, NSfc_ready_out);
+  flowcontrol E_FC (rst_active_low, ENport, EEport, EWport, ESport, ELport, L_DCTS, N_DCTS, E_DCTS, W_DCTS, S_DCTS, ELfc_ready_out, ENfc_ready_out, EEfc_ready_out, EWfc_ready_out, ESfc_ready_out);
+  flowcontrol W_FC (rst_active_low, WNport, WEport, WWport, WSport, WLport, L_DCTS, N_DCTS, E_DCTS, W_DCTS, S_DCTS, WLfc_ready_out, WNfc_ready_out, WEfc_ready_out, WWfc_ready_out, WSfc_ready_out);
+  flowcontrol S_FC (rst_active_low, SNport, SEport, SWport, SSport, SLport, L_DCTS, N_DCTS, E_DCTS, W_DCTS, S_DCTS, SLfc_ready_out, SNfc_ready_out, SEfc_ready_out, SWfc_ready_out, SSfc_ready_out);
   
   // ARBITER
   arbiter L_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LLfc_ready_out, NLfc_ready_out, ELfc_ready_out, WLfc_ready_out, SLfc_ready_out, Lnextstate);
@@ -188,13 +186,10 @@ module noc_router(clk, rst,
   xbar S_XBAR (Ssel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Sdata_out_with_parity, Svalidout);
   
   // OUTPUT BUFFER
-  output_buffer L_OUTPUT_BUFFER (clk, rst_active_low, (Lready_in && Lvalidout), Ldata_out_with_parity, Ldata_out, Lvalid_out);
-  output_buffer N_OUTPUT_BUFFER (clk, rst_active_low, (Nready_in && Nvalidout), Ndata_out_with_parity, Ndata_out, Nvalid_out);
-  output_buffer E_OUTPUT_BUFFER (clk, rst_active_low, (Eready_in && Evalidout), Edata_out_with_parity, Edata_out, Evalid_out);
-  output_buffer W_OUTPUT_BUFFER (clk, rst_active_low, (Wready_in && Wvalidout), Wdata_out_with_parity, Wdata_out, Wvalid_out);
-  output_buffer S_OUTPUT_BUFFER (clk, rst_active_low, (Sready_in && Svalidout), Sdata_out_with_parity, Sdata_out, Svalid_out);
+  output_buffer L_OUTPUT_BUFFER (clk, rst_active_low, (L_DCTS && Lvalidout), Ldata_out_with_parity, L_TX, L_RTS);
+  output_buffer N_OUTPUT_BUFFER (clk, rst_active_low, (N_DCTS && Nvalidout), Ndata_out_with_parity, N_TX, N_RTS);
+  output_buffer E_OUTPUT_BUFFER (clk, rst_active_low, (E_DCTS && Evalidout), Edata_out_with_parity, E_TX, E_RTS);
+  output_buffer W_OUTPUT_BUFFER (clk, rst_active_low, (W_DCTS && Wvalidout), Wdata_out_with_parity, W_TX, W_RTS);
+  output_buffer S_OUTPUT_BUFFER (clk, rst_active_low, (S_DCTS && Svalidout), Sdata_out_with_parity, S_TX, S_RTS);
  
-  // PARITY CHECKER
-  //parity_checkers PARITY_CHK0 (Nbuffer_data_out, Ebuffer_data_out, Wbuffer_data_out, Sbuffer_data_out, Lbuffer_data_out, Nparity_err, Eparity_err, Wparity_err, Sparity_err, Lparity_err);
-  
 endmodule
