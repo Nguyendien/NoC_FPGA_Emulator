@@ -22,7 +22,7 @@ module flowcontrol(rst,
   output reg  Lready_out, Nready_out, Eready_out, Wready_out, Sready_out;                // Ready signal send to Arbiter, Previous router
   
   // Ready_out is asserted whenever the selected output port and the corresponding output FIFO is also ready enough
-  always @(rst, Lready, Nready, Eready, Wready, Sready, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, Lport, Nport, Eport, Wport, Sport) begin
+  always @(rst, Lready_in, Nready_in, Eready_in, Wready_in, Sready_in, Lport, Nport, Eport, Wport, Sport) begin
     if (rst) begin
       Lready_out <= 1'b0;
       Nready_out <= 1'b0;
