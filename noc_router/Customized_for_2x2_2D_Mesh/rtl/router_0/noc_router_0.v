@@ -13,9 +13,9 @@
 * $Author: ranga $
 *********************/
 `include "../../include/parameters.v"
-`include "../common/fifo_onehot.v"
-`include "../common/init_read.v"
-`include "../common/output_buffer.v"
+`include "fifo_onehot.v"
+`include "init_read.v"
+`include "output_buffer.v"
 `include "router_0_state_defines.v"
 
 // NoC router 0 has only Local, East and South ports in a 2x2 2D Mesh topology
@@ -40,7 +40,7 @@ module noc_router_0 (clk, rst,
   output                     L_RTS, E_RTS, S_RTS;                                // Outgoing RTS (Request to Send) signal to NEXT router (or NI) 
 
   // Declaring the local variables
-  wire                   	rst_active_low; // NB: reset is avtive low!
+  wire                   	rst_active_low; // NB: reset is active low!
   wire                  	Erd_en, Srd_en, Lrd_en;                                              				   // read enable for FIFO buffer
   wire [`DATA_WIDTH-1:0] 	Efifo_data_out, Sfifo_data_out, Lfifo_data_out;      								   // data output from input FIFO buffer
   wire                  	Eempty, Sempty, Lempty;                                              				   // empty signal from FIFO buffer to LBDR

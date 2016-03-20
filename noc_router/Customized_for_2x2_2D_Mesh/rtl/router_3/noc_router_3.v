@@ -13,9 +13,9 @@
 * $Author: ranga $
 *********************/
 `include "../../include/parameters.v"
-`include "../common/fifo_onehot.v"
-`include "../common/init_read.v"
-`include "../common/output_buffer.v"
+`include "fifo_onehot.v"
+`include "init_read.v"
+`include "output_buffer.v"
 `include "router_3_state_defines.v"
 
 module noc_router_3 (clk, rst,
@@ -38,7 +38,7 @@ module noc_router_3 (clk, rst,
   output                     L_RTS, N_RTS, W_RTS;                                // Outgoing RTS (Request to Send) signal to NEXT router (or NI) 
 
   // Declaring the local variables
-  wire                   rst_active_low; // NB: reset is avtive low!
+  wire                   rst_active_low; // NB: reset is active low!
   wire                   Nrd_en, Wrd_en, Lrd_en;                                               // read enable for FIFO buffer
   wire [`DATA_WIDTH-1:0] Nfifo_data_out, Wfifo_data_out, Lfifo_data_out;       // data output from input FIFO buffer
   wire                   Nempty, Wempty, Lempty;                                               // empty signal from FIFO buffer to LBDR
