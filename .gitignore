@@ -87,7 +87,7 @@
 !*.xmp
 ########
 #SDK project files
-#######
+########
 !.project
 !.cproject
 !Makefile
@@ -95,8 +95,14 @@
 !*.make
 !make.*
 
+#########
+#Auto generated project files
+#########
 NoC_integration/NoC_integration.sdk/FSBL*
 NoC_integration/NoC_integration.sdk/*wrapper_hw_platform*
 
 !*.upgrade_log
+
+.svn
+.DS_Store
 
