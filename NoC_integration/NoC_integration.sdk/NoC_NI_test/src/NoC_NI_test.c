@@ -6,14 +6,14 @@
  */
 
 #include <stdio.h>
-#include "platform.h"
+//#include "platform.h"
 #include "xparameters.h"
 #include "xil_io.h"
 #include "network_interface.h"
 
 int main()
 {
-    init_platform();
+    //init_platform();
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\r");
     print("Hello World\n\r");
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\r");
@@ -61,6 +61,6 @@ int main()
 //
 //		print("================");
 //	}
-    cleanup_platform();
+    //cleanup_platform();
     return 0;
 }
