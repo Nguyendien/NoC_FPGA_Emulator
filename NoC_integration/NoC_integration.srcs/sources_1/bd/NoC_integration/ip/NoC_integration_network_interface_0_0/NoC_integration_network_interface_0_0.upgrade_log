@@ -1,6 +1,40 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Sun Mar 20 22:36:33 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_network_interface_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_network_interface_0_0 (ttu.ee:user:network_interface:1.1 (Rev. 1)) to current project options.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'NoC_integration_network_interface_0_0'.
+
+
+-upgrade has removed interface 'Port_out'
+-upgrade has removed interface 'S00_AXI'
+-upgrade has removed interface 'port_in'
+-upgrade has added interface 'S_AXI_PE_con'
+-upgrade has added interface 'router_in'
+-upgrade has added interface 'router_out'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
 | Date         : Thu Mar 10 18:09:34 2016
 | Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 | Command      : upgrade_ip

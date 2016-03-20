@@ -6,7 +6,8 @@
   <spirit:version>1.1</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
-      <spirit:name>S00_AXI</spirit:name>
+      <spirit:name>S_AXI_PE_con</spirit:name>
+      <spirit:displayName>AXI connection for the processing element</spirit:displayName>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
       <spirit:slave>
@@ -169,15 +170,15 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>WIZ_DATA_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choices_0">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S_AXI_PE_CON.WIZ_DATA_WIDTH" spirit:choiceRef="choices_0">32</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>WIZ_NUM_REG</spirit:name>
-          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">4</spirit:value>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S_AXI_PE_CON.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">4</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
-          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choices_1">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S_AXI_PE_CON.SUPPORTS_NARROW_BURST" spirit:choiceRef="choices_1">0</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -221,7 +222,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S_AXI_PE_con</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
@@ -230,9 +231,9 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>port_in</spirit:name>
-      <spirit:displayName>Port_in</spirit:displayName>
-      <spirit:description>Port_in</spirit:description>
+      <spirit:name>router_in</spirit:name>
+      <spirit:displayName>router_in</spirit:displayName>
+      <spirit:description>router_in</spirit:description>
       <spirit:busType spirit:vendor="ttu.ee" spirit:library="user" spirit:name="NoC_connection" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="ttu.ee" spirit:library="user" spirit:name="NoC_connection_rtl" spirit:version="1.0"/>
       <spirit:master/>
@@ -264,9 +265,9 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>Port_out</spirit:name>
-      <spirit:displayName>Port_out</spirit:displayName>
-      <spirit:description>Port_out</spirit:description>
+      <spirit:name>router_out</spirit:name>
+      <spirit:displayName>router_out</spirit:displayName>
+      <spirit:description>router_out</spirit:description>
       <spirit:busType spirit:vendor="ttu.ee" spirit:library="user" spirit:name="NoC_connection" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="ttu.ee" spirit:library="user" spirit:name="NoC_connection_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -977,7 +978,7 @@
         <xilinx:canUpgradeFrom>ttu.ee:user:network_interface:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>ttu.ee:user:dummy_network_interface:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2016-03-18T15:50:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-03-20T20:35:57Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ttu.ee:user:dummy_network_interface:1.0_ARCHIVE_LOCATION">/home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator</xilinx:tag>
         <xilinx:tag xilinx:name="ttu.ee:user:network_interface:1.0_ARCHIVE_LOCATION">/home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator</xilinx:tag>
@@ -986,7 +987,7 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3937a241"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="6747815f"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="cafe3ba6"/>
       <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8c897167"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="5ea1a6c0"/>
