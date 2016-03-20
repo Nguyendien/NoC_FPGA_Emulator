@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1458343690">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1458504725">
   <File Type="VDS-TIMING-PB" Name="NoC_integration_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="NoC_integration_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="NoC_integration_wrapper.dcp"/>
@@ -29,6 +29,7 @@
     <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_network_interface_0_0/NoC_integration_network_interface_0_0.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_noc_router_0_0/NoC_integration_noc_router_0_0.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_dummy_network_interface_0_0/NoC_integration_dummy_network_interface_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_noc_router_0_2/NoC_integration_noc_router_0_2.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="NoC_integration_wrapper"/>

@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: ttu.ee:user:dummy_network_interface:1.0
+-- IP VLNV: ttu.ee:user:network_interface:1.1
 -- IP Revision: 1
 
 LIBRARY ieee;
@@ -55,13 +55,12 @@ USE ieee.numeric_std.ALL;
 
 ENTITY NoC_integration_network_interface_0_0 IS
   PORT (
-    debug_port : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    router_RTS_data_in : IN STD_LOGIC;
-    router_CTS_data_in : OUT STD_LOGIC;
-    router_data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    router_RTS_data_out : OUT STD_LOGIC;
-    router_CTS_data_out : IN STD_LOGIC;
-    router_data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    DRTS : IN STD_LOGIC;
+    CTS : OUT STD_LOGIC;
+    RX : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    RTS : OUT STD_LOGIC;
+    DCTS : IN STD_LOGIC;
+    TX : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s00_axi_awaddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s00_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s00_axi_awvalid : IN STD_LOGIC;
@@ -96,13 +95,12 @@ ARCHITECTURE NoC_integration_network_interface_0_0_arch OF NoC_integration_netwo
       C_S00_AXI_ADDR_WIDTH : INTEGER -- Width of S_AXI address bus
     );
     PORT (
-      debug_port : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      router_RTS_data_in : IN STD_LOGIC;
-      router_CTS_data_in : OUT STD_LOGIC;
-      router_data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      router_RTS_data_out : OUT STD_LOGIC;
-      router_CTS_data_out : IN STD_LOGIC;
-      router_data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      DRTS : IN STD_LOGIC;
+      CTS : OUT STD_LOGIC;
+      RX : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      RTS : OUT STD_LOGIC;
+      DCTS : IN STD_LOGIC;
+      TX : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       s00_axi_awaddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       s00_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       s00_axi_awvalid : IN STD_LOGIC;
@@ -131,12 +129,12 @@ ARCHITECTURE NoC_integration_network_interface_0_0_arch OF NoC_integration_netwo
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF NoC_integration_network_interface_0_0_arch : ARCHITECTURE IS "NoC_integration_network_interface_0_0,network_interface_v1_0,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_INFO OF router_RTS_data_in: SIGNAL IS "ttu.ee:user:router_data_connection:1.0 Router_to_ni_data RTC";
-  ATTRIBUTE X_INTERFACE_INFO OF router_CTS_data_in: SIGNAL IS "ttu.ee:user:router_data_connection:1.0 Router_to_ni_data CTS";
-  ATTRIBUTE X_INTERFACE_INFO OF router_data_in: SIGNAL IS "ttu.ee:user:router_data_connection:1.0 Router_to_ni_data Data";
-  ATTRIBUTE X_INTERFACE_INFO OF router_RTS_data_out: SIGNAL IS "ttu.ee:user:router_data_connection:1.0 NI_to_router_data RTC";
-  ATTRIBUTE X_INTERFACE_INFO OF router_CTS_data_out: SIGNAL IS "ttu.ee:user:router_data_connection:1.0 NI_to_router_data CTS";
-  ATTRIBUTE X_INTERFACE_INFO OF router_data_out: SIGNAL IS "ttu.ee:user:router_data_connection:1.0 NI_to_router_data Data";
+  ATTRIBUTE X_INTERFACE_INFO OF DRTS: SIGNAL IS "ttu.ee:user:NoC_connection:1.0 port_in RTS";
+  ATTRIBUTE X_INTERFACE_INFO OF CTS: SIGNAL IS "ttu.ee:user:NoC_connection:1.0 port_in CTS";
+  ATTRIBUTE X_INTERFACE_INFO OF RX: SIGNAL IS "ttu.ee:user:NoC_connection:1.0 port_in Data";
+  ATTRIBUTE X_INTERFACE_INFO OF RTS: SIGNAL IS "ttu.ee:user:NoC_connection:1.0 Port_out RTS";
+  ATTRIBUTE X_INTERFACE_INFO OF DCTS: SIGNAL IS "ttu.ee:user:NoC_connection:1.0 Port_out CTS";
+  ATTRIBUTE X_INTERFACE_INFO OF TX: SIGNAL IS "ttu.ee:user:NoC_connection:1.0 Port_out Data";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID";
@@ -165,13 +163,12 @@ BEGIN
       C_S00_AXI_ADDR_WIDTH => 4
     )
     PORT MAP (
-      debug_port => debug_port,
-      router_RTS_data_in => router_RTS_data_in,
-      router_CTS_data_in => router_CTS_data_in,
-      router_data_in => router_data_in,
-      router_RTS_data_out => router_RTS_data_out,
-      router_CTS_data_out => router_CTS_data_out,
-      router_data_out => router_data_out,
+      DRTS => DRTS,
+      CTS => CTS,
+      RX => RX,
+      RTS => RTS,
+      DCTS => DCTS,
+      TX => TX,
       s00_axi_awaddr => s00_axi_awaddr,
       s00_axi_awprot => s00_axi_awprot,
       s00_axi_awvalid => s00_axi_awvalid,

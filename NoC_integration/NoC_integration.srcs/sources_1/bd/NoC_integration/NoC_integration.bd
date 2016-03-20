@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:synthFlowMode="None" bd:tool_version="2015.1" bd:top="NoC_integration" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2015.1" bd:top="NoC_integration" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -96,6 +96,16 @@
         <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="processing_system7_0_axi_periph"/>
         <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="network_interface_0"/>
       </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>network_interface_0_port_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_out" spirit:componentRef="noc_router_0"/>
+        <spirit:activeInterface spirit:busRef="port_in" spirit:componentRef="network_interface_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_0_N_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_in" spirit:componentRef="noc_router_0"/>
+        <spirit:activeInterface spirit:busRef="Port_out" spirit:componentRef="network_interface_0"/>
+      </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -110,6 +120,7 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="noc_router_0" spirit:portRef="rst"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rst_processing_system7_0_100M_interconnect_aresetn</spirit:name>
@@ -126,6 +137,7 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="noc_router_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -219,10 +231,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>S00_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>S00_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -265,10 +287,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>M00_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>M00_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -311,10 +343,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>M01_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>M01_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -560,10 +602,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>M_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>M_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -606,10 +658,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>S_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>S_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -730,10 +792,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>M_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>M_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -776,10 +848,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>S_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>S_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -925,10 +1007,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>M_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>M_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -971,10 +1063,20 @@
           <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>S_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_RESET</spirit:name>
             <spirit:value>S_ARESETN</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
