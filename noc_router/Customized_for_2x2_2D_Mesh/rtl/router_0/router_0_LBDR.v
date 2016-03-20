@@ -8,7 +8,7 @@
 * $Author: ranga $
 *********************/
 
-`include "parameters.v"
+`include "../../include/parameters.v"
 
 module LBDR(clk, rst,
             empty,

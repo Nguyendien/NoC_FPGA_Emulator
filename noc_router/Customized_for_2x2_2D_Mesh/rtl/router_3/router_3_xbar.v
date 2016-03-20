@@ -7,7 +7,7 @@
 * $Date: 2016-02-15 23:43:28 +0200 (Mon, 15 Feb 2016) $
 * $Author: ranga $
 *********************/
-`include "parameters.v"
+`include "../../include/parameters.v"
 `include "router_3_state_defines.v"
 
 module xbar(sel_in, N_datain, W_datain, L_datain, dataout, validout);

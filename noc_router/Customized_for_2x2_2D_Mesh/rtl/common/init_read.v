@@ -7,7 +7,7 @@
 * $Date: 2016-02-20 21:11:39 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
-`include "parameters.v"
+`include "../../include/parameters.v"
 
 module init_read(clk, rst, empty, flit_type, init_rd);
   

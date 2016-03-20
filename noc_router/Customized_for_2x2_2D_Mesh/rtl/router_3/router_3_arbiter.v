@@ -11,7 +11,7 @@
 * $Date: 2016-02-20 19:24:53 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
-`include "parameters.v"
+`include "../../include/parameters.v"
 `include "router_3_state_defines.v"
 
 module arbiter(clk, rst,

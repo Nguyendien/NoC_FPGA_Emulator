@@ -12,7 +12,10 @@
 * $Date: 2016-02-20 18:43:26 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
-`include "parameters.v"
+`include "../../include/parameters.v"
+`include "../common/fifo_onehot.v"
+`include "../common/init_read.v"
+`include "../common/output_buffer.v"
 `include "router_2_state_defines.v"
 
 module noc_router_2 (clk, rst,

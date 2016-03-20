@@ -7,8 +7,7 @@
 * $Date: 2016-02-20 21:11:39 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
-`include "parameters.v"
-// `include "state_defines.v"
+`include "../include/parameters.v"
   
   // Task to generate reset and assign default settings -- router_id and Rxy
   task automatic reset;
