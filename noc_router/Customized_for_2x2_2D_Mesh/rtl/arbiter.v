@@ -11,33 +11,35 @@
 * $Date: 2016-02-20 19:24:53 +0200 (Sat, 20 Feb 2016) $
 * $Author: ranga $
 *********************/
-`include "../../include/parameters.v"
-`include "router_1_state_defines.v"
+`include "../include/parameters.v"
+`include "../include/state_defines.v"
 
 module arbiter(clk, rst,
-                Lflit_type, Wflit_type, Sflit_type,
-                Llength, Wlength, Slength,
-                Lreq, Wreq, Sreq,
+                Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id,
+                Llength, Nlength, Elength, Wlength, Slength,
+                Lreq, Nreq, Ereq, Wreq, Sreq,
                 nextstate
               );
  
   input         clk, rst;
-  input [2:0]   Lflit_type, Wflit_type, Sflit_type;
-  input [11:0]  Llength, Wlength, Slength;
-  input         Lreq, Wreq, Sreq;
+  input [2:0]   Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id;
+  input [11:0]  Llength, Nlength, Elength, Wlength, Slength;
+  input         Lreq, Nreq, Ereq, Wreq, Sreq;
   
-  output reg [3:0] nextstate;
+  output reg [5:0] nextstate;
   
   // Declaring the local variables
-  reg [3:0] currentstate; 
-  reg       Lruntimer, Wruntimer, Sruntimer;
+  reg [5:0] currentstate; 
+  reg       Lruntimer, Nruntimer, Eruntimer, Wruntimer, Sruntimer;
   
-  wire      Ltimesup, Wtimesup, Stimesup;
+  wire      Ltimesup, Ntimesup, Etimesup, Wtimesup, Stimesup;
     
   // Timer module that runs for the entire packet length
-  timer Ltimer (clk, rst, Lflit_type, Llength, Lruntimer, Ltimesup);
-  timer Wtimer (clk, rst, Wflit_type, Wlength, Wruntimer, Wtimesup);
-  timer Stimer (clk, rst, Sflit_type, Slength, Sruntimer, Stimesup);
+  timer Ltimer (clk, rst, Lflit_id, Llength, Lruntimer, Ltimesup);
+  timer Ntimer (clk, rst, Nflit_id, Nlength, Nruntimer, Ntimesup);
+  timer Etimer (clk, rst, Eflit_id, Elength, Eruntimer, Etimesup);
+  timer Wtimer (clk, rst, Wflit_id, Wlength, Wruntimer, Wtimesup);
+  timer Stimer (clk, rst, Sflit_id, Slength, Sruntimer, Stimesup);
   
   // Arbiter - State Machine
   // Current state sequential Logic
@@ -49,13 +51,19 @@ module arbiter(clk, rst,
   end
   
   // Next state decoder Logic
-  always @ (Lreq, Wreq, Sreq, Ltimesup, Wtimesup, Stimesup, currentstate) begin
-    {Lruntimer, Wruntimer, Sruntimer} = 0;
+  always @ (Lreq, Nreq, Ereq, Wreq, Sreq, Ltimesup, Ntimesup, Etimesup, Wtimesup, Stimesup, currentstate) begin
+    {Lruntimer, Nruntimer, Eruntimer, Wruntimer, Sruntimer} = 0;
     case(currentstate)
       `IDLE:
         begin
           if(Lreq == 1) begin
             nextstate = `GRANT_L;
+          end
+          else if(Nreq == 1) begin
+            nextstate = `GRANT_N;
+          end
+          else if(Ereq == 1) begin
+            nextstate = `GRANT_E;
           end
           else if(Wreq == 1) begin
             nextstate = `GRANT_W;
@@ -74,6 +82,12 @@ module arbiter(clk, rst,
             Lruntimer = 1;
             nextstate = `GRANT_L;
           end
+          else if(Nreq == 1) begin
+            nextstate = `GRANT_N;
+          end
+          else if(Ereq == 1) begin
+            nextstate = `GRANT_E;
+          end
           else if(Wreq == 1) begin
             nextstate = `GRANT_W;
           end
@@ -88,6 +102,58 @@ module arbiter(clk, rst,
           end
         end
         
+      `GRANT_N:
+        begin
+          if(Nreq == 1 && Ntimesup == 0) begin
+            Nruntimer = 1;
+            nextstate = `GRANT_N;
+          end
+          else if(Ereq == 1) begin
+            nextstate = `GRANT_E;
+          end
+          else if(Wreq == 1) begin
+            nextstate = `GRANT_W;
+          end
+          else if(Sreq == 1) begin
+            nextstate = `GRANT_S;
+          end
+          else if(Lreq == 1) begin
+            nextstate = `GRANT_L;
+          end
+          else if(Nreq == 1) begin
+            nextstate = `GRANT_N;
+          end
+          else begin
+            nextstate = `IDLE;
+          end
+        end
+      
+      `GRANT_E:
+        begin
+          if(Ereq == 1 && Etimesup == 0) begin
+            Eruntimer = 1;
+            nextstate = `GRANT_E;
+          end
+          else if(Wreq == 1) begin
+            nextstate = `GRANT_W;
+          end
+          else if(Sreq == 1) begin
+            nextstate = `GRANT_S;
+          end
+          else if(Lreq == 1) begin
+            nextstate = `GRANT_L;
+          end
+          else if(Nreq == 1) begin
+            nextstate = `GRANT_N;
+          end
+          else if(Ereq == 1) begin
+            nextstate = `GRANT_E;
+          end
+          else begin
+            nextstate = `IDLE;
+          end
+        end
+      
       `GRANT_W:
         begin
           if(Wreq == 1 && Wtimesup == 0) begin
@@ -99,6 +165,12 @@ module arbiter(clk, rst,
           end
           else if(Lreq == 1) begin
             nextstate = `GRANT_L;
+          end
+          else if(Nreq == 1) begin
+            nextstate = `GRANT_N;
+          end
+          else if(Ereq == 1) begin
+            nextstate = `GRANT_E;
           end
           else if(Wreq == 1) begin
             nextstate = `GRANT_W;
@@ -116,6 +188,12 @@ module arbiter(clk, rst,
           end
           else if(Lreq == 1) begin
             nextstate = `GRANT_L;
+          end
+          else if(Nreq == 1) begin
+            nextstate = `GRANT_N;
+          end
+          else if(Ereq == 1) begin
+            nextstate = `GRANT_E;
           end
           else if(Wreq == 1) begin
             nextstate = `GRANT_W;
@@ -137,10 +215,10 @@ module arbiter(clk, rst,
 
 endmodule
 
-module timer (clk, rst, flit_type, length, runtimer, timesup);
+module timer (clk, rst, flit_id, length, runtimer, timesup);
 
   input           clk, rst;
-  input [2 : 0]   flit_type;
+  input [2 : 0]   flit_id;
   input [11 : 0]  length;
   input           runtimer;
   
@@ -157,7 +235,7 @@ module timer (clk, rst, flit_type, length, runtimer, timesup);
       timeoutclockperiods <= 0;
     end
     else begin
-      if (flit_type == `HEADER) begin
+      if (flit_id == `HEADER) begin
         timeoutclockperiods <= length;
       end
       if (runtimer == 0) begin

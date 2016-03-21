@@ -7,7 +7,7 @@
 * $Date: 2015-11-21 15:19:20 +0200 (Sat, 21 Nov 2015) $
 * $Author: ranga $
 *********************/
-`include "../../include/parameters.v"
+`include "../include/parameters.v"
 
 module output_buffer(clk, rst, 
                       enable, // ready_in signal from next router

@@ -8,23 +8,23 @@
 * $Author: ranga $
 *********************/
 
-`include "../../include/parameters.v"
+`include "../include/parameters.v"
 
 module LBDR(clk, rst,
             empty,
             Rxy_rst, Cx_rst, 
-            flit_type, dst_addr, cur_addr_rst,
-            Wport, Sport, Lport
+            flit_id, dst_addr, cur_addr_rst,
+            Nport, Eport, Wport, Sport, Lport
             );
             
   input clk, rst;
   input empty;
   input [7:0] Rxy_rst;
   input [3:0] Cx_rst;
-  input [2:0] flit_type;
+  input [2:0] flit_id;
   input [`AXIS-1 : 0] dst_addr, cur_addr_rst;
   
-  output reg Wport, Sport, Lport;
+  output reg Nport, Wport, Eport, Sport, Lport;
   
   // Declaring the local variables
   reg [7:0] Rxy;
@@ -68,13 +68,15 @@ module LBDR(clk, rst,
   wire S1 = y_cur < y_dst;
   
   // Logic 2 -- The final output port direction based on the comparator logic and Routing, connecting bits
-  // LBDR routing logic works on HEADER flit alone and it maintains the same port direction for BODY and TAIL flit(s) of the same packet, until a new HEADER flit arrives
+  // LBDR routing logic works on HEADER flit alone and it maintains the same port direction for PAYLOAD and TAIL flit of the same packet, until a new HEADER flit arrives
   
   always @ (posedge clk) begin
     if (rst || empty) begin
-      {Wport, Sport, Lport} <= 0;
+      {Nport, Eport, Wport, Sport, Lport} <= 0;
     end
-    else if (flit_type == `HEADER) begin
+    else if (flit_id == `HEADER) begin
+      Nport <= ((N1 & ~E1 & ~W1) | (N1 & E1 & Rne) | (N1 & W1 & Rnw)) & Cn;
+      Eport <= ((E1 & ~N1 & ~S1) | (E1 & N1 & Ren) | (E1 & S1 & Res)) & Ce;
       Wport <= ((W1 & ~N1 & ~S1) | (W1 & N1 & Rwn) | (W1 & S1 & Rws)) & Cw;
       Sport <= ((S1 & ~E1 & ~W1) | (S1 & E1 & Rse) | (S1 & W1 & Rsw)) & Cs;
       Lport <= ~N1 & ~ E1 & ~W1 & ~S1;
