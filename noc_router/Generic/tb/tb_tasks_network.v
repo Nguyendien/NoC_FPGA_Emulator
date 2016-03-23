@@ -17,7 +17,7 @@
     input [3 : 0] Cx_rst;
     input [3 : 0] cur_addr_rst;
     begin
-      rst      = 1;
+      rst      = 0;
       @(negedge clk) begin
         Rxy[id]      = Rxy_rst;
         Cx[id]       = Cx_rst;
@@ -29,7 +29,7 @@
       repeat(2)
         @(negedge clk);
       //$display("TIME:%0t HARD_RESET:: Ldata_out:%0h, Ndata_out:%0h, Edata_out:%0h, Wdata_out:%0h, Sdata_out:%0h, Lready_out:%0b, Nready_out:%0b, Eready_out:%0b, Wready_out:%0b, Sready_out:%0b,  Lvalid_out:%0b, Nvalid_out:%0b, Evalid_out:%0b, Wvalid_out:%0b, Svalid_out:%0b",  $time, Ldata_out[id], Ndata_out, Edata_out, Wdata_out, Sdata_out, Lready_out, Nready_out, Eready_out, Wready_out, Sready_out, Lvalid_out, Nvalid_out, Evalid_out, Wvalid_out, Svalid_out);
-      rst = 0;
+      rst = 1;
     end
   endtask
   

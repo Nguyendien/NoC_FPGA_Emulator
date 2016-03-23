@@ -7,9 +7,9 @@
 * $Author: ranga $
 *********************/
 
-  // defining the flit ID -- One hot encoding
+  // defining the flit Type -- One hot encoding
   `define HEADER  3'b001
-  `define PAYLOAD 3'b010
+  `define BODY	  3'b010
   `define TAIL    3'b100
 
   // Specifying the FIFO parameters
