@@ -1,6 +1,6 @@
 /********************
 * Filename:     state_defines.v
-* Description:  definitions of the possibile values for the arbiter state variable
+* Description:  definitions of the possible values for the arbiter state variable
                 one-hot encoding considered
 * $Revision: 21 $
 * $Id: state_defines.v 21 2015-11-21 10:54:06Z ranga $

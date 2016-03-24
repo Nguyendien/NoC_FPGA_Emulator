@@ -64,7 +64,7 @@ module fifo_onehot(clk, rst,
   input                      wr_en, rd_en;
   input [`DATA_WIDTH-1 : 0]  data_in;
   
-  output reg [`DATA_WIDTH-1 : 0]  data_out;            // to crossbar
+  output reg [`DATA_WIDTH-1 : 0]  data_out;            // to crossbar , Because of using reg, the data_out will be inferred as a register
   output                          empty, ready_out;    // used for handshaking and flow control
   
   // Declaring the local variables

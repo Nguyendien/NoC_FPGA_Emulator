@@ -9,13 +9,14 @@
 *********************/
 `include "../include/parameters.v"
 `include "../include/state_defines.v"
-  
+
   // Task to generate reset and assign default settings -- router_id, Rxy, Cx, curr_addr
   task automatic reset;
     input [`NODES-1 : 0] id;
     input [7 : 0] Rxy_rst;
     input [3 : 0] Cx_rst;
     input [3 : 0] cur_addr_rst;
+    
     begin
       rst      = 0;
       @(posedge clk) begin
@@ -37,31 +38,42 @@
     input [11 : 0]    p_length;           // packet length in terms of # of flits = Header + Body (Payload) + Tail
     input [3 : 0]     d_addr, s_addr;
     input [7 : 0]     p_id;               // packet id
-    
+    integer f;
     output [`DATA_WIDTH-1 : 0] header_data; 
     begin
       flit   = `HEADER;
+      f = $fopen("output.txt","a");
+      $fdisplay(f,"TIME:%0t TASK HEADER: Flit:%0b, length:%0d, d_addr:%0h, s_addr:%0h, p_id:%0h, Parity:%0b \n", $time, flit, p_length, d_addr, s_addr, p_id, parity);
       $display("TIME:%0t TASK HEADER: Flit:%0b, length:%0d, d_addr:%0h, s_addr:%0h, p_id:%0h, Parity:%0b \n", $time, flit, p_length, d_addr, s_addr, p_id, parity);
+      $fclose(f);  
       header_data = {flit, p_length, d_addr, s_addr, p_id, parity};
     end
   endtask
   
   task automatic payload;
     output [`DATA_WIDTH-1 : 0] payload_data; 
+    integer f;
     begin
       data    = {$random};
       flit    = `PAYLOAD;
+      f = $fopen("output.txt","a");
+      $fdisplay(f,"TIME:%0t TASK PAYLOAD: Flit:%0b, Data:%0h, Parity:%0b \n", $time, flit, data, parity);
       $display("TIME:%0t TASK PAYLOAD: Flit:%0b, Data:%0h, Parity:%0b \n", $time, flit, data, parity);
+      $fclose(f);
       payload_data = {flit, data, parity};
     end
   endtask
   
   task automatic tail;
     output [`DATA_WIDTH-1 : 0] tail_data; 
+    integer f;
     begin
       data    = {$random};
       flit    = `TAIL;
+      f = $fopen("output.txt","a");
+      $fdisplay(f,"TIME:%0t TASK TAIL: Flit:%0b, Data:%0h, Parity:%0b \n", $time, flit, data, parity);
       $display("TIME:%0t TASK TAIL: Flit:%0b, Data:%0h, Parity:%0b \n", $time, flit, data, parity);
+      $fclose(f);
       tail_data = {flit, data, parity};
     end
   endtask
@@ -75,6 +87,7 @@
     input [3 : 0]     d_addr, s_addr;
     input [7 : 0]     p_id;               // packet id
     integer i;
+    integer f;
     begin
       // HEADER
       @(negedge clk)
@@ -84,7 +97,10 @@
           @(negedge clk);
         end
         header(p_length, d_addr, s_addr, p_id, tmp_data[id]);
+        f = $fopen("output.txt","a");
+        $fdisplay(f,"TIME:%0t HEADER: tmp_data:%0h \n", $time, tmp_data[id]);
         $display("TIME:%0t HEADER: tmp_data:%0h \n", $time, tmp_data[id]);
+        $fclose(f);
         Ndata_in[id] = tmp_data[id];
       end
       // PAYLOAD
@@ -95,7 +111,10 @@
           @(negedge clk);
         end
         payload(tmp_data[id]);
+	f = $fopen("output.txt","a");
+	$fdisplay(f,"TIME:%0t PAYLOAD: tmp_data:%0h \n", $time, tmp_data[id]);
         $display("TIME:%0t PAYLOAD: tmp_data:%0h \n", $time, tmp_data[id]);
+        $fclose(f);
         Ndata_in[id] = tmp_data[id];
       end
       // TAIL
@@ -105,7 +124,10 @@
           @(negedge clk);
         end
         tail(tmp_data[id]);
+	f = $fopen("output.txt","a");
+	$fdisplay(f,"TIME:%0t TAIL: tmp_data:%0h \n", $time, tmp_data[id]);
         $display("TIME:%0t TAIL: tmp_data:%0h \n", $time, tmp_data[id]);
+	$fclose(f);
         Ndata_in[id] = tmp_data[id];
       end
       
@@ -259,7 +281,7 @@
       end
     end
   endtask
-  
+
   // Local port Buffer
   task automatic Lpkt_gen;
     input [`NODES-1 : 0] id;
@@ -267,6 +289,8 @@
     input [3 : 0]     d_addr, s_addr;
     input [7 : 0]     p_id;               // packet id
     integer i;
+    integer f;
+
     begin
       // HEADER
       @(posedge clk)
@@ -276,10 +300,13 @@
           @(posedge clk);
         end
         header(p_length, d_addr, s_addr, p_id, tmp_data[id]);
+        f = $fopen("output.txt","a");
+	$fdisplay(f,"TIME:%0t HEADER: tmp_data:%0h \n", $time, tmp_data[id]);
         $display("TIME:%0t HEADER: tmp_data:%0h \n", $time, tmp_data[id]);
+        $fclose(f);
         Ldata_in[id] = tmp_data[id];
       end
-      // PAYLOAD
+      // BODY
       for(i = 1; i < p_length-1; i = i+1) begin
         @(posedge clk);
         Lvalid_in[id] = 1;
@@ -287,7 +314,10 @@
           @(posedge clk);
         end
         payload(tmp_data[id]);
+        f = $fopen("output.txt","a");
+        $fdisplay(f,"TIME:%0t PAYLOAD: tmp_data:%0h \n", $time, tmp_data[id]);
         $display("TIME:%0t PAYLOAD: tmp_data:%0h \n", $time, tmp_data[id]);
+        $fclose(f);
         Ldata_in[id] = tmp_data[id];
       end
       // TAIL
@@ -297,7 +327,10 @@
           @(posedge clk);
         end
         tail(tmp_data[id]);
+        f = $fopen("output.txt","a");
+        $fdisplay(f,"TIME:%0t TAIL: tmp_data:%0h \n", $time, tmp_data[id]);
         $display("TIME:%0t TAIL: tmp_data:%0h \n", $time, tmp_data[id]);
+        $fclose(f);
         Ldata_in[id] = tmp_data[id];
       end
       
@@ -306,4 +339,5 @@
         Ldata_in[id] = 0;
       end
     end
+
   endtask

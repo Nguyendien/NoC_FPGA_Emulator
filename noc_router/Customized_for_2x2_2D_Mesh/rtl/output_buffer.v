@@ -15,7 +15,7 @@ module output_buffer(clk, rst,
                       data_out,
                       valid
                     );
-                    
+                     
   input                      clk, rst;
   input                      enable;
   input [`DATA_WIDTH-1 : 0]  data_in;        // 32 bits with parity
