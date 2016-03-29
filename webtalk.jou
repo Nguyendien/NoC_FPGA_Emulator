@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Mon Mar 28 11:20:24 2016
+# Process ID: 11810
+# Log file: /home/hartz/pc/peekon/media/Data/NoC_FPGA_Emulator/NoC_FPGA_Emulator/webtalk.log
+# Journal file: /home/hartz/pc/peekon/media/Data/NoC_FPGA_Emulator/NoC_FPGA_Emulator/webtalk.jou
+#-----------------------------------------------------------
+source /home/hartz/pc/peekon/media/Data/NoC_FPGA_Emulator/NoC_FPGA_Emulator/2x2_microblaze/2x2_microblaze.hw/webtalk/labtool_webtalk.tcl -notrace
