@@ -5,7 +5,6 @@
 debug::add_scope template.lib 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config  -id {IP_Flow 19-2248}  -suppress 
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.compositeFile.enableAutoGeneration 0
@@ -19,6 +18,7 @@ set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_repo_paths {
   /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/noc_router
   /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/network_interface_1.0
+  /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/noc_router_NW
 } [current_project]
 add_files /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/NoC_integration.bd
 set_property used_in_implementation false [get_files -all /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xdc]
@@ -27,7 +27,6 @@ set_property used_in_implementation false [get_files -all /home/kjans/pc/NoC_Emu
 set_property used_in_implementation false [get_files -all /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_xbar_0/NoC_integration_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/ip/NoC_integration_auto_pc_1/NoC_integration_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/NoC_integration_ooc.xdc]
 set_property is_locked true [get_files /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.srcs/sources_1/bd/NoC_integration/NoC_integration.bd]
 

@@ -14,8 +14,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_top_left"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/network_interface_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_NW"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
@@ -28,22 +28,51 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_axi_periph_0/NoC_integration_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_0_0/NoC_integration_network_interface_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_2_0/NoC_integration_xlconstant_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_1_0/NoC_integration_xlconstant_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_0_0/NoC_integration_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_noc_router_NW_0_0/NoC_integration_noc_router_NW_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xbar_0/NoC_integration_xbar_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_1/NoC_integration_auto_pc_1.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.vhd"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_0_0/NoC_integration_network_interface_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_axi_periph_0/NoC_integration_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="NoC_integration_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.vhd"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.hwdef"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_noc_router_0_0_0/NoC_integration_noc_router_0_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/NI_test/NI_test.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_processing_system7_0_0/NI_test_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_rst_processing_system7_0_100M_0/NI_test_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_processing_system7_0_axi_periph_0/NI_test_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="NI_test_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hw_handoff/NI_test_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hdl/NI_test.hwdef"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hw_handoff/NI_test.hwh"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_auto_pc_0/NI_test_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hdl/NI_test.vhd"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/NI_test/hdl/NI_test_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -53,10 +82,13 @@
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_dummy_network_interface_0_0/NoC_integration_dummy_network_interface_0_0.upgrade_log"/>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_noc_router_0_2/NoC_integration_noc_router_0_2.upgrade_log"/>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_noc_router_0_0_0/NoC_integration_noc_router_0_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_noc_router_NW_0_0/NoC_integration_noc_router_NW_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/NI_test/ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="NoC_integration_wrapper"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -79,6 +111,7 @@
         <Option Name="TopModule" Val="NoC_integration_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
@@ -128,14 +161,4 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
   </Runs>
-  <MsgRule>
-    <MsgAttr Name="RuleType" Val="0"/>
-    <MsgAttr Name="Limit" Val="-1"/>
-    <MsgAttr Name="NewSeverity" Val="ANY"/>
-    <MsgAttr Name="Id" Val="IP_Flow 19-2248"/>
-    <MsgAttr Name="Severity" Val="ANY"/>
-    <MsgAttr Name="ShowRule" Val="1"/>
-    <MsgAttr Name="RuleSource" Val="16"/>
-    <MsgAttr Name="StringIsRegExp" Val="0"/>
-  </MsgRule>
 </Project>

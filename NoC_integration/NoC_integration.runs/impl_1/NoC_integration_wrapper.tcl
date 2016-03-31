@@ -44,7 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config  -id {IP_Flow 19-2248}  -suppress 
 
 start_step init_design
 set rc [catch {
@@ -59,6 +58,7 @@ set rc [catch {
   /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.cache/ip
   /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/noc_router
   /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/network_interface_1.0
+  /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/noc_router_NW
 } [current_project]
   set_property ip_output_repo /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.cache/ip [current_project]
   add_files -quiet /home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.runs/synth_1/NoC_integration_wrapper.dcp

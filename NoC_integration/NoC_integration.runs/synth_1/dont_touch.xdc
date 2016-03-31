@@ -19,14 +19,26 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration
 # IP: bd/NoC_integration/ip/NoC_integration_xbar_0/NoC_integration_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_xbar_0 || ORIG_REF_NAME==NoC_integration_xbar_0}]
 
-# IP: bd/NoC_integration/ip/NoC_integration_noc_router_0_0/NoC_integration_noc_router_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_noc_router_0_0 || ORIG_REF_NAME==NoC_integration_noc_router_0_0}]
+# IP: bd/NoC_integration/ip/NoC_integration_noc_router_NW_0_0/NoC_integration_noc_router_NW_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_noc_router_NW_0_0 || ORIG_REF_NAME==NoC_integration_noc_router_NW_0_0}]
+
+# IP: bd/NoC_integration/ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_network_interface_1_0 || ORIG_REF_NAME==NoC_integration_network_interface_1_0}]
+
+# IP: bd/NoC_integration/ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_network_interface_2_0 || ORIG_REF_NAME==NoC_integration_network_interface_2_0}]
+
+# IP: bd/NoC_integration/ip/NoC_integration_xlconstant_0_0/NoC_integration_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_xlconstant_0_0 || ORIG_REF_NAME==NoC_integration_xlconstant_0_0}]
+
+# IP: bd/NoC_integration/ip/NoC_integration_xlconstant_1_0/NoC_integration_xlconstant_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_xlconstant_1_0 || ORIG_REF_NAME==NoC_integration_xlconstant_1_0}]
+
+# IP: bd/NoC_integration/ip/NoC_integration_xlconstant_2_0/NoC_integration_xlconstant_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_xlconstant_2_0 || ORIG_REF_NAME==NoC_integration_xlconstant_2_0}]
 
 # IP: bd/NoC_integration/ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_auto_pc_0 || ORIG_REF_NAME==NoC_integration_auto_pc_0}]
-
-# IP: bd/NoC_integration/ip/NoC_integration_auto_pc_1/NoC_integration_auto_pc_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==NoC_integration_auto_pc_1 || ORIG_REF_NAME==NoC_integration_auto_pc_1}]
 
 # XDC: bd/NoC_integration/ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==NoC_integration_processing_system7_0_0 || ORIG_REF_NAME==NoC_integration_processing_system7_0_0}] {/inst }]/inst ]]
@@ -42,7 +54,5 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/NoC_integration/ip/NoC_integration_xbar_0/NoC_integration_xbar_0_ooc.xdc
 
 # XDC: bd/NoC_integration/ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0_ooc.xdc
-
-# XDC: bd/NoC_integration/ip/NoC_integration_auto_pc_1/NoC_integration_auto_pc_1_ooc.xdc
 
 # XDC: bd/NoC_integration/NoC_integration_ooc.xdc

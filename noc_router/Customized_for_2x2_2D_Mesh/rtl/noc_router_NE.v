@@ -40,7 +40,7 @@ module noc_router_NE(clk, rst,
   wire [`DATA_WIDTH-1:0] Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out;       // data output from input FIFO buffer
   wire                   Wempty, Sempty, Lempty;                                               // empty signal from FIFO buffer to LBDR
   wire                   Wfifo_ready_out, Sfifo_ready_out, Lfifo_ready_out;  // FIFO ready signal send to flowcontrol
-  wire [2:0]             Nflit_id, Eflit_id, Wflit_id, Sflit_id, Lflit_id;                                     // flit id type from FIFO buffer to LBDR and ARBITER
+  wire [2:0]             Nflit_type, Eflit_type, Wflit_type, Sflit_type, Lflit_type;                                     // flit id type from FIFO buffer to LBDR and ARBITER
   wire [`AXIS-1 : 0]     Wdst_addr, Sdst_addr, Ldst_addr;                                // destination address from FIFO buffer to LBDR and ARBITER
   wire [11: 0]           Nlength, Elength, Wlength, Slength, Llength;              // packet length sent to arbiter
   
@@ -78,11 +78,11 @@ module noc_router_NE(clk, rst,
   assign Lrd_en = Linit_rd || WLgrant || SLgrant || LLgrant;
   
   // Extract packet type, address & length from FIFO data out
-  assign Nflit_id = Nfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
-  assign Eflit_id = Efifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
-  assign Wflit_id = Wfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
-  assign Sflit_id = Sfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
-  assign Lflit_id = Lfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
+  assign Nflit_type = Nfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
+  assign Eflit_type = Efifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
+  assign Wflit_type = Wfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
+  assign Sflit_type = Sfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
+  assign Lflit_type = Lfifo_data_out[(`DATA_WIDTH-3) +: 3];     // [31:29]
   
   assign Wdst_addr = Wfifo_data_out[(`DATA_WIDTH-19) +: 4];    // [16:13]
   assign Sdst_addr = Sfifo_data_out[(`DATA_WIDTH-19) +: 4];    // [16:13]
@@ -115,14 +115,14 @@ module noc_router_NE(clk, rst,
   fifo_onehot S_FIFO (clk, rst_active_low, S_DRTS, Srd_en, S_RX,  Sfifo_data_out, Sempty, Sfifo_ready_out);
   
   // INIT_READ
-  init_read L_INIT (clk, rst_active_low, Lempty, Lflit_id, Linit_rd);
-  init_read W_INIT (clk, rst_active_low, Wempty, Wflit_id, Winit_rd);
-  init_read S_INIT (clk, rst_active_low, Sempty, Sflit_id, Sinit_rd);
+  init_read L_INIT (clk, rst_active_low, Lempty, Lflit_type, Linit_rd);
+  init_read W_INIT (clk, rst_active_low, Wempty, Wflit_type, Winit_rd);
+  init_read S_INIT (clk, rst_active_low, Sempty, Sflit_type, Sinit_rd);
   
   // LBDR
-  LBDR L_LBDR (clk, rst_active_low, Lempty, Rxy, Cx, Lflit_id, Ldst_addr, cur_addr, LNport, LEport, LWport, LSport, LLport);
-  LBDR W_LBDR (clk, rst_active_low, Wempty, Rxy, Cx, Wflit_id, Wdst_addr, cur_addr, WNport, WEport, WWport, WSport, WLport);
-  LBDR S_LBDR (clk, rst_active_low, Sempty, Rxy, Cx, Sflit_id, Sdst_addr, cur_addr, SNport, SEport, SWport, SSport, SLport);
+  LBDR L_LBDR (clk, rst_active_low, Lempty, Rxy, Cx, Lflit_type, Ldst_addr, cur_addr, LNport, LEport, LWport, LSport, LLport);
+  LBDR W_LBDR (clk, rst_active_low, Wempty, Rxy, Cx, Wflit_type, Wdst_addr, cur_addr, WNport, WEport, WWport, WSport, WLport);
+  LBDR S_LBDR (clk, rst_active_low, Sempty, Rxy, Cx, Sflit_type, Sdst_addr, cur_addr, SNport, SEport, SWport, SSport, SLport);
   
   // FLOWCONTROL
   flowcontrol L_FC (rst_active_low, LNport, LEport, LWport, LSport, LLport, L_DCTS, 1'b0, 1'b0, W_DCTS, S_DCTS, LLfc_ready_out, LNfc_ready_out, LEfc_ready_out, LWfc_ready_out, LSfc_ready_out);
@@ -130,9 +130,9 @@ module noc_router_NE(clk, rst,
   flowcontrol S_FC (rst_active_low, SNport, SEport, SWport, SSport, SLport, L_DCTS, 1'b0, 1'b0, W_DCTS, S_DCTS, SLfc_ready_out, SNfc_ready_out, SEfc_ready_out, SWfc_ready_out, SSfc_ready_out);
   
   // ARBITER
-  arbiter L_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LLfc_ready_out, NLfc_ready_out, ELfc_ready_out, WLfc_ready_out, SLfc_ready_out, Lnextstate);
-  arbiter W_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LWfc_ready_out, NWfc_ready_out, EWfc_ready_out, WWfc_ready_out, SWfc_ready_out, Wnextstate);
-  arbiter S_ARBITER (clk, rst_active_low, Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id, Llength, Nlength, Elength, Wlength, Slength, LSfc_ready_out, NSfc_ready_out, ESfc_ready_out, WSfc_ready_out, SSfc_ready_out, Snextstate);
+  arbiter L_ARBITER (clk, rst_active_low, Lflit_type, Nflit_type, Eflit_type, Wflit_type, Sflit_type, Llength, Nlength, Elength, Wlength, Slength, LLfc_ready_out, NLfc_ready_out, ELfc_ready_out, WLfc_ready_out, SLfc_ready_out, Lnextstate);
+  arbiter W_ARBITER (clk, rst_active_low, Lflit_type, Nflit_type, Eflit_type, Wflit_type, Sflit_type, Llength, Nlength, Elength, Wlength, Slength, LWfc_ready_out, NWfc_ready_out, EWfc_ready_out, WWfc_ready_out, SWfc_ready_out, Wnextstate);
+  arbiter S_ARBITER (clk, rst_active_low, Lflit_type, Nflit_type, Eflit_type, Wflit_type, Sflit_type, Llength, Nlength, Elength, Wlength, Slength, LSfc_ready_out, NSfc_ready_out, ESfc_ready_out, WSfc_ready_out, SSfc_ready_out, Snextstate);
   
   // CROSSBAR SWITCH
   xbar L_XBAR (Lsel_in, Nfifo_data_out, Efifo_data_out, Wfifo_data_out, Sfifo_data_out, Lfifo_data_out, Ldata_out_with_parity, Lvalidout);

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date             : Sun Mar 20 22:44:49 2016
+| Date             : Thu Mar 31 16:56:25 2016
 | Host             : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 | Command          : report_power -file NoC_integration_wrapper_power_routed.rpt -pb NoC_integration_wrapper_power_summary_routed.pb
 | Design           : NoC_integration_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.699 |
-| Dynamic (W)              | 1.542 |
+| Total On-Chip Power (W)  | 1.696 |
+| Dynamic (W)              | 1.540 |
 | Device Static (W)        | 0.156 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 65.4  |
@@ -49,17 +49,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.006 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     3266 |       --- |             --- |
-|   LUT as Logic          |     0.003 |     1259 |     53200 |            2.37 |
-|   Register              |    <0.001 |     1434 |    106400 |            1.35 |
-|   CARRY4                |    <0.001 |       45 |     13300 |            0.34 |
-|   LUT as Shift Register |    <0.001 |       66 |     17400 |            0.38 |
-|   Others                |     0.000 |      229 |       --- |             --- |
-| Signals                 |     0.004 |     2405 |       --- |             --- |
+| Clocks                  |     0.007 |        3 |       --- |             --- |
+| Slice Logic             |     0.001 |     4319 |       --- |             --- |
+|   LUT as Logic          |     0.001 |     1482 |     53200 |            2.79 |
+|   Register              |    <0.001 |     2139 |    106400 |            2.01 |
+|   CARRY4                |    <0.001 |       51 |     13300 |            0.38 |
+|   LUT as Shift Register |    <0.001 |       64 |     17400 |            0.37 |
+|   Others                |     0.000 |      270 |       --- |             --- |
+| Signals                 |     0.002 |     3357 |       --- |             --- |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.156 |          |           |                 |
-| Total                   |     1.699 |          |           |                 |
+| Total                   |     1.696 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -69,7 +69,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.013 |      0.015 |
+| Vccint    |       1.000 |     0.026 |       0.011 |      0.015 |
 | Vccaux    |       1.800 |     0.021 |       0.000 |      0.021 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -142,92 +142,108 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------------------------------------------+-----------+
-| Name                                                         | Power (W) |
-+--------------------------------------------------------------+-----------+
-| NoC_integration_wrapper                                      |     1.542 |
-|   NoC_integration_i                                          |     1.542 |
-|     network_interface_0                                      |    <0.001 |
-|       U0                                                     |    <0.001 |
-|         network_interface_v1_0_S00_AXI_inst                  |    <0.001 |
-|     noc_router_0                                             |     0.001 |
-|       inst                                                   |     0.001 |
-|         L_ARBITER                                            |    <0.001 |
-|           Ltimer                                             |    <0.001 |
-|           Ntimer                                             |    <0.001 |
-|           Stimer                                             |     0.000 |
-|           Wtimer                                             |    <0.001 |
-|         L_FIFO                                               |     0.001 |
-|           genblk2[0].REG_IN                                  |    <0.001 |
-|           genblk2[1].REG_IN                                  |    <0.001 |
-|           genblk2[2].REG_IN                                  |    <0.001 |
-|           genblk2[3].REG_IN                                  |    <0.001 |
-|         L_INIT                                               |    <0.001 |
-|         L_LBDR                                               |    <0.001 |
-|         L_OUTPUT_BUFFER                                      |    <0.001 |
-|         S_FIFO                                               |     0.000 |
-|           genblk2[3].REG_IN                                  |     0.000 |
-|     processing_system7_0                                     |     1.530 |
-|       inst                                                   |     1.530 |
-|     processing_system7_0_axi_periph                          |     0.010 |
-|       m01_couplers                                           |     0.005 |
-|         auto_pc                                              |     0.005 |
-|           inst                                               |     0.005 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s             |     0.005 |
-|               RD.ar_channel_0                                |    <0.001 |
-|                 ar_cmd_fsm_0                                 |    <0.001 |
-|                 cmd_translator_0                             |    <0.001 |
-|                   incr_cmd_0                                 |    <0.001 |
-|                   wrap_cmd_0                                 |    <0.001 |
-|               RD.r_channel_0                                 |     0.002 |
-|                 rd_data_fifo_0                               |     0.001 |
-|                 transaction_fifo_0                           |    <0.001 |
-|               SI_REG                                         |     0.002 |
-|                 ar_pipe                                      |    <0.001 |
-|                 aw_pipe                                      |    <0.001 |
-|                 b_pipe                                       |    <0.001 |
-|                 r_pipe                                       |    <0.001 |
-|               WR.aw_channel_0                                |    <0.001 |
-|                 aw_cmd_fsm_0                                 |    <0.001 |
-|                 cmd_translator_0                             |    <0.001 |
-|                   incr_cmd_0                                 |    <0.001 |
-|                   wrap_cmd_0                                 |    <0.001 |
-|               WR.b_channel_0                                 |    <0.001 |
-|                 bid_fifo_0                                   |    <0.001 |
-|                 bresp_fifo_0                                 |    <0.001 |
-|       s00_couplers                                           |     0.000 |
-|         auto_pc                                              |     0.000 |
-|       xbar                                                   |     0.005 |
-|         inst                                                 |     0.005 |
-|           gen_samd.crossbar_samd                             |     0.005 |
-|             addr_arbiter_ar                                  |    <0.001 |
-|             addr_arbiter_aw                                  |    <0.001 |
-|             gen_decerr_slave.decerr_slave_inst               |    <0.001 |
-|             gen_master_slots[0].reg_slice_mi                 |    <0.001 |
-|               b_pipe                                         |    <0.001 |
-|               r_pipe                                         |    <0.001 |
-|             gen_master_slots[1].reg_slice_mi                 |    <0.001 |
-|               b_pipe                                         |    <0.001 |
-|               r_pipe                                         |    <0.001 |
-|             gen_master_slots[2].reg_slice_mi                 |    <0.001 |
-|               b_pipe                                         |    <0.001 |
-|               r_pipe                                         |    <0.001 |
-|             gen_slave_slots[0].gen_si_read.si_transactor_ar  |     0.001 |
-|               gen_multi_thread.arbiter_resp_inst             |    <0.001 |
-|             gen_slave_slots[0].gen_si_write.si_transactor_aw |     0.001 |
-|               gen_multi_thread.arbiter_resp_inst             |    <0.001 |
-|             gen_slave_slots[0].gen_si_write.splitter_aw_si   |    <0.001 |
-|             gen_slave_slots[0].gen_si_write.wdata_router_w   |    <0.001 |
-|               wrouter_aw_fifo                                |    <0.001 |
-|                 gen_srls[0].gen_rep[0].srl_nx1               |    <0.001 |
-|                 gen_srls[0].gen_rep[1].srl_nx1               |    <0.001 |
-|             splitter_aw_mi                                   |    <0.001 |
-|     rst_processing_system7_0_100M                            |    <0.001 |
-|       U0                                                     |    <0.001 |
-|         EXT_LPF                                              |    <0.001 |
-|           ACTIVE_LOW_EXT.ACT_LO_EXT                          |    <0.001 |
-|         SEQ                                                  |    <0.001 |
-|           SEQ_COUNTER                                        |    <0.001 |
-+--------------------------------------------------------------+-----------+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| NoC_integration_wrapper                          |     1.540 |
+|   NoC_integration_i                              |     1.540 |
+|     network_interface_0                          |    <0.001 |
+|       U0                                         |    <0.001 |
+|         network_interface_v1_0_S00_AXI_inst      |    <0.001 |
+|           NI_PE_to_Router                        |    <0.001 |
+|           NI_Router_to_PE                        |    <0.001 |
+|     network_interface_1                          |    <0.001 |
+|       U0                                         |    <0.001 |
+|         network_interface_v1_0_S00_AXI_inst      |    <0.001 |
+|           NI_PE_to_Router                        |    <0.001 |
+|           NI_Router_to_PE                        |    <0.001 |
+|     network_interface_2                          |    <0.001 |
+|       U0                                         |    <0.001 |
+|         network_interface_v1_0_S00_AXI_inst      |    <0.001 |
+|           NI_PE_to_Router                        |    <0.001 |
+|           NI_Router_to_PE                        |    <0.001 |
+|     noc_router_NW_0                              |     0.004 |
+|       inst                                       |     0.004 |
+|         E_ARBITER                                |    <0.001 |
+|           Etimer                                 |    <0.001 |
+|           Ltimer                                 |    <0.001 |
+|           Stimer                                 |    <0.001 |
+|         E_FIFO                                   |    <0.001 |
+|           genblk2[0].REG_IN                      |    <0.001 |
+|           genblk2[1].REG_IN                      |    <0.001 |
+|           genblk2[2].REG_IN                      |    <0.001 |
+|           genblk2[3].REG_IN                      |    <0.001 |
+|         E_INIT                                   |    <0.001 |
+|         E_LBDR                                   |    <0.001 |
+|         E_OUTPUT_BUFFER                          |    <0.001 |
+|         L_ARBITER                                |    <0.001 |
+|           Etimer                                 |    <0.001 |
+|           Ltimer                                 |    <0.001 |
+|           Stimer                                 |    <0.001 |
+|         L_FIFO                                   |    <0.001 |
+|           genblk2[0].REG_IN                      |    <0.001 |
+|           genblk2[1].REG_IN                      |    <0.001 |
+|           genblk2[2].REG_IN                      |    <0.001 |
+|           genblk2[3].REG_IN                      |    <0.001 |
+|         L_INIT                                   |    <0.001 |
+|         L_LBDR                                   |    <0.001 |
+|         L_OUTPUT_BUFFER                          |    <0.001 |
+|         S_ARBITER                                |    <0.001 |
+|           Etimer                                 |    <0.001 |
+|           Ltimer                                 |    <0.001 |
+|           Stimer                                 |    <0.001 |
+|         S_FIFO                                   |    <0.001 |
+|           genblk2[0].REG_IN                      |    <0.001 |
+|           genblk2[1].REG_IN                      |    <0.001 |
+|           genblk2[2].REG_IN                      |    <0.001 |
+|           genblk2[3].REG_IN                      |    <0.001 |
+|         S_INIT                                   |    <0.001 |
+|         S_LBDR                                   |    <0.001 |
+|         S_OUTPUT_BUFFER                          |    <0.001 |
+|     processing_system7_0                         |     1.530 |
+|       inst                                       |     1.530 |
+|     processing_system7_0_axi_periph              |     0.004 |
+|       s00_couplers                               |     0.003 |
+|         auto_pc                                  |     0.003 |
+|           inst                                   |     0.003 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.003 |
+|               RD.ar_channel_0                    |    <0.001 |
+|                 ar_cmd_fsm_0                     |    <0.001 |
+|                 cmd_translator_0                 |    <0.001 |
+|                   incr_cmd_0                     |    <0.001 |
+|                   wrap_cmd_0                     |    <0.001 |
+|               RD.r_channel_0                     |     0.001 |
+|                 rd_data_fifo_0                   |    <0.001 |
+|                 transaction_fifo_0               |    <0.001 |
+|               SI_REG                             |     0.001 |
+|                 ar_pipe                          |    <0.001 |
+|                 aw_pipe                          |    <0.001 |
+|                 b_pipe                           |    <0.001 |
+|                 r_pipe                           |    <0.001 |
+|               WR.aw_channel_0                    |    <0.001 |
+|                 aw_cmd_fsm_0                     |    <0.001 |
+|                 cmd_translator_0                 |    <0.001 |
+|                   incr_cmd_0                     |    <0.001 |
+|                   wrap_cmd_0                     |    <0.001 |
+|               WR.b_channel_0                     |    <0.001 |
+|                 bid_fifo_0                       |    <0.001 |
+|                 bresp_fifo_0                     |    <0.001 |
+|       xbar                                       |    <0.001 |
+|         inst                                     |    <0.001 |
+|           gen_sasd.crossbar_sasd_0               |    <0.001 |
+|             addr_arbiter_inst                    |    <0.001 |
+|             gen_decerr.decerr_slave_inst         |    <0.001 |
+|             reg_slice_r                          |    <0.001 |
+|             splitter_ar                          |    <0.001 |
+|             splitter_aw                          |    <0.001 |
+|     rst_processing_system7_0_100M                |    <0.001 |
+|       U0                                         |    <0.001 |
+|         EXT_LPF                                  |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT              |    <0.001 |
+|         SEQ                                      |    <0.001 |
+|           SEQ_COUNTER                            |    <0.001 |
+|     xlconstant_0                                 |     0.000 |
+|     xlconstant_1                                 |     0.000 |
++--------------------------------------------------+-----------+
 
 

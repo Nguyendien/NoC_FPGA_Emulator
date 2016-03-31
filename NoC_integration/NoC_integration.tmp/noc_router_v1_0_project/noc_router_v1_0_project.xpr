@@ -6,7 +6,7 @@
 <Project Version="7" Minor="5" Path="/home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/NoC_integration/NoC_integration.tmp/noc_router_v1_0_project/noc_router_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="bf09a7e4418445f4884387d249527580"/>
+    <Option Name="Id" Val="4cf8ed2208ee42808f8d65692d22e3ca"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>
@@ -14,6 +14,7 @@
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/noc_router"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/network_interface_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/noc_router_NW"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
