@@ -125,11 +125,15 @@ module noc_router_NW (clk, rst,
   LBDR L_LBDR (clk, rst_active_low, Lempty, Rxy, Cx, Lflit_type, Ldst_addr, cur_addr, LNport, LEport, LWport, LSport, LLport);
   LBDR E_LBDR (clk, rst_active_low, Eempty, Rxy, Cx, Eflit_type, Edst_addr, cur_addr, ENport, EEport, EWport, ESport, ELport);
   LBDR S_LBDR (clk, rst_active_low, Sempty, Rxy, Cx, Sflit_type, Sdst_addr, cur_addr, SNport, SEport, SWport, SSport, SLport);
+
+  assign LLport = 1'b0; // U-Turns are not allowed
+  assign EEport = 1'b0; // U-Turns are not allowed
+  assign SSport = 1'b0; // U-Turns are not allowed
   
   // FLOWCONTROL
-  flowcontrol L_FC (rst_active_low, LNport, LEport, LWport, LSport, LLport, L_DCTS, 1'b0, E_DCTS, 1'b0, S_DCTS, LLfc_ready_out, LNfc_ready_out, LEfc_ready_out, LWfc_ready_out, LSfc_ready_out);
-  flowcontrol E_FC (rst_active_low, ENport, EEport, EWport, ESport, ELport, L_DCTS, 1'b0, E_DCTS, 1'b0, S_DCTS, ELfc_ready_out, ENfc_ready_out, EEfc_ready_out, EWfc_ready_out, ESfc_ready_out);
-  flowcontrol S_FC (rst_active_low, SNport, SEport, SWport, SSport, SLport, L_DCTS, 1'b0, E_DCTS, 1'b0, S_DCTS, SLfc_ready_out, SNfc_ready_out, SEfc_ready_out, SWfc_ready_out, SSfc_ready_out);
+  flowcontrol L_FC (rst_active_low, LNport, LEport, LWport, LSport, 1'b0, L_DCTS, 1'b0, E_DCTS, 1'b0, S_DCTS, LLfc_ready_out, LNfc_ready_out, LEfc_ready_out, LWfc_ready_out, LSfc_ready_out);
+  flowcontrol E_FC (rst_active_low, ENport, 1'b0, EWport, ESport, ELport, L_DCTS, 1'b0, E_DCTS, 1'b0, S_DCTS, ELfc_ready_out, ENfc_ready_out, EEfc_ready_out, EWfc_ready_out, ESfc_ready_out);
+  flowcontrol S_FC (rst_active_low, SNport, SEport, SWport, 1'b0, SLport, L_DCTS, 1'b0, E_DCTS, 1'b0, S_DCTS, SLfc_ready_out, SNfc_ready_out, SEfc_ready_out, SWfc_ready_out, SSfc_ready_out);
   
   // ARBITER
   arbiter L_ARBITER (clk, rst_active_low, Lflit_type, Nflit_type, Eflit_type, Wflit_type, Sflit_type, Llength, Nlength, Elength, Wlength, Slength, LLfc_ready_out, NLfc_ready_out, ELfc_ready_out, WLfc_ready_out, SLfc_ready_out, Lnextstate);
