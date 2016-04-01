@@ -18,7 +18,7 @@
     input [3 : 0] cur_addr_rst;
     begin
       rst      = 0;
-      @(posedge clk) begin
+      @(negedge clk) begin
         Rxy[id]      = Rxy_rst;
         Cx[id]       = Cx_rst;
         cur_addr[id] = cur_addr_rst;
@@ -27,7 +27,7 @@
         {Lready_in[id], Nready_in[id], Eready_in[id], Wready_in[id], Sready_in[id]} = 5'b11111;
       end
       repeat(2)
-        @(posedge clk);
+        @(negedge clk);
       //$display("TIME:%0t HARD_RESET:: Ldata_out:%0h, Ndata_out:%0h, Edata_out:%0h, Wdata_out:%0h, Sdata_out:%0h, Lready_out:%0b, Nready_out:%0b, Eready_out:%0b, Wready_out:%0b, Sready_out:%0b,  Lvalid_out:%0b, Nvalid_out:%0b, Evalid_out:%0b, Wvalid_out:%0b, Svalid_out:%0b",  $time, Ldata_out[id], Ndata_out, Edata_out, Wdata_out, Sdata_out, Lready_out, Nready_out, Eready_out, Wready_out, Sready_out, Lvalid_out, Nvalid_out, Evalid_out, Wvalid_out, Svalid_out);
       rst = 1;
     end
@@ -283,11 +283,11 @@
 
     begin
       // HEADER
-      @(posedge clk)
+      @(negedge clk)
       begin
         Lvalid_in[id] = 1;
         while(!Lready_out[id]) begin
-          @(posedge clk);
+          @(negedge clk);
         end
         header(p_length, d_addr, s_addr, p_id, tmp_data[id]);
         f = $fopen("output.txt","a");
@@ -298,10 +298,10 @@
       end
       // PAYLOAD
       for(i = 1; i < p_length-1; i = i+1) begin
-        @(posedge clk);
+        @(negedge clk);
         Lvalid_in[id] = 1;
         while(!Lready_out[id]) begin
-          @(posedge clk);
+          @(negedge clk);
         end
         payload(tmp_data[id]);
 	f = $fopen("output.txt","a");
@@ -311,10 +311,10 @@
         Ldata_in[id] = tmp_data[id];
       end
       // TAIL
-      @(posedge clk) begin
+      @(negedge clk) begin
         Lvalid_in[id] = 1;
         while(!Lready_out[id]) begin
-          @(posedge clk);
+          @(negedge clk);
         end
         tail(tmp_data[id]);
 	f = $fopen("output.txt","a");
@@ -324,7 +324,7 @@
         Ldata_in[id] = tmp_data[id];
       end
       
-      @(posedge clk) begin
+      @(negedge clk) begin
         Lvalid_in[id] = 0;
         Ldata_in[id] = 0;
       end
