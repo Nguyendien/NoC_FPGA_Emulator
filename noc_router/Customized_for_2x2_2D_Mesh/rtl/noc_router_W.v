@@ -20,7 +20,6 @@ module noc_router(clk, rst,
                   L_RX, L_DRTS, L_CTS, L_TX, L_RTS, L_DCTS,
                   N_RX, N_DRTS, N_CTS, N_TX, N_RTS, N_DCTS,
                   E_RX, E_DRTS, E_CTS, E_TX, E_RTS, E_DCTS,
-                  W_RX, W_DRTS, W_CTS, W_TX, W_RTS, W_DCTS,
                   S_RX, S_DRTS, S_CTS, S_TX, S_RTS, S_DCTS
                 );
                 
@@ -28,13 +27,13 @@ module noc_router(clk, rst,
   input [7:0]                Rxy;                                                              // Routing bits set during reset                    
   input [3:0]                Cx;                                                               // Connectivity bits set during reset        
   input [`AXIS-1 : 0]        cur_addr;                                                         // currrent address of the router set during reset  
-  input [`DATA_WIDTH-1 : 0]  L_RX, N_RX, E_RX, W_RX, S_RX;                                     // Incoming data from PREVIOUS router (or NI)
-  input                      L_DRTS, N_DRTS, E_DRTS, W_DRTS, S_DRTS;                           // Incoming DRTS (Detect Request to Send) signal from PREVIOUS router (or NI)
-  input                      L_DCTS, N_DCTS, E_DCTS, W_DCTS, S_DCTS;                           // Incoming DCTS (Detect Clear to Send) signal from NEXT router (or NI)
+  input [`DATA_WIDTH-1 : 0]  L_RX, N_RX, E_RX, S_RX;                                     // Incoming data from PREVIOUS router (or NI)
+  input                      L_DRTS, N_DRTS, E_DRTS, S_DRTS;                           // Incoming DRTS (Detect Request to Send) signal from PREVIOUS router (or NI)
+  input                      L_DCTS, N_DCTS, E_DCTS, S_DCTS;                           // Incoming DCTS (Detect Clear to Send) signal from NEXT router (or NI)
   
-  output [`DATA_WIDTH-1 : 0] L_TX, N_TX, E_TX, W_TX, S_TX;                                     // Outgoing data to NEXT router(NI)
-  output                     L_CTS, N_CTS, E_CTS, W_CTS, S_CTS;                                // Outgoing CTS (Clear to Send) signal to PREVIOUS router (or NI)
-  output                     L_RTS, N_RTS, E_RTS, W_RTS, S_RTS;                                // Outgoing RTS (Request to Send) signal to NEXT router (or NI) 
+  output [`DATA_WIDTH-1 : 0] L_TX, N_TX, E_TX, S_TX;                                     // Outgoing data to NEXT router(NI)
+  output                     L_CTS, N_CTS, E_CTS, S_CTS;                                // Outgoing CTS (Clear to Send) signal to PREVIOUS router (or NI)
+  output                     L_RTS, N_RTS, E_RTS, S_RTS;                                // Outgoing RTS (Request to Send) signal to NEXT router (or NI) 
 
   // Declaring the local variables
   wire                   rst_active_low; // NB: reset is active low!
