@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
---Date        : Thu Mar 31 16:54:12 2016
+--Date        : Wed Apr  6 22:22:44 2016
 --Host        : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 --Command     : generate_target NoC_integration.bd
 --Design      : NoC_integration
@@ -1514,33 +1514,6 @@ architecture STRUCTURE of NoC_integration is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component NoC_integration_rst_processing_system7_0_100M_0;
-  component NoC_integration_noc_router_NW_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    Rxy : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Cx : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    cur_addr : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    L_RX : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    L_DRTS : in STD_LOGIC;
-    L_CTS : out STD_LOGIC;
-    L_TX : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    L_RTS : out STD_LOGIC;
-    L_DCTS : in STD_LOGIC;
-    E_RX : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    E_DRTS : in STD_LOGIC;
-    E_CTS : out STD_LOGIC;
-    E_TX : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    E_RTS : out STD_LOGIC;
-    E_DCTS : in STD_LOGIC;
-    S_RX : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_DRTS : in STD_LOGIC;
-    S_CTS : out STD_LOGIC;
-    S_TX : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_RTS : out STD_LOGIC;
-    S_DCTS : in STD_LOGIC
-  );
-  end component NoC_integration_noc_router_NW_0_0;
   component NoC_integration_xlconstant_0_0 is
   port (
     dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
@@ -1649,6 +1622,33 @@ architecture STRUCTURE of NoC_integration is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component NoC_integration_network_interface_2_0;
+  component NoC_integration_noc_router_NW_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    Rxy : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Cx : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    cur_addr : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    L_RX : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    L_DRTS : in STD_LOGIC;
+    L_CTS : out STD_LOGIC;
+    L_TX : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    L_RTS : out STD_LOGIC;
+    L_DCTS : in STD_LOGIC;
+    E_RX : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    E_DRTS : in STD_LOGIC;
+    E_CTS : out STD_LOGIC;
+    E_TX : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    E_RTS : out STD_LOGIC;
+    E_DCTS : in STD_LOGIC;
+    S_RX : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_DRTS : in STD_LOGIC;
+    S_CTS : out STD_LOGIC;
+    S_TX : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_RTS : out STD_LOGIC;
+    S_DCTS : in STD_LOGIC
+  );
+  end component NoC_integration_noc_router_NW_0_0;
   signal GND_1 : STD_LOGIC;
   signal VCC_1 : STD_LOGIC;
   signal network_interface_0_router_in_CTS : STD_LOGIC;

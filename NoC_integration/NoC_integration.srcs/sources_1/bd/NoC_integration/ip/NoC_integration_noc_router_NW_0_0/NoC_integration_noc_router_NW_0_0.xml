@@ -290,7 +290,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 31 13:54:12 UTC 2016</spirit:value>
+            <spirit:value>Wed Apr 06 19:22:43 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -325,7 +325,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 31 13:54:12 UTC 2016</spirit:value>
+            <spirit:value>Wed Apr 06 19:22:43 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -800,45 +800,45 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/include/parameters.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/include/parameters.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/LBDR.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/LBDR.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/include/state_defines.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/include/state_defines.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/arbiter.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/arbiter.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/fifo_onehot.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/fifo_onehot.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/flowcontrol.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/flowcontrol.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/init_read.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/init_read.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/output_buffer.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/output_buffer.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/xbar.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/xbar.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/1770d310/rtl/noc_router_NW.v</spirit:name>
+        <spirit:name>../../../../ipshared/ttu.ee/noc_router_nw_v1_0/6e981c2e/rtl/noc_router_NW.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -868,7 +868,7 @@
       </xilinx:taxonomies>
       <xilinx:displayName>noc_router_NW_v1_0</xilinx:displayName>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-03-24T16:24:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-04-06T18:55:10Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ttu.ee:user:noc_router_NW:1.0_ARCHIVE_LOCATION">/home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/noc_router_NW</xilinx:tag>
@@ -881,7 +881,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="960ceb83"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6a452792"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="54e48982"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="cb8953a5"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="85800cd4"/>
     </xilinx:packagingInfo>

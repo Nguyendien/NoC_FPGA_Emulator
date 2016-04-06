@@ -1,6 +1,90 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Wed Apr  6 22:00:06 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_noc_router_NW_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_noc_router_NW_0_0 (ttu.ee:user:noc_router_NW:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Wed Apr  6 20:24:00 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_noc_router_NW_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_noc_router_NW_0_0 (ttu.ee:user:noc_router_NW:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Wed Apr  6 20:09:03 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_noc_router_NW_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_noc_router_NW_0_0 (ttu.ee:user:noc_router_NW:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Wed Apr  6 19:16:17 2016
+| Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'NoC_integration_noc_router_NW_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of NoC_integration_noc_router_NW_0_0 (ttu.ee:user:noc_router_NW:1.0 (Rev. 1)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
 | Date         : Thu Mar 24 18:24:40 2016
 | Host         : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 | Command      : upgrade_ip

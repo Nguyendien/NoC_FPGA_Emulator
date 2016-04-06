@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
---Date        : Thu Mar 31 16:54:13 2016
+--Date        : Wed Apr  6 22:22:44 2016
 --Host        : strudel running 64-bit SUSE Linux Enterprise Server 11 (x86_64)
 --Command     : generate_target NoC_integration_wrapper.bd
 --Design      : NoC_integration_wrapper

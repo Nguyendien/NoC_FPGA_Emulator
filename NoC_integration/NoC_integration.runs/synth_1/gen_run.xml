@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1459432453">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1459970565">
   <File Type="VDS-TIMING-PB" Name="NoC_integration_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="NoC_integration_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="NoC_integration_wrapper.dcp"/>
@@ -50,6 +50,15 @@
     <File Path="$PSRCDIR/sources_1/bd/NI_test/ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_0_0/Noc_integration_4x4_network_noc_router_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_E_0_0/Noc_integration_4x4_network_noc_router_E_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_E_0_2/Noc_integration_4x4_network_noc_router_E_0_2.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_4/Noc_integration_4x4_network_noc_router_FULL_0_4.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_5/Noc_integration_4x4_network_noc_router_FULL_0_5.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_6/Noc_integration_4x4_network_noc_router_FULL_0_6.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_0/Noc_integration_4x4_network_noc_router_FULL_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_1/Noc_integration_4x4_network_noc_router_FULL_0_1.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_2/Noc_integration_4x4_network_noc_router_FULL_0_2.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="NoC_integration_wrapper"/>

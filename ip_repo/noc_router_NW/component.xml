@@ -267,7 +267,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d5c77dbd</spirit:value>
+            <spirit:value>fbfec164</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -282,7 +282,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d5c77dbd</spirit:value>
+            <spirit:value>fbfec164</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -690,7 +690,7 @@
       <spirit:file>
         <spirit:name>rtl/noc_router_NW.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_c18885de</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_a9f077e9</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -765,7 +765,7 @@
       </xilinx:taxonomies>
       <xilinx:displayName>noc_router_NW_v1_0</xilinx:displayName>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-03-24T16:24:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-04-06T18:55:10Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ttu.ee:user:noc_router_NW:1.0_ARCHIVE_LOCATION">/home/kjans/pc/NoC_Emulator/git/Integration/NoC_FPGA_Emulator/ip_repo/noc_router_NW</xilinx:tag>
@@ -774,7 +774,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="960ceb83"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6a452792"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="54e48982"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="cb8953a5"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="85800cd4"/>
     </xilinx:packagingInfo>

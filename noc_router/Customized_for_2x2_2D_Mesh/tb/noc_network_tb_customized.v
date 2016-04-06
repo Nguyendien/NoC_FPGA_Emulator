@@ -68,7 +68,7 @@ module noc_network_tb;
   wire [`DATA_WIDTH-1 : 0] Ldata_out[`NODES-1 : 0], Ndata_out[`NODES-1 : 0], Edata_out[`NODES-1 : 0], Wdata_out[`NODES-1 : 0], Sdata_out[`NODES-1 : 0];            // Outgoing data to NEXT router(NI)
   wire                     Lready_out[`NODES-1 : 0], Nready_out[`NODES-1 : 0], Eready_out[`NODES-1 : 0], Wready_out[`NODES-1 : 0], Sready_out[`NODES-1 : 0];       // Outgoing ready signal to PREVIOUS router(NI)
   wire                     Lvalid_out[`NODES-1 : 0], Nvalid_out[`NODES-1 : 0], Evalid_out[`NODES-1 : 0], Wvalid_out[`NODES-1 : 0], Svalid_out[`NODES-1 : 0];       // Outgoing valid signal to NEXT router(NI)
-  
+      
   // Instantiate NOC_ROUTER based on number of nodes 
 
     noc_router_NW R0 (clk, rst,
@@ -99,11 +99,12 @@ module noc_network_tb;
                             Wdata_in[3], Wvalid_in[3], Wready_out[3], Wdata_out[3], Wvalid_out[3], Wready_in[3]
                           );  
 
-    assert a0(.valid (Lvalid_out[0]), .data_out (Ldata_out[0][31 : 0]));
+  // Instantiation of assert module for measuring QoS parameters (latency,throughput) 
+    assert a0(.valid (Lvalid_out[0]), .data_out (Ldata_out[0]));
     assert a1(.valid (Lvalid_out[1]), .data_out (Ldata_out[1]));
     assert a2(.valid (Lvalid_out[2]), .data_out (Ldata_out[2]));
     assert a3(.valid (Lvalid_out[3]), .data_out (Ldata_out[3]));
-						  
+  
   // output connectivity
   always @(*) begin
     // ROUTER0
@@ -146,14 +147,14 @@ module noc_network_tb;
   
   // Specify the CYCLE parameter
   parameter CYCLE = 10;
-
+  
   // Generating Clock of period 10ns
   initial begin
     clk = 0;
     forever 
       #(CYCLE/2) clk = ~clk;
   end
-
+  
   // Start the simulation
   initial begin : SIM
     integer i;
@@ -165,16 +166,16 @@ module noc_network_tb;
     reset('d1, 8'b00111100, 4'b1100, 4'b0001); //--NODE1
     reset('d2, 8'b00111100, 4'b0011, 4'b0010); //--NODE2
     reset('d3, 8'b00111100, 4'b0101, 4'b0011); //--NODE3
-    
-    fork
+
+//    fork
       Lpkt_gen('d0, 12'd4, 4'd3, 4'd0, 8'd1); // NODE0 sends to NODE3
-      Lpkt_gen('d1, 12'd4, 4'd2, 4'd1, 8'd2); // NODE1 sends to NODE2
-      Lpkt_gen('d3, 12'd4, 4'd0, 4'd3, 8'd3); // NODE3 sends to NODE0
-      Lpkt_gen('d2, 12'd4, 4'd1, 4'd2, 8'd4); // NODE2 sends to NODE1
+//    Lpkt_gen('d1, 12'd4, 4'd2, 4'd1, 8'd2); // NODE1 sends to NODE2
+//    Lpkt_gen('d3, 12'd4, 4'd0, 4'd3, 8'd3); // NODE3 sends to NODE0
+//    Lpkt_gen('d2, 12'd4, 4'd1, 4'd2, 8'd4); // NODE2 sends to NODE1
 
 //    Lpkt_gen('d1, 12'd4, 4'd3, 4'd1, 8'd2); // NODE1 sends to NODE3
 //    Epkt_gen('d1, 12'd4, 4'd3, 4'd1, 8'd3); // NODE0 sends to NODE3
-    join
+//    join
 
 //    Lpkt_gen('d3, 12'd5, 4'd0, 4'd3, 8'd5); // West
 //    Lpkt_gen('d2, 12'd6, 4'd0, 4'd2, 8'd6); // North

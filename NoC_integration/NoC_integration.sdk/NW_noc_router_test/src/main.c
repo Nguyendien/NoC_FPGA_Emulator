@@ -6,6 +6,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 //#include "platform.h"
 #include "xparameters.h"
 #include "xil_io.h"
@@ -15,40 +16,95 @@
 #define NI_S_BASEADDR	XPAR_NETWORK_INTERFACE_1_S00_AXI_BASEADDR
 #define NI_E_BASEADDR	XPAR_NETWORK_INTERFACE_2_S00_AXI_BASEADDR
 
-int buildHeader(){
-	return 0b00100000000001100010000000000011;
+#define SRC_ADDR_OFFSET 		256
+#define DST_ADDR_OFFSET			4096
+#define PACKET_LENGTH_OFFSET	65536
 
+#define PAYLOAD_OFFSET			2
+#define FLIT_TYPE_OFFSET		536870912
+
+#define FLIT_TYPE_HEADER	0b001
+#define FLIT_TYPE_BODY		0b010
+#define FLIT_TYPE_TAIL		0b100
+
+int parity_check(u32 flit){
+    //Even number 1-s = 0
+
+	int parity = 0;
+
+	while (flit)
+    {
+        parity = !parity;
+        flit = flit & (flit - 1);
+    }
+
+	return parity;
+}
+
+u32 build_header(u32 packetID, u32 srcAddr, u32 dstAddr, u32 packetLength){
+
+		return packetID + \
+			SRC_ADDR_OFFSET * srcAddr + \
+			DST_ADDR_OFFSET * dstAddr + \
+			PACKET_LENGTH_OFFSET * packetLength;
+
+}
+
+u32 build_flit (u32 flitType, u32 payload) {
+
+	int parity;
+
+	u32 flit = PAYLOAD_OFFSET * payload + \
+			FLIT_TYPE_OFFSET * flitType;
+
+	parity = parity_check(flit);
+	return parity + flit;
+
+}
+
+void send_flit(int NIBaseAddr, u32 flit){
+	NETWORK_INTERFACE_mWriteReg(NIBaseAddr, NETWORK_INTERFACE_S00_AXI_SLV_REG1_OFFSET, flit);
+
+	NETWORK_INTERFACE_mWriteReg(NIBaseAddr, NETWORK_INTERFACE_S00_AXI_SLV_REG2_OFFSET, 1);
+	NETWORK_INTERFACE_mWriteReg(NIBaseAddr, NETWORK_INTERFACE_S00_AXI_SLV_REG2_OFFSET, 0);
+
+}
+
+u32 recv_flit(int NIBaseAddr){
+
+	return NETWORK_INTERFACE_mReadReg(NIBaseAddr, NETWORK_INTERFACE_S00_AXI_SLV_REG0_OFFSET);
 }
 
 int main()
 {
     //init_platform();
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\r");
-    print("Hello World\n\r");
+    print("Router test\n\r");
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\r");
 
-    u32 dataOut = 45;
-    int i;
+    u32 dataOut = 0;
 
-    for (i=0;i<10000;i++);
-	printf("Sending data from Local: %d\n\r", buildHeader());
+    /* Build a header flit */
+    u32 flitContent = build_header(1, 1, 1, 3);
+    u32 flit = build_flit(FLIT_TYPE_HEADER, flitContent);
 
-	NETWORK_INTERFACE_mWriteReg(NI_L_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG1_OFFSET, buildHeader());
+    /* Send a flit to Local  (should come out from East) */
+	printf("Sending data from Local: %lu\n\r", flit);
+	send_flit(NI_E_BASEADDR, flit);
 
-	NETWORK_INTERFACE_mWriteReg(NI_L_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG2_OFFSET, 1);
-	NETWORK_INTERFACE_mWriteReg(NI_L_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG2_OFFSET, 0);
-
-	for (i=0;i<10000;i++);
+	/* Receive packet from East */
 	printf("Receiving packet from East...\n\r");
-	dataOut = NETWORK_INTERFACE_mReadReg(NI_E_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG0_OFFSET);
+	dataOut = recv_flit(NI_E_BASEADDR);
 	printf("Data received from East: %lu\n\r", dataOut);
 
+	/* Receive packet from South */
 	printf("Receiving packet from South...\n\r");
-	dataOut = NETWORK_INTERFACE_mReadReg(NI_S_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG0_OFFSET);
+	dataOut = recv_flit(NI_S_BASEADDR);
 	printf("Data received from South: %lu\n\r", dataOut);
 
+	/* Receive packet from Local */
 	printf("Receiving packet from Local...\n\r");
-	dataOut = NETWORK_INTERFACE_mReadReg(NI_L_BASEADDR, NETWORK_INTERFACE_S00_AXI_SLV_REG0_OFFSET);
+	dataOut = recv_flit(NI_L_BASEADDR);
 	printf("Data received from Local: %lu\n\r", dataOut);
 
 	print("================");

@@ -13,8 +13,16 @@
     <Option Name="BoardPart" Val="em.avnet.com:zed:part0:1.3"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/network_interface_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_SE"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_SW"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_W"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_FULL"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_E"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_N"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_NE"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_S"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_generic"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/noc_router_NW"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
@@ -28,23 +36,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_2_0/NoC_integration_xlconstant_2_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_1_0/NoC_integration_xlconstant_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_0_0/NoC_integration_xlconstant_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_axi_periph_0/NoC_integration_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_noc_router_NW_0_0/NoC_integration_noc_router_NW_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xbar_0/NoC_integration_xbar_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_0_0/NoC_integration_network_interface_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_axi_periph_0/NoC_integration_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="NoC_integration_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.vhd"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.vhd"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.hwdef"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="NoC_integration_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd">
         <FileInfo>
@@ -59,16 +67,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_processing_system7_0_0/NI_test_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_auto_pc_0/NI_test_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_rst_processing_system7_0_100M_0/NI_test_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_processing_system7_0_axi_periph_0/NI_test_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="NI_test_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hw_handoff/NI_test_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hdl/NI_test.hwdef"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hw_handoff/NI_test.hwh"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_auto_pc_0/NI_test_auto_pc_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="hdl/NI_test.vhd"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_processing_system7_0_0/NI_test_processing_system7_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/NI_test/hdl/NI_test_wrapper.vhd">
         <FileInfo>
@@ -86,6 +89,15 @@
       <File Path="$PSRCDIR/sources_1/bd/NI_test/ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.upgrade_log"/>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.upgrade_log"/>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_0_0/Noc_integration_4x4_network_noc_router_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_E_0_0/Noc_integration_4x4_network_noc_router_E_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_E_0_2/Noc_integration_4x4_network_noc_router_E_0_2.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_4/Noc_integration_4x4_network_noc_router_FULL_0_4.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_5/Noc_integration_4x4_network_noc_router_FULL_0_5.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_6/Noc_integration_4x4_network_noc_router_FULL_0_6.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_0/Noc_integration_4x4_network_noc_router_FULL_0_0.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_1/Noc_integration_4x4_network_noc_router_FULL_0_1.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_2/Noc_integration_4x4_network_noc_router_FULL_0_2.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="NoC_integration_wrapper"/>
