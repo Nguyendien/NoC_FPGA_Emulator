@@ -30,32 +30,77 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/NoC_integration/NoC_integration.bd">
+      <File Path="$PSRCDIR/sources_1/bd/network_2x2/network_2x2.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_2_0/NoC_integration_xlconstant_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_1_0/NoC_integration_xlconstant_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_0_0/NoC_integration_xlconstant_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_axi_periph_0/NoC_integration_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_noc_router_NW_0_0/NoC_integration_noc_router_NW_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xbar_0/NoC_integration_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_1_0/network_2x2_xlconstant_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_2_0/network_2x2_xlconstant_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_0_0/network_2x2_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="hw_handoff/network_2x2_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="hw_handoff/network_2x2.hwh"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_noc_router_SW_0_0/network_2x2_noc_router_SW_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_noc_router_SE_0_0/network_2x2_noc_router_SE_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_6_0/network_2x2_xlconstant_6_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_noc_router_NW_0_0/network_2x2_noc_router_NW_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_noc_router_NE_0_0/network_2x2_noc_router_NE_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_8_0/network_2x2_xlconstant_8_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_7_0/network_2x2_xlconstant_7_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_0_1/network_2x2_xlconstant_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_3_0/network_2x2_xlconstant_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="hdl/network_2x2.vhd"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_5_0/network_2x2_xlconstant_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_2_1/network_2x2_xlconstant_2_1.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_4_0/network_2x2_xlconstant_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xlconstant_1_1/network_2x2_xlconstant_1_1.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="network_2x2_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_auto_pc_0/network_2x2_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_network_interface_3_0/network_2x2_network_interface_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_network_interface_2_0/network_2x2_network_interface_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="hdl/network_2x2.hwdef"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_network_interface_0_0/network_2x2_network_interface_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_processing_system7_0_0/network_2x2_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_network_interface_1_0/network_2x2_network_interface_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_xbar_0/network_2x2_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_rst_processing_system7_0_100M_0/network_2x2_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_2x2.bd" FileRelPathName="ip/network_2x2_processing_system7_0_axi_periph_0/network_2x2_processing_system7_0_axi_periph_0.xci"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/network_2x2/hdl/network_2x2_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/NoC_integration/NoC_integration.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_0_0/NoC_integration_network_interface_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xbar_0/NoC_integration_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_axi_periph_0/NoC_integration_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_noc_router_NW_0_0/NoC_integration_noc_router_NW_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_rst_processing_system7_0_100M_0/NoC_integration_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_1_0/NoC_integration_network_interface_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration.hwh"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hw_handoff/NoC_integration_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.hwdef"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_network_interface_2_0/NoC_integration_network_interface_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_0_0/NoC_integration_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_1_0/NoC_integration_xlconstant_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_xlconstant_2_0/NoC_integration_xlconstant_2_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_auto_pc_0/NoC_integration_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.vhd"/>
-        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="hdl/NoC_integration.hwdef"/>
         <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="NoC_integration_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="NoC_integration.bd" FileRelPathName="ip/NoC_integration_processing_system7_0_0/NoC_integration_processing_system7_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -70,8 +115,8 @@
         <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_auto_pc_0/NI_test_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_rst_processing_system7_0_100M_0/NI_test_rst_processing_system7_0_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_processing_system7_0_axi_periph_0/NI_test_processing_system7_0_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_processing_system7_0_0/NI_test_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="NI_test.bd" FileRelPathName="ip/NI_test_network_interface_0_0/NI_test_network_interface_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/NI_test/hdl/NI_test_wrapper.vhd">
         <FileInfo>
@@ -98,9 +143,30 @@
       <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_0/Noc_integration_4x4_network_noc_router_FULL_0_0.upgrade_log"/>
       <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_1/Noc_integration_4x4_network_noc_router_FULL_0_1.upgrade_log"/>
       <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_2/Noc_integration_4x4_network_noc_router_FULL_0_2.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/network_3x3/network_3x3.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_xlconstant_1_0/network_3x3_xlconstant_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_SE_0_0/network_3x3_noc_router_SE_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_xlconstant_2_0/network_3x3_xlconstant_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_processing_system7_0_0/network_3x3_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_E_0_0/network_3x3_noc_router_E_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_FULL_0_0/network_3x3_noc_router_FULL_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_N_0_0/network_3x3_noc_router_N_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_S_0_0/network_3x3_noc_router_S_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_NW_0_0/network_3x3_noc_router_NW_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_NE_0_0/network_3x3_noc_router_NE_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_xlconstant_0_0/network_3x3_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_SW_0_0/network_3x3_noc_router_SW_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="network_3x3.bd" FileRelPathName="ip/network_3x3_noc_router_W_0_0/network_3x3_noc_router_W_0_0.xci"/>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="NoC_integration_wrapper"/>
+        <Option Name="TopModule" Val="network_2x2_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

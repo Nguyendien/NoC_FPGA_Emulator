@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1459970565">
-  <File Type="VDS-TIMING-PB" Name="NoC_integration_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="NoC_integration_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="NoC_integration_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="NoC_integration_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="NoC_integration_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="NoC_integration_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="NoC_integration_wrapper.vds"/>
-  <File Type="PA-TCL" Name="NoC_integration_wrapper.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1460034043">
+  <File Type="VDS-TIMING-PB" Name="network_2x2_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="network_2x2_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="network_2x2_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="network_2x2_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="network_2x2_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="network_2x2_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="network_2x2_wrapper.vds"/>
+  <File Type="PA-TCL" Name="network_2x2_wrapper.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/network_2x2/network_2x2.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/network_2x2/hdl/network_2x2_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/NoC_integration/NoC_integration.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -22,6 +36,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/NoC_integration/hdl/NoC_integration_wrapper.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -59,9 +74,17 @@
     <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_0/Noc_integration_4x4_network_noc_router_FULL_0_0.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_1/Noc_integration_4x4_network_noc_router_FULL_0_1.upgrade_log"/>
     <File Path="$PSRCDIR/sources_1/bd/Noc_integration_4x4_network/ip/Noc_integration_4x4_network_noc_router_FULL_0_2/Noc_integration_4x4_network_noc_router_FULL_0_2.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/network_3x3/network_3x3.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="NoC_integration_wrapper"/>
+      <Option Name="TopModule" Val="network_2x2_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:synthFlowMode="None" bd:tool_version="2015.1" bd:top="network_3x3" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>network_3x3</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>DDR</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="ddrx" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="ddrx_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>FIXED_IO</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="display_processing_system7" spirit:name="fixedio" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="display_processing_system7" spirit:name="fixedio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="network_3x3_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports/>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>network_3x3_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>processing_system7_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="processing_system7" spirit:vendor="xilinx.com" spirit:version="5.5"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_processing_system7_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="preset">ZedBoard</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_E_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_E" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_E_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_FULL_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_FULL" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_FULL_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_N_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_N" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_N_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_NE_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_NE" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_NE_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_NW_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_NW" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_NW_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_S_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_S" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_S_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_SE_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_SE" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_SE_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_SW_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_SW" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_SW_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>noc_router_W_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="noc_router_W" spirit:vendor="ttu.ee" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_noc_router_W_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_xlconstant_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">60</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_xlconstant_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">10</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>xlconstant_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">network_3x3_xlconstant_2_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections>
+      <spirit:interconnection>
+        <spirit:name>noc_router_N_0_W_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="E_out" spirit:componentRef="noc_router_NW_0"/>
+        <spirit:activeInterface spirit:busRef="W_in" spirit:componentRef="noc_router_N_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_W_0_N_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_out" spirit:componentRef="noc_router_NW_0"/>
+        <spirit:activeInterface spirit:busRef="N_in" spirit:componentRef="noc_router_W_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_NW_0_E_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="W_out" spirit:componentRef="noc_router_N_0"/>
+        <spirit:activeInterface spirit:busRef="E_in" spirit:componentRef="noc_router_NW_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_FULL_0_N_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_out" spirit:componentRef="noc_router_N_0"/>
+        <spirit:activeInterface spirit:busRef="N_in" spirit:componentRef="noc_router_FULL_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_NE_0_W_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="E_out" spirit:componentRef="noc_router_N_0"/>
+        <spirit:activeInterface spirit:busRef="W_in" spirit:componentRef="noc_router_NE_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_N_0_E_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="W_out" spirit:componentRef="noc_router_NE_0"/>
+        <spirit:activeInterface spirit:busRef="E_in" spirit:componentRef="noc_router_N_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_E_0_N_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_out" spirit:componentRef="noc_router_NE_0"/>
+        <spirit:activeInterface spirit:busRef="N_in" spirit:componentRef="noc_router_E_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_NE_0_S_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_out" spirit:componentRef="noc_router_E_0"/>
+        <spirit:activeInterface spirit:busRef="S_in" spirit:componentRef="noc_router_NE_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_FULL_0_E_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="W_out" spirit:componentRef="noc_router_E_0"/>
+        <spirit:activeInterface spirit:busRef="E_in" spirit:componentRef="noc_router_FULL_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_SE_0_N_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_out" spirit:componentRef="noc_router_E_0"/>
+        <spirit:activeInterface spirit:busRef="N_in" spirit:componentRef="noc_router_SE_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_E_0_S_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_out" spirit:componentRef="noc_router_SE_0"/>
+        <spirit:activeInterface spirit:busRef="S_in" spirit:componentRef="noc_router_E_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_S_0_E_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="W_out" spirit:componentRef="noc_router_SE_0"/>
+        <spirit:activeInterface spirit:busRef="E_in" spirit:componentRef="noc_router_S_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_SE_0_W_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="E_out" spirit:componentRef="noc_router_S_0"/>
+        <spirit:activeInterface spirit:busRef="W_in" spirit:componentRef="noc_router_SE_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_SW_0_E_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="W_out" spirit:componentRef="noc_router_S_0"/>
+        <spirit:activeInterface spirit:busRef="E_in" spirit:componentRef="noc_router_SW_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_FULL_0_S_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_out" spirit:componentRef="noc_router_S_0"/>
+        <spirit:activeInterface spirit:busRef="S_in" spirit:componentRef="noc_router_FULL_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_S_0_W_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="E_out" spirit:componentRef="noc_router_SW_0"/>
+        <spirit:activeInterface spirit:busRef="W_in" spirit:componentRef="noc_router_S_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_W_0_S_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_out" spirit:componentRef="noc_router_SW_0"/>
+        <spirit:activeInterface spirit:busRef="S_in" spirit:componentRef="noc_router_W_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_NW_0_S_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_out" spirit:componentRef="noc_router_W_0"/>
+        <spirit:activeInterface spirit:busRef="S_in" spirit:componentRef="noc_router_NW_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_SW_0_N_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_out" spirit:componentRef="noc_router_W_0"/>
+        <spirit:activeInterface spirit:busRef="N_in" spirit:componentRef="noc_router_SW_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_FULL_0_W_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="E_out" spirit:componentRef="noc_router_W_0"/>
+        <spirit:activeInterface spirit:busRef="W_in" spirit:componentRef="noc_router_FULL_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_N_0_S_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="N_out" spirit:componentRef="noc_router_FULL_0"/>
+        <spirit:activeInterface spirit:busRef="S_in" spirit:componentRef="noc_router_N_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_W_0_E_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="W_out" spirit:componentRef="noc_router_FULL_0"/>
+        <spirit:activeInterface spirit:busRef="E_in" spirit:componentRef="noc_router_W_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_S_0_N_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_out" spirit:componentRef="noc_router_FULL_0"/>
+        <spirit:activeInterface spirit:busRef="N_in" spirit:componentRef="noc_router_S_0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>noc_router_E_0_W_in</spirit:name>
+        <spirit:activeInterface spirit:busRef="E_out" spirit:componentRef="noc_router_FULL_0"/>
+        <spirit:activeInterface spirit:busRef="W_in" spirit:componentRef="noc_router_E_0"/>
+      </spirit:interconnection>
+    </spirit:interconnections>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK0"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+    <spirit:hierConnections>
+      <spirit:hierConnection spirit:interfaceRef="DDR/processing_system7_0_DDR">
+        <spirit:activeInterface spirit:busRef="DDR" spirit:componentRef="processing_system7_0"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="FIXED_IO/processing_system7_0_FIXED_IO">
+        <spirit:activeInterface spirit:busRef="FIXED_IO" spirit:componentRef="processing_system7_0"/>
+      </spirit:hierConnection>
+    </spirit:hierConnections>
+  </spirit:design>
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>Addressing/processing_system7_0</spirit:library>
+    <spirit:name>processing_system7</spirit:name>
+    <spirit:version>5.5</spirit:version>
+    <spirit:addressSpaces>
+      <spirit:addressSpace>
+        <spirit:name>Data</spirit:name>
+        <spirit:range>4G</spirit:range>
+        <spirit:width>32</spirit:width>
+        <spirit:segments/>
+      </spirit:addressSpace>
+    </spirit:addressSpaces>
+  </spirit:component>
+
+</bd:repository>

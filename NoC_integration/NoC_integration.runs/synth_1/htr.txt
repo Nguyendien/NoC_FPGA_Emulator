@@ -6,4 +6,4 @@
 # Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log NoC_integration_wrapper.vds -m64 -mode batch -messageDb vivado.pb -notrace -source NoC_integration_wrapper.tcl
+vivado -log network_2x2_wrapper.vds -m64 -mode batch -messageDb vivado.pb -notrace -source network_2x2_wrapper.tcl

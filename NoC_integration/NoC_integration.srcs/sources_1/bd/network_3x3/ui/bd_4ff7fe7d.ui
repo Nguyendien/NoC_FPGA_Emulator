@@ -1,0 +1,51 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 2:10 -defaultsOSRD -top
+preplace port FIXED_IO -pg 1 -lvl 2:-10 -defaultsOSRD -top
+preplace inst xlconstant_0 -pg 1 -lvl 1 -y 1480 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -y 1560 -defaultsOSRD
+preplace inst noc_router_SW_0 -pg 1 -lvl 2 -y 1580 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 1 -y 1640 -defaultsOSRD
+preplace inst noc_router_SE_0 -pg 1 -lvl 4 -y 1610 -defaultsOSRD
+preplace inst noc_router_E_0 -pg 1 -lvl 4 -y 1190 -defaultsOSRD
+preplace inst noc_router_S_0 -pg 1 -lvl 3 -y 1610 -defaultsOSRD
+preplace inst noc_router_W_0 -pg 1 -lvl 2 -y 1150 -defaultsOSRD
+preplace inst noc_router_N_0 -pg 1 -lvl 3 -y 710 -defaultsOSRD
+preplace inst noc_router_FULL_0 -pg 1 -lvl 3 -y 1190 -defaultsOSRD
+preplace inst noc_router_NW_0 -pg 1 -lvl 2 -y 680 -defaultsOSRD
+preplace inst noc_router_NE_0 -pg 1 -lvl 4 -y 700 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 280 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 1 440
+preplace netloc noc_router_E_0_W_in 1 2 3 690 1050 NJ 1050 1730
+preplace netloc noc_router_FULL_0_E_in 1 3 1 1150
+preplace netloc noc_router_S_0_W_in 1 1 3 470 1460 NJ 1460 1120
+preplace netloc noc_router_N_0_S_in 1 2 2 680 850 1140
+preplace netloc noc_router_FULL_0_S_in 1 2 2 690 1340 1140
+preplace netloc noc_router_E_0_S_in 1 3 2 1160 1320 1730
+preplace netloc noc_router_SE_0_N_in 1 3 2 1160 1060 1740
+preplace netloc noc_router_N_0_E_in 1 3 1 1150
+preplace netloc noc_router_NW_0_S_in 1 1 2 430 800 670
+preplace netloc noc_router_SW_0_E_in 1 2 1 680
+preplace netloc noc_router_S_0_E_in 1 3 1 1150
+preplace netloc noc_router_NE_0_S_in 1 3 2 1150 820 1730
+preplace netloc noc_router_FULL_0_W_in 1 1 3 440 1010 NJ 1010 1120
+preplace netloc noc_router_N_0_W_in 1 1 3 430 560 NJ 560 1140
+preplace netloc processing_system7_0_FIXED_IO 1 1 1 430
+preplace netloc noc_router_W_0_S_in 1 1 2 460 1440 670
+preplace netloc noc_router_SE_0_W_in 1 2 3 700 1480 NJ 1480 1730
+preplace netloc noc_router_W_0_E_in 1 2 1 680
+preplace netloc noc_router_SW_0_N_in 1 1 2 450 1450 670
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 140 420
+preplace netloc noc_router_S_0_N_in 1 2 2 700 1330 1130
+preplace netloc noc_router_E_0_N_in 1 3 2 1160 580 1750
+preplace netloc noc_router_NW_0_E_in 1 2 1 670
+preplace netloc noc_router_NE_0_W_in 1 2 3 680 570 NJ 570 1730
+preplace netloc noc_router_FULL_0_N_in 1 2 2 690 840 1130
+preplace netloc noc_router_W_0_N_in 1 1 2 420 1020 670
+levelinfo -pg 1 0 220 570 1020 1630 1770
+",
+}
+{
+   da_ps7_cnt: "1",
+}
