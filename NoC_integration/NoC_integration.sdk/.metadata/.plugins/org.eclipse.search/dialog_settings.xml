@@ -46,12 +46,12 @@
 		</list>
 	</section>
 	<section name="SearchDialog">
-		<item value="org.eclipse.search.internal.ui.text.TextSearchPage" key="PREVIOUS_PAGE"/>
+		<item value="org.eclipse.cdt.ui.pdomSearchPage" key="PREVIOUS_PAGE"/>
 	</section>
 	<section name="DialogBounds_SearchDialog">
-		<item value="586" key="DIALOG_WIDTH"/>
-		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="482" key="DIALOG_HEIGHT"/>
+		<item value="593" key="DIALOG_WIDTH"/>
+		<item value="1|Sans|10.208333|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="474" key="DIALOG_HEIGHT"/>
 		<item value="990" key="DIALOG_X_ORIGIN"/>
 		<item value="419" key="DIALOG_Y_ORIGIN"/>
 	</section>

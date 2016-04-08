@@ -24,13 +24,13 @@ preplace inst network_interface_3 -pg 1 -lvl 5 -y 1340 -defaultsOSRD
 preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 300 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -y 550 -defaultsOSRD
 preplace inst xlconstant_10 -pg 1 -lvl 4 -y 1570 -defaultsOSRD
-preplace inst noc_router_NW_0 -pg 1 -lvl 3 -y 1090 -defaultsOSRD
+preplace inst noc_router_NW_0 -pg 1 -lvl 3 -y 1040 -defaultsOSRD
 preplace inst noc_router_NE_0 -pg 1 -lvl 5 -y 990 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 1 2 NJ 370 820
 preplace netloc xlconstant_5_dout 1 4 1 1420
-preplace netloc xlconstant_1_dout 1 2 1 N
-preplace netloc xlconstant_2_dout 1 2 1 820
-preplace netloc noc_router_NW_0_L_in 1 2 2 880 1210 1220
+preplace netloc xlconstant_1_dout 1 2 1 820
+preplace netloc xlconstant_2_dout 1 2 1 830
+preplace netloc noc_router_NW_0_L_in 1 2 2 870 1160 1220
 preplace netloc network_interface_3_router_in 1 4 2 1490 1260 1800
 preplace netloc processing_system7_0_axi_periph_M03_AXI 1 3 2 1260 1100 NJ
 preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 2 900 690 1220
@@ -40,12 +40,12 @@ preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 460
 preplace netloc xlconstant_8_dout 1 2 1 860
 preplace netloc xlconstant_7_dout 1 2 1 820
 preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 2 900 1250 1230
-preplace netloc noc_router_NW_0_S_in 1 2 2 870 1230 1210
+preplace netloc noc_router_NW_0_S_in 1 2 2 870 1180 1210
 preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 2 3 860 870 NJ 870 1460
 preplace netloc xlconstant_10_dout 1 4 1 1420
 preplace netloc noc_router_SW_0_L_in 1 2 2 900 1430 1210
 preplace netloc network_interface_2_router_in 1 2 2 880 1260 1210
-preplace netloc noc_router_SW_0_E_in 1 3 2 1250 1520 NJ
+preplace netloc noc_router_SW_0_E_in 1 3 2 1240 1520 NJ
 preplace netloc noc_router_NE_0_S_in 1 4 2 1470 1120 1800
 preplace netloc xlconstant_0_dout 1 2 1 830
 preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 380 830
@@ -54,8 +54,8 @@ preplace netloc xlconstant_6_dout 1 2 1 830
 preplace netloc noc_router_SE_0_W_in 1 2 4 890 1420 NJ 1510 NJ 1420 1800
 preplace netloc xlconstant_4_dout 1 4 1 N
 preplace netloc network_interface_1_router_in 1 4 2 1490 850 1800
-preplace netloc network_interface_0_router_in 1 2 2 890 850 1220
-preplace netloc noc_router_SW_0_N_in 1 2 2 900 1220 1220
+preplace netloc network_interface_0_router_in 1 2 2 880 850 1220
+preplace netloc noc_router_SW_0_N_in 1 2 2 900 1170 1220
 preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 2 1 840
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 690 450 560 850 860 NJ 860 1450
 preplace netloc xlconstant_11_dout 1 4 1 1450
@@ -63,7 +63,7 @@ preplace netloc noc_router_NE_0_L_in 1 4 2 1470 870 1800
 preplace netloc noc_router_NW_0_E_in 1 3 2 1240 980 NJ
 preplace netloc noc_router_SE_0_L_in 1 4 2 1480 1250 1810
 preplace netloc processing_system7_0_axi_periph_M01_AXI 1 3 2 NJ 290 1450
-preplace netloc noc_router_NE_0_W_in 1 2 4 900 970 NJ 1090 NJ 1130 1810
+preplace netloc noc_router_NE_0_W_in 1 2 4 900 920 NJ 990 NJ 1130 1810
 preplace netloc xlconstant_3_dout 1 4 1 1470
 levelinfo -pg 1 0 220 650 1060 1350 1680 1840
 ",
