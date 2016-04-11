@@ -200,7 +200,7 @@ module assert(input valid, input [31 : 0] data_out);
         begin
 	    f = $fopen("output.txt","a");
 	    $fdisplay(f,"TIME: %0t FLIT_TYPE: TAIL DST_ADDR: %0b \n", $time, data_out[(`DATA_WIDTH-19) +: 2]);
-            $display(f,"TIME: %0t FLIT_TYPE: TAIL DST_ADDR: %0b \n", $time, data_out[(`DATA_WIDTH-19) +: 2]);
+        $display("TIME: %0t FLIT_TYPE: TAIL DST_ADDR: %0b \n", $time, data_out[(`DATA_WIDTH-19) +: 2]);
 	    $fclose(f);
         end
     end
