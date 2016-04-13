@@ -1,0 +1,4 @@
+1)Separate combinational and sequential processes for Writefsm and Readfsm
+2)No data through readfsm and only the length goes through the Writefsm(not the entire data)
+3)Some signal name changes
+4)Variables have been replaced with signals in the Writefsm
