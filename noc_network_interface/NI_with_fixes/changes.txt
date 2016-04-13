@@ -1,4 +1,5 @@
-Separate combinational and sequential processes for Writefsm and Readfsm
-No data through readfsm and only the length goes through the Writefsm(not the entire data)
-Some signal name changes
-Variables have been replaced with signals in the Writefsm
+Separate combinational and sequential processes for Writefsm and Readfsm.
+No data through readfsm and only the length goes through the Writefsm(not the entire data).
+Some signal name changes.
+Variables have been replaced with signals in the Writefsm.
+Added an additional component(outreg.vhd) which receives data control signals from Writefsm and Readfsm.
