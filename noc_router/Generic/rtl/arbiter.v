@@ -17,16 +17,18 @@
 module arbiter(clk, rst,
                 Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id,
                 Llength, Nlength, Elength, Wlength, Slength,
-                Lreq, Nreq, Ereq, Wreq, Sreq,
-                nextstate
+                Lreq, Nreq, Ereq, Wreq, Sreq, DCTS,
+                nextstate, output_buffer_en, RTS
               );
  
   input         clk, rst;
   input [2:0]   Lflit_id, Nflit_id, Eflit_id, Wflit_id, Sflit_id;
   input [11:0]  Llength, Nlength, Elength, Wlength, Slength;
-  input         Lreq, Nreq, Ereq, Wreq, Sreq;
+  input         Lreq, Nreq, Ereq, Wreq, Sreq, DCTS;
   
   output reg [5:0] nextstate;
+  output output_buffer_en;
+  output reg RTS;
   
   // Declaring the local variables
   reg [5:0] currentstate; 
@@ -50,6 +52,23 @@ module arbiter(clk, rst,
     currentstate <= nextstate;
   end
   
+   // Assigning the enable signals for output buffers
+  assign output_buffer_en = (nextstate[5] || nextstate[4] || nextstate[3] || nextstate[2] || nextstate[1]) && DCTS;
+
+  always @(posedge clk) begin : proc_
+  	if(rst) begin
+  		RTS <= 0;
+  	end else begin
+  		if (output_buffer_en == 1) begin
+  			RTS <= 1;
+  		end	
+  		else if(DCTS == 1)begin
+  			RTS <= 0;
+  		end
+  	end
+  end
+
+
   // Next state decoder Logic
   always @ (Lreq, Nreq, Ereq, Wreq, Sreq, Ltimesup, Ntimesup, Etimesup, Wtimesup, Stimesup, currentstate) begin
     {Lruntimer, Nruntimer, Eruntimer, Wruntimer, Sruntimer} = 0;

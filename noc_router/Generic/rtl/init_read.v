@@ -9,11 +9,11 @@
 *********************/
 `include "../include/parameters.v"
 
-module init_read(clk, rst, empty, flit_id, init_rd);
+module init_read(clk, rst, empty, flit_type, init_rd);
   
   input clk, rst;
   input empty;
-  input [2 : 0] flit_id;        // One-hot encoded [001 - Header, 010 - Payload, 100 - Tail]
+  input [2 : 0] flit_type;        // One-hot encoded [001 - Header, 010 - Payload, 100 - Tail]
   
   output reg init_rd;
   
@@ -27,7 +27,7 @@ module init_read(clk, rst, empty, flit_id, init_rd);
           init_rd <= 0;
         end
       end
-      else if (flit_id == `TAIL) begin
+      else if (flit_type == `TAIL) begin
         init_rd <= 1;
       end
     end
