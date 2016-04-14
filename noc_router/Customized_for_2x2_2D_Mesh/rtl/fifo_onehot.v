@@ -14,6 +14,7 @@
 module fifo_onehot(clk, rst, 
                     wr_en, rd_en,
                     data_in,
+                    mux_out,
                     data_out,
                     empty, ready_out
                   );
@@ -64,7 +65,8 @@ module fifo_onehot(clk, rst,
   input                      wr_en, rd_en;
   input [`DATA_WIDTH-1 : 0]  data_in;
   
-  output reg [`DATA_WIDTH-1 : 0]  data_out;            // to crossbar , Because of using reg, the data_out will be inferred as a register
+  output reg [`DATA_WIDTH-1 : 0]  data_out;            // to crossbar
+  output [`DATA_WIDTH-1 : 0]  mux_out;            // to LBDR and arbiter  etc.
   output                          empty, ready_out;    // used for handshaking and flow control
   
   // Declaring the local variables
@@ -87,6 +89,7 @@ module fifo_onehot(clk, rst,
       data_out <= mux_data_out;
     end
   end
+  assign mux_out = mux_data_out;
   
   // Write pointer operation
   always @ (posedge clk) begin
@@ -110,7 +113,7 @@ module fifo_onehot(clk, rst,
   
   // Full and Empty Control
   assign empty = (wr_ptr == rd_ptr) ? 1'b1 : 1'b0;
-  assign full = (wr_ptr == {rd_ptr[0],rd_ptr[`PTR_SIZE-1:1]} ) ? 1'b1 : 1'b0;
+  assign full = (wr_ptr == {rd_ptr[1],rd_ptr[0],rd_ptr[`PTR_SIZE-1:2]} ) ? 1'b1 : 1'b0;
   
   generate
     genvar we;

@@ -10,39 +10,32 @@
 `include "../include/parameters.v"
 `include "../include/state_defines.v"
 
-module xbar(sel_in, N_datain, E_datain, W_datain, S_datain, L_datain, dataout, validout);
+module xbar(sel_in, N_datain, E_datain, W_datain, S_datain, L_datain, dataout);
   
   input [4 : 0]             sel_in;
   input [`DATA_WIDTH-1 : 0] N_datain, E_datain, W_datain, S_datain, L_datain;
   
   output reg [`DATA_WIDTH-1 : 0] dataout;
-  output reg                     validout;
   
-  always @ (sel_in, N_datain, E_datain, W_datain, S_datain, L_datain, dataout, validout) begin
+  always @ (sel_in, N_datain, E_datain, W_datain, S_datain, L_datain) begin
     case (sel_in)
       `N_PORT : begin
         dataout  = N_datain;
-        validout = 1'b1;
       end
       `E_PORT : begin
         dataout  = E_datain;
-        validout = 1'b1;
       end
       `W_PORT : begin
         dataout  = W_datain;
-        validout = 1'b1;
       end
       `S_PORT : begin
         dataout  = S_datain;
-        validout = 1'b1;
       end
       `L_PORT : begin
         dataout  = L_datain;
-        validout = 1'b1;
       end
       default : begin
         dataout  = 'd0;
-        validout = 1'b0;
       end
     endcase
   end
